@@ -4,7 +4,7 @@ An open-source Python package for generation of SMART probe pockets and calculat
 
 ## Dependencies
 - pandas
-- numpy
+- scipy
 - RDKit
 - dbstep (optional)
 - pyvista (optional)
