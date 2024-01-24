@@ -1,0 +1,147 @@
+Dependencies:
+ - pandas
+ - numpy
+ - rdkit
+ - scipy
+ - (optional) morfeus
+ - (optional) DBSTEP
+ - (optional) pyvista
+
+##############################################################
+1: Add a molecular probe to a structure
+##############################################################
+
+ SMART_probe_utils.py
+
+ Commandline Usage:
+  -i (input file with extension)
+  -o (output filename, default = i+'_SMART_probe')
+  -p (probe name)
+  -tip (structure binding atom, 0-indexed)
+  -tail (structure reference atom, 0-indexed)
+  -plane (structure reference plane atoms (2n), 0-indexed)
+  -dist (structure-probe distance (Å), default = 2.0 Å)
+  ex:
+    python3 SMART_probe_utils.py -f R-TCPTTL_1.mol -o R-TCPTTL_acyclic_6SiH2 -p acyclic_6SiH2 -dist 2.0 -tip 0 -tail 1
+
+ Module:
+
+  class SMART_probe_utils.ReadFile(ext, filename, tip, tail=False, plane=False)
+    read structure from file
+
+      ext - file extension (str; .mol2, .sdf, or .xyz)
+      filename - name of input file (str)
+      tip - binding atom number (int, 0-indexed)
+      tail - atom defining reference binding vector (int, 0-indexed)
+      plane - 2 atoms defining reference plane for binding vector ([int, int])
+
+      returns:
+      struct - structure instance
+
+  class SMART_probe_utils.Structure(mol, tip, tail=False, plane=False)
+    read structure from Mol object
+
+      mol - Mol object
+      tip - binding atom number (int, 0-indexed)
+      tail - atom defining reference binding vector (int, 0-indexed)
+      plane - 2 atoms defining reference plane for binding vector ([int, int])
+
+      returns:
+      struct - structure instance
+
+  class SMART_probe_utils.Probe(filename)
+    read probe from filename
+
+      filename - name of input file (str)
+
+      returns:
+      probe - probe instance
+
+  class SMART_probe_utils.ExportStructure(filename)
+    export docked structure as .mol
+
+      filename - name of output file (str)
+
+  function SMART_probe_utils.addProbe(struc, probe, dist=2.0)
+    add probe to structure
+
+      struct - structure instance
+      probe - probe instance
+      dist - distance between probe and structure binding points (float)
+
+      returns:
+      dock - docked structure
+
+##############################################################
+2: Generate probe conformers with constrained substructure
+##############################################################
+
+  SMART_conf_search.py
+
+  Commandline Usage:
+   -f (input docked file)
+   -p (input parameter file)
+   -o (output filename, default = f+'_SMART_confs')
+   ex:
+      python3 SMART_conf_search.py -f R-TCPTTL_acyclic_6SiH2.mol -p PARAMS.txt -o R-TCPTTL_acyclic_6SiH2_confs
+
+   Module:
+
+   function SMART_conf_search.PARAMS.read_parameter_file(filename)
+    set global conformational search parameters from text file
+
+      filename - name of input file (str)
+
+   function SMART_conf_search.PARAMS.read_parameters({'NSTEP': 500, 'FIXAT': [], 'MAXROTATION': 330, 'MINROTATION': 30, 'SEED': None})
+    set global conformational search parameters from dictionary
+
+      NSTEP - number of conformational search steps (int)
+      FIXAT - fixed atom ids ([int,...])
+      MAXROTATION - minimum bond rotation, degrees (int)
+      MINROTATION - maximum bond rotation, degrees (int)
+      SEED - for reproducability
+
+   class SMART_conf_search.ReadDocked(filename)
+    read docked structure from .mol file
+
+      filename - name of input file (str)
+
+      returns:
+      dock - docked structure instance
+
+   class SMART_conf_search.ExportConformers(filename)
+    export file containing saved conformations
+
+      filename - name of output file (str)
+
+   function SMART_conf_search.start(dock)
+    start conformational search algorithm
+
+      confs - conformer ensemble
+
+##############################################################
+3: Compute SMART descriptors
+##############################################################
+
+ SMART_descriptors.py
+
+ Commandline Usage:
+  -f (input file)
+  --rdkit (compute descriptors with rdkit)
+  --dbstep (compute descriptors with DBSTEP)
+  ex:
+     python3 SMART_conf_search.py -f R-TCPTTL_acyclic_6SiH2_confs.mol2 --rdkit --dbstep
+
+  Module:
+
+  function SMART_descriptors.RDKit_Properties(confs, m_id)
+    compute descriptors using RDKit
+
+      confs - conformer ensemble (mol, ensemble)
+      m_id - metal center ID (int, 0-indexed)
+
+  function SMART_descriptors.DBSTEP_Properties(confs, m_id)
+    compute descriptors using DBSTEP
+
+      confs - conformer ensemble (mol, ensemble)
+      m_id - metal center ID (int, 0-indexed)
