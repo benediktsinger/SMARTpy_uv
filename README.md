@@ -1,4 +1,5 @@
-# SMART
+# SMART 
+<img width="195" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/6da48469-0a27-4084-bf85-a8d474757127"> <img width="200" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/84905748-9780-4411-a9cb-8d97dcc63e2a">
 ## Spatial Molding for Approachable Rigid Targets
 An open-source Python package for generation of SMART probe pockets and calculation of SMART descriptors.
 
@@ -8,7 +9,7 @@ An open-source Python package for generation of SMART probe pockets and calculat
 - RDKit
 - dbstep (optional)
 - pyvista (optional)
-- 
+  
 # Instructions
 ### Step 1: Select and Add a Probe to Structure(s) of interest
 stuff here...
