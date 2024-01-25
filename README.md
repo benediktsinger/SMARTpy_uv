@@ -1,6 +1,6 @@
-# SMART 
+# Spatial Molding for Approachable Rigid Targets (SMART)
 <img width="195" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/6da48469-0a27-4084-bf85-a8d474757127"> <img width="200" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/84905748-9780-4411-a9cb-8d97dcc63e2a">
-## Spatial Molding for Approachable Rigid Targets
+
 An open-source Python package for generation of SMART probe pockets and calculation of SMART descriptors.
 
 ## Dependencies
