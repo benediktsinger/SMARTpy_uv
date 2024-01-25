@@ -3,7 +3,6 @@ Dependencies:
  - numpy
  - rdkit
  - scipy
- - (optional) morfeus
  - (optional) DBSTEP
  - (optional) pyvista
 
