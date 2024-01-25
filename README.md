@@ -11,11 +11,11 @@ An open-source Python package for generation of SMART probe pockets and calculat
 - pyvista (optional)
   
 # Instructions
-### Step 1: Select and Add a Probe to Structure(s) of interest
+### Step 1: Select and Add Probe to Structure(s) of Interest
 stuff here...
-### Step 2: Generate Probe Conformational Enssemble
+### Step 2: Generate Probe Conformational Ensemble
 stuff here...
-### Step 3: Calculate Molecular Descxriptors
+### Step 3: Calculate Molecular Descriptors
 stuff here...
 # Citations
 This package:
