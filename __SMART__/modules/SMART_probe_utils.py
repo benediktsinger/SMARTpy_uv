@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # SMART probe addition utility
-#   version: b0.1 (released 10-10-2023)
+#   version: b1.1 (released 01-27-2024)
 #   developer: Beck R. Miller (beck.miller@utah.edu)
 #
 ############# ------- DEPENDENCIES
@@ -15,10 +15,41 @@ from rdkit import RDLogger
 from rdkit.Geometry import Point3D
 RDLogger.DisableLog('rdApp.*')
 pt = Chem.GetPeriodicTable()
+
+############# ------- UTILITY FUNCTIONS
+def octahedral(mol, metalID, bindingAtoms):
+    for a in binding_atoms:
+        n = 0
+        min, max, avg = 360, 0, 0
+        for b in binding_atoms:
+            if a == b:
+                continue
+            n += 1
+            angle = rdMolTransforms.GetAngleDeg(mol.GetConformer(), a-1, metal_id-1, b-1)
+            avg += angle
+            if angle > max:
+                max = angle
+            if angle < min:
+                min = angle
+        #print('Min:',min,'Max:',max,'Avg:',avg/n)
+        if max < (180-TOL):
+            return a-1
+
+def tetrahedral(mol, metalID, bindingAtoms):
+    ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[0]-1)) +
+                np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[1]-1)) +
+                np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[2]-1)) ) / 3
+    return ref_pos
+
+def trigonal(mol, metalID, bindingAtoms):
+    ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[0]-1)) +
+                np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[1]-1)) ) / 2
+    return ref_pos
+
 ############# ------- UTILITY CLASSES
 class ReadFile:
     # initialize single structure coordinates
-    def __init__(self, ext, fname, tip, tail=None, plane=None, path=os.getcwd()):
+    def __init__(self, ext, fname, path=os.getcwd()):
     #file type, name, (path)
         try:
             self.NAME = fname
@@ -33,6 +64,8 @@ class ReadFile:
                 self.MOL = Chem.MolFromXYZFile(file, removeHs=False)
             elif self.TYPE == 'pdb':
                 self.MOL = Chem.MolFromPDBFile(file, removeHs=False)
+            elif self.TYPE == 'sdf':
+                self.MOL = Chem.SDSupplier(file, removeHs=False)[0]
             self.ATOMS = self.MOL.GetAtoms()
             self.NATOMS = self.MOL.GetNumAtoms()
         except Exception as e:
@@ -40,17 +73,42 @@ class ReadFile:
             print(e)
             sys.exit()
 
+    def Reference_Vector(self, tip, tail=None, plane=None):
         if tail:
             self.TAIL_N = tail
+
             self.Vector = BindingVector(self.MOL, self.TIP_N, self.TAIL_N)
         else:
             self.PLN1_N = plane[0]
             self.PLN2_N = plane[1]
             self.Vector = BindingVector(self.MOL, self.TIP_N, [self.PLN1_N, self.PLN2_N])
 
+    def Assess_Geometry(self, geom=None, metalID=None, bindingAtoms=None, TOL=20):
+        if geom == 'octahedral':
+            if not len(bindingAtoms) == 5:
+                print('Cannot compute octahedral geometry from these atoms:')
+                print(bindingAtoms)
+                sys.exit()
+            self.Vector = GeometryVector(self.MOL, self.TIP_N, octahedral(self.MOL, metalID, bindingAtoms))
+        elif geom == 'tetrahedral':
+            if not len(bindingAtoms) == 3:
+                print('Cannot compute tetrahedral geometry from these atoms:')
+                print(bindingAtoms)
+                sys.exit()
+            self.Vector = GeometryVector(self.MOL, self.TIP_N, tetrahedral(self.MOL, metalID, bindingAtoms))
+        elif geom ==  'trigonal':
+            if not len(bindingAtoms) == 2:
+                print('Cannot compute trigonal geometry from these atoms:')
+                print(bindingAtoms)
+                sys.exit()
+            self.Vector = GeometryVector(self.MOL, self.TIP_N, trigonal(self.MOL, metalID, bindingAtoms))
+        else:
+            print('please a specify geometry')
+            sys.exit()
+
 class Structure:
     # initialize single structure coordinates
-    def __init__(self, name, mol, tip, tail=None, plane=None, path=os.getcwd()):
+    def __init__(self, name, mol, path=os.getcwd()):
     #file type, name, (path)
         try:
             self.NAME = name
@@ -63,13 +121,40 @@ class Structure:
             print(e)
             sys.exit()
 
+    def Reference_Vector(self, tip, tail=None, plane=None):
         if tail:
             self.TAIL_N = tail
             self.Vector = BindingVector(self.MOL, self.TIP_N, self.TAIL_N)
-        else:
+        elif plane:
             self.PLN1_N = plane[0]
             self.PLN2_N = plane[1]
             self.Vector = BindingVector(self.MOL, self.TIP_N, [self.PLN1_N, self.PLN2_N])
+        else:
+            print('specify reference atom(s)')
+            sys.exit()
+
+    def Assess_Geometry(self, geom=None, metalID=None, bindingAtoms=None, TOL=20):
+        if geom == 'octahedral':
+            if not len(bindingAtoms) == 5:
+                print('Cannot compute octahedral geometry from these atoms:')
+                print(bindingAtoms)
+                sys.exit()
+            self.Vector = GeometryVector(self.MOL, self.TIP_N, octahedral(self.MOL, metalID, bindingAtoms))
+        elif geom == 'tetrahedral':
+            if not len(bindingAtoms) == 3:
+                print('Cannot compute tetrahedral geometry from these atoms:')
+                print(bindingAtoms)
+                sys.exit()
+            self.Vector = GeometryVector(self.MOL, self.TIP_N, tetrahedral(self.MOL, metalID, bindingAtoms))
+        elif geom ==  'trigonal':
+            if not len(bindingAtoms) == 2:
+                print('Cannot compute trigonal geometry from these atoms:')
+                print(bindingAtoms)
+                sys.exit()
+            self.Vector = GeometryVector(self.MOL, self.TIP_N, trigonal(self.MOL, metalID, bindingAtoms))
+        else:
+            print('please a specify geometry')
+            sys.exit()
 
 class Probe:
     # initialize built-in probe
@@ -83,18 +168,24 @@ class Probe:
             self.ATOMS = self.MOL.GetAtoms()
             self.NATOMS = self.MOL.GetNumAtoms()
             self.TIP_N = 0
-            id=0
-            for atom in self.ATOMS:
-                if pt.GetElementSymbol(atom.GetAtomicNum()) == 'H':
-                    id = atom.GetIdx()
-            self.TAIL_N = id#self.NATOMS-1
-            #self.TIP_POS = self.MOL.GetConformer().GetAtomPosition(self.TIP_N)
+            self.TAIL_N = self.NATOMS-1
         except Exception as e:
             print('no probe found -', file)
             print(e)
             sys.exit()
-
         self.Vector = BindingVector(self.MOL, self.TIP_N, self.TAIL_N)
+
+class GeometryVector:
+    def __init__(self, MOL, tip, tail_pos):
+        try:
+            self.TAIL_POS = tail_pos
+            self.TIP_POS = MOL.GetConformer().GetAtomPosition(int(tip))
+            v = (self.TIP_POS - self.TAIL_POS)
+            n = np.linalg.norm(v)
+            self.U = (v / n)
+        except np.linalg.LinAlgError:
+            print('invalid coordinates')
+            sys.exit()
 
 class BindingVector:
     # calculate binding vectors
