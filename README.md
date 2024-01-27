@@ -4,7 +4,6 @@
 An open-source Python package for generation of SMART probe ensembles and calculation of SMART molecular descriptors.
 
 ## Dependencies
-- argparse
 - pandas
 - scipy
 - mathutils
