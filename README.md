@@ -36,7 +36,7 @@ python3 SMART_probe_utils.py -f R-TCPTTL_1.mol -o R-TCPTTL_1_probe -tip 0 -tail 
 ### Step 2: Generate Probe Conformational Ensemble
 ```
 import SMART_conf_search as SMART_conf
-PAR = {'FIXAT':[-22, 100, 1], 'NSTEP':500, 'MAXROTATION':330,'MINROTATION':30} #freeze atoms 22-100
+PAR = {'FIXAT':[-22, 100, 1], 'NSTEP':500, 'MAXROTATION':330,'MINROTATION':30} #freeze atoms 22-100, 1
 SMART_conf.PARAMS.read_parameters(PAR) # set search parameters
 try:
     confs = SMART_conf.start(docked) # run algorithm
