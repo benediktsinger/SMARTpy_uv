@@ -54,8 +54,8 @@ class ReadFile:
         try:
             self.NAME = fname
             self.TYPE = ext
+
             file = os.path.join(path, fname+'.'+ext)
-            #print(file)
             if self.TYPE == 'mol2':
                 self.MOL = Chem.MolFromMol2File(file, removeHs=False)
             elif self.TYPE == 'mol':
@@ -65,7 +65,7 @@ class ReadFile:
             elif self.TYPE == 'pdb':
                 self.MOL = Chem.MolFromPDBFile(file, removeHs=False)
             elif self.TYPE == 'sdf':
-                self.MOL = Chem.SDMolSupplier(file, removeHs=False)[0]
+                self.MOL = Chem.SDSupplier(file, removeHs=False)[0]
             self.ATOMS = self.MOL.GetAtoms()
             self.NATOMS = self.MOL.GetNumAtoms()
         except Exception as e:
@@ -74,12 +74,12 @@ class ReadFile:
             sys.exit()
 
     def Reference_Vector(self, tip, tail=None, plane=None):
-        print(self)
-        self.TIP_N = tip
         if tail:
             self.TAIL_N = tail
+            self.TIP_N = tip
             self.Vector = BindingVector(self.MOL, self.TIP_N, self.TAIL_N)
         else:
+            self.TIP_N = tip
             self.PLN1_N = plane[0]
             self.PLN2_N = plane[1]
             self.Vector = BindingVector(self.MOL, self.TIP_N, [self.PLN1_N, self.PLN2_N])
@@ -114,6 +114,7 @@ class Structure:
         try:
             self.NAME = name
             self.MOL = mol
+
             self.ATOMS = self.MOL.GetAtoms()
             self.NATOMS = self.MOL.GetNumAtoms()
         except Exception as e:
@@ -122,11 +123,12 @@ class Structure:
             sys.exit()
 
     def Reference_Vector(self, tip, tail=None, plane=None):
-        self.TIP_N = tip
         if tail:
+            self.TIP_N = tip
             self.TAIL_N = tail
             self.Vector = BindingVector(self.MOL, self.TIP_N, self.TAIL_N)
         elif plane:
+            self.TIP_N = tip
             self.PLN1_N = plane[0]
             self.PLN2_N = plane[1]
             self.Vector = BindingVector(self.MOL, self.TIP_N, [self.PLN1_N, self.PLN2_N])
@@ -343,7 +345,6 @@ def translate(struc, probe, dist):
 
 def addProbe(struc, probe, dist=2.0, rot=5.0):
     # main utility function
-    #print(struc, probe)
     probe_r = rotateAlign(struc, probe)
     #Chem.MolToMolFile(probe_r.MOL, 'rot.mol')
     probe_t = translate(struc, probe_r, dist)
