@@ -13,15 +13,19 @@ file = 'R-TCPTTL_1.mol2'
 # Prepare structure
 structure = SMART.ReadFile(file)
 print(structure.NumAtoms)
-structure.Reference_Vector(tip=0, tail=1, dist=2.0)
-print(structure.Vector)
-sys.exit()
+
+structure.reference_vector(0, 1, dist=2.0)
+print(structure.Id)
+
 # Prepare probe
-probe = SMART.Probe('S_SiF2_8_cyclic')
-probe_count = probe.NATOMS
+probe = SMART.ReadProbe('S_SiF2_10_cyclic.mol2')
+probe_count = probe.NumAtoms
 # Dock probe to structure
 print('\nadding probe',probe)
-docked = SMART.addProbe(structure, probe, dist=2.0)
-SMART.ExportStructure(docked, file.split('.')[0]+'_S_SiF2_8_cyclic')
+docked = SMART.add_probe(structure, probe, dist=2.0)
 
+cav, struc, cmplx = SMART_conf.CUSTOM_TEMPLATE_SEARCH(docked)
+#SMART.ExportStructure(docked, file.split('.')[0]+'_S_SiF2_8_cyclic')
+properties = SMART_des.get_all_properties(struc, cav, id, prox_radius=3.5, alpha=0)
+print(properties)
 print('DONE')

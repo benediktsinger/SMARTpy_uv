@@ -217,7 +217,7 @@ def RDKit_Properties(struc, probe):
     # Miscellaneous shape properties
     properties['RDKit_Asphericity_cavity'] = Descriptors3D.Asphericity(probe)
     properties['RDKit_Eccentricity_cavity'] = Descriptors3D.Eccentricity(probe)
-    properties['RDKit_InertialShapeFactor'_cavity] = Descriptors3D.InertialShapeFactor(probe)
+    properties['RDKit_InertialShapeFactor_cavity'] = Descriptors3D.InertialShapeFactor(probe)
     properties['RDKit_SpherocityIndex_cavity'] = Descriptors3D.SpherocityIndex(probe)
     properties['RDKit_NormalizedInertiaRatio1/3_cavity'] = Descriptors3D.NPR1(probe)
 
@@ -300,6 +300,7 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
     export_descriptors(properties, out)
 
 if __name__ == '__main__':
+    ##! PARSE CMDLINE INPUT !##
     parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Molecular Descriptor Calculations.',epilog='Uses multiple open-source python packages to compute SMART molecular descriptors.')
     parser.add_argument('-f', required=True) # file prefixes (cavity and structure)
     parser.add_argument('-id', required=True) # metal ID
