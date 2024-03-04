@@ -92,8 +92,8 @@ CONFS.CPLX_CONFS = None
 
 ############# ------- MAIN FNXS
 def save_out(name):
-    writer = Chem.SDWriter(name+'_pocket.sdf')
-    print('writing conformers to file',name+'_pocket.sdf')
+    writer = Chem.SDWriter(name+'_cavity.sdf')
+    print('writing conformers to file',name+'_cavity.sdf')
     for cid in [conf.GetId() for conf in CONFS.PROBES.GetConformers()]:#range(1, CONFS.PROBES.GetNumConformers()):
         writer.write(CONFS.PROBES, confId=cid)
     writer = Chem.SDWriter(name+'_mol.sdf')
@@ -348,6 +348,7 @@ def template_search(step=1):
         return template_search(step)
     return
 
+############# ------- HANDLER FNXS
 def TEMPLATE_SEARCH(mol=None):
     '''initiate conformational search by ensemble template'''
     if not mol:
@@ -372,8 +373,12 @@ def TEMPLATE_SEARCH(mol=None):
     template_search()
 
     print('***************** Finished *****************')
-    print(CONFS.PROBES.GetNumConformers(), 'conformers saved')
-    print("--- %s seconds ---" % (time.time() - starttime))
+    print("--- Time Elapsed: %s seconds ---" % (time.time() - starttime))
+    try:
+        print('---',CONFS.PROBES.GetNumConformers(), 'conformers saved ---')
+    except Exception as e:
+        print('SIMULATION FAILED')
+
     return CONFS.PROBES, CONFS.MOL, CONFS.CPLX_CONFS
 
 def CUSTOM_TEMPLATE_SEARCH(mol=None):
@@ -400,9 +405,14 @@ def CUSTOM_TEMPLATE_SEARCH(mol=None):
     # start custom template search
     starttime = time.time()
     custom_template()
+
     print('***************** Finished *****************')
-    print(CONFS.PROBES.GetNumConformers(), 'conformers saved')
-    print("--- %s seconds ---" % (time.time() - starttime))
+    print("--- Time Elapsed: %s seconds ---" % (time.time() - starttime))
+    try:
+        print('---',CONFS.PROBES.GetNumConformers(), 'conformers saved ---')
+    except Exception as e:
+        print('SIMULATION FAILED')
+
     return CONFS.PROBES, CONFS.MOL, CONFS.CPLX_CONFS
 
 def TORSIONAL_STEP_SEARCH(mol=None):
@@ -429,9 +439,14 @@ def TORSIONAL_STEP_SEARCH(mol=None):
     # start stepwise search
     starttime = time.time()
     torsional_step()
+
     print('***************** Finished *****************')
-    print(CONFS.PROBES.GetNumConformers(), 'conformers saved')
-    print("--- %s seconds ---" % (time.time() - starttime))
+    print("--- Time Elapsed: %s seconds ---" % (time.time() - starttime))
+    try:
+        print('---',CONFS.PROBES.GetNumConformers(), 'conformers saved ---')
+    except Exception as e:
+        print('SIMULATION FAILED')
+
     return CONFS.PROBES, CONFS.MOL, CONFS.CPLX_CONFS
 
 def main(Fin, Pin, PROTOC, name):
@@ -455,7 +470,7 @@ def main(Fin, Pin, PROTOC, name):
 
 if __name__ == '__main__':
     ##! PARSE CMDLINE INPUT !##
-    parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Pocket generation Utility Package.',epilog='Probe conformer search by modified Monte Carlo algorithm')
+    parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Probe Conformer-Generation Utility Package.',epilog='Probe conformer search by torsional/template search')
     parser.add_argument('-s', required=True, choices=[1,2,3,'torsional','template','custom']) #search protocol
     parser.add_argument('-f', required=True) #structure file
     parser.add_argument('-p', required=True) #parameter file

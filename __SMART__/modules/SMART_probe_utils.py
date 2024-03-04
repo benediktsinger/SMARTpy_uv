@@ -2,12 +2,11 @@
 # SMART probe addition utility
 #   version: b1.1 (released 01-27-2024)
 #   developer: Beck R. Miller (beck.miller@utah.edu)
-#
+#   GitHub:
 ############# ------- DEPENDENCIES
 import sys, os, argparse, math, mathutils, time
-import numpy as np
+#import numpy as np
 from scipy.spatial.transform import Rotation as R
-
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit import ForceField
@@ -16,215 +15,239 @@ from rdkit.Geometry import Point3D
 RDLogger.DisableLog('rdApp.*')
 pt = Chem.GetPeriodicTable()
 
-############# ------- UTILITY FUNCTIONS
-def octahedral(mol, metalID, bindingAtoms):
-    for a in binding_atoms:
+############# ------- INPUT/OUTPUT UTILITY CLASSES
+class ReadFile:
+    # initialize single structure coordinates
+    def __init__(self, fname, path=os.getcwd()):
+        '''initialize ReadFile: file.ext as input and base attributes'''
+        try:
+            os.path.isfile(os.path.join(path, fname))
+        except Exception as e:
+            print('no structure file found -', path, fname)
+            print(e)
+            sys.exit()
+
+        self.Name = fname
+        self.Type = fname.split('.')[-1]
+        self.File = os.path.join(path, fname)
+
+        try:
+            if self.Type == 'mol2':
+                self.MOL = Chem.MolFromMol2File(self.File, removeHs=False)
+            elif self.Type == 'mol':
+                self.MOL = Chem.MolFromMolFile(self.File, removeHs=False)
+            elif self.Type == 'xyz':
+                self.MOL = Chem.MolFromXYZFile(self.File, removeHs=False)
+            elif self.Type == 'pdb':
+                self.MOL = Chem.MolFromPDBFile(self.File, removeHs=False)
+            elif self.Type == 'sdf':
+                self.MOL = Chem.SDMolSupplier(self.File, removeHs=False)[0]
+            self.NumAtoms = self.MOL.GetNumAtoms()
+        except Exception as e:
+            print('no structure in file -', fname)
+            print(e)
+            sys.exit()
+
+class ReadMol:
+    # initialize RDKit MOL as input
+    def __init__(self, mol):
+        '''ReadMol: RDKit MOL as input and base attributes'''
+        self.MOL = mol
+        self.NumAtoms = self.MOL.GetNumAtoms()
+
+class ReadProbe:
+    # initialize probe
+    def __init__(self, probe, path=None):
+        '''ReadProbe: initialize probe from .mol2 file'''
+        if path:
+            try:
+                PROBE_PATH = os.path.isfile(path)
+            except Exception as e:
+                print('no probe file found -', path, probe)
+                print(e)
+                sys.exit()
+        else:
+            try:
+                PROBE_PATH = os.path.join(os.path.getdirname(__file__), 'Probes')
+            except Exception as e:
+                print('no probe file found -', os.path.getdirname(__file__), probe)
+
+        if not probe.endswith('.mol2'):
+            file = os.path.join(PROBE_PATH, probe+'.mol2')
+        else:
+            file = os.path.join(PROBE_PATH, probe)
+        self.Name = probe
+        self.MOL = Chem.MolFromMol2File(file, removeHs=False)
+        self.NumAtoms = self.MOL.GetNumAtoms()
+        Reference_Vector(0, self.getNumAtoms-1)
+
+class ExportStructure:
+    def __init__(self, mol, outname='out'):
+        '''ExportStructure: export structure as mol file'''
+        Chem.MolToMolFile(mol, outname+'.mol')
+
+############# ------- VECTOR INIT CLASSES
+class Reference_Vector():
+    def __init__(self, id, ref, dist=2.0):
+        '''Reference_Vector: probe binding vector based on tail/tip vector definition'''
+        self.TipId = id
+        self.TailId = ref
+        tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.TipId))
+        tail_pos = self.MOL.GetConformer().GetAtomPosition(int(self.TailId))
+        self.Vector = _reference_vector(self.Mol(), tip_pos, tail_pos)
+
+class Reference_Angle():
+    def __init__(self, id, ref, dist=2.0):
+        '''Reference_Angle: cross product of input angle as binding reference vector'''
+        self.TipId = id
+        self.PlaneIds = ref
+        tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.TipId))
+        tail1_pos = self.MOL.GetConformer().GetAtomPosition(int(self.PlaneIds[0]))
+        tail2_pos = self.MOL.GetConformer().GetAtomPosition(int(self.PlaneIds[1]))
+        self.Vector= _crossproduct_vector(self.Mol(), tip_pos, tail1_pos, tail2_pos)
+
+class Define_Geometry():
+    def __init__(self, id, geom, bindingAtoms, dist=2.0):
+        '''Define_Geometry: define binding center geometry and reference atoms'''
+        self.Geometry = geom
+        self.TipId = id
+        self.RefAtoms = bindingAtoms
+        tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.TipId))
+        if not self.RefAtoms:
+            print('please specify binding atoms or use Detect_Geometry feature')
+            print(bindingAtoms)
+            sys.exit()
+
+        if self.Geometry == 'octahedral':
+            if not len(self.RefAtoms) == 5:
+                print('Cannot compute octahedral geometry from these atoms:')
+                print(self.RefAtoms)
+                sys.exit()
+            tail_pos = _octahedral(self.MOL, self.TipId, self.RefAtoms)
+        elif self.Geometry == 'tetrahedral':
+            if not len(self.RefAtoms) == 3:
+                print('Cannot compute tetrahedral geometry from these atoms:')
+                print(self.RefAtoms)
+                sys.exit()
+            tail_pos = _tetrahedral(self.MOL, self.RefAtoms)
+        elif self.Geometry ==  'trigonal':
+            if not len(self.RefAtoms) == 2:
+                print('Cannot compute trigonal geometry from these atoms:')
+                print(self.RefAtoms)
+                sys.exit()
+            tail_pos = _trigonal(self.MOL, self.RefAtoms)
+        else:
+            print(self.Geometry)
+            print('please specify a known geometry: trigonal, tetrahedral, octahedral')
+            sys.exit()
+
+        self.Vector = _reference_vector(self.MOL, tip_pos, tail_pos)
+        self.BindingPos = np.array(self.Vector.TipPos) + (float(dist)*np.array(self.Vector.U))
+
+class Detect_Geometry():
+    def __init__(self, id, covalent=True, searchRadius=None):
+        '''Detect_Geometry: automatically detect binding center geometry by binding radii '''
+        print('Detect_Geometry: currently not availiable')
+        sys.exit()
+
+        self.TipId = id
+        atom = self.MOL.GetAtomWithIdx(id)
+        if covalent:
+            neighbors = atom.GetNeighbors()
+            if len(neigbors) == 2:
+                _trigonal(self.MOL, self.RefAtoms)
+            elif len(neigbors) == 3:
+                _tetrahedral(self.MOL, self.RefAtoms)
+            elif len(neigbors) == 5:
+                _octahedral(self.MOL, self.TipId, self.RefAtoms)
+            else:
+                print('Unknown geometry. Try covalent=False or Define_Geometry')
+                sys.exit()
+        else:
+            neighbors = []
+            atom_ = self.MOL.GetConformer().GetAtomPosition(id)
+            atom_r = Chem.GetPeriodicTable().GetRvdw(atom.GetAtomicNum())
+            for i in self.MOL.GetAtoms():
+                i_ = self.MOL.GetConformer().GetAtomPosition(i.GetIdx())
+                i_r = Chem.GetPeriodicTable().GetRvdw(i.GetAtomicNum())
+                d = (i_-atom_).LengthSq()
+                r_d = i_r + atom_r
+                if d <= r_d:
+                    neighbors.append(i.GetIdx())
+
+
+############# ------- PROTECTED VECTOR CONSTRUCTION CLASSES
+class _reference_vector():
+    def __init__(self, idPos, refPos, dist=None):# MOL,
+        try:
+            self.TipPos = np.array(idPos)
+            self.TailPos = np.array(refPos)
+            v = (idPos - refPos)
+            n = np.linalg.norm(v)
+            self.U = (v / n)
+            if dist:
+                self.BindingPos = np.array(self.TipPos) + (float(dist)*np.array(self.U))
+        except np.linalg.LinAlgError:
+            print('invalid coordinates')
+            sys.exit()
+
+class _crossproduct_vector():
+    # calculate binding vectors
+    def __init__(self, MOL, idPos, refPos1, refPos2, dist=None):
+    # ReadFiles/Probe.mol, tip atom number, tail atom number
+        try:
+            self.TipPos = idPos
+            v1 = refPos1 - self.TipPos
+            n1 = np.linalg.norm(v1)
+            self.V1 = (v1 / n1)
+            v2 = refPos2 - self.TipPos
+            n2 = np.linalg.norm(v2)
+            self.V2 = (v2 / n2)
+            self.U = np.cross(self.V1, self.V2)
+            if dist:
+                self.BindingPos = np.array(self.TipPos) + (float(dist)*np.array(self.U))
+        except np.linalg.LinAlgError:
+            print('invalid coordinates')
+            sys.exit()
+
+############# ------- VECTOR UTILITY FUNCTIONS
+def _octahedral(mol, id, bindingAtoms):
+    TOL = 20
+    for a in bindingAtoms:
         n = 0
         min, max, avg = 360, 0, 0
-        for b in binding_atoms:
+        for b in bindingAtoms:
             if a == b:
                 continue
             n += 1
-            angle = rdMolTransforms.GetAngleDeg(mol.GetConformer(), a-1, metal_id-1, b-1)
+            angle = rdMolTransforms.GetAngleDeg(mol.GetConformer(), a-1, id-1, b-1)
             avg += angle
             if angle > max:
                 max = angle
             if angle < min:
                 min = angle
-        #print('Min:',min,'Max:',max,'Avg:',avg/n)
         if max < (180-TOL):
             return a-1
 
-def tetrahedral(mol, metalID, bindingAtoms):
+def _tetrahedral(mol, bindingAtoms):
     ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[0]-1)) +
                 np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[1]-1)) +
                 np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[2]-1)) ) / 3
     return ref_pos
 
-def trigonal(mol, metalID, bindingAtoms):
+def _trigonal(mol, bindingAtoms):
     ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[0]-1)) +
                 np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[1]-1)) ) / 2
     return ref_pos
 
-############# ------- UTILITY CLASSES
-class ReadFile:
-    # initialize single structure coordinates
-    def __init__(self, ext, fname, path=os.getcwd()):
-    #file type, name, (path)
-        try:
-            self.NAME = fname
-            self.TYPE = ext
-            file = os.path.join(path, fname+'.'+ext)
-            #print(file)
-            if self.TYPE == 'mol2':
-                self.MOL = Chem.MolFromMol2File(file, removeHs=False)
-            elif self.TYPE == 'mol':
-                self.MOL = Chem.MolFromMolFile(file, removeHs=False)
-            elif self.TYPE == 'xyz':
-                self.MOL = Chem.MolFromXYZFile(file, removeHs=False)
-            elif self.TYPE == 'pdb':
-                self.MOL = Chem.MolFromPDBFile(file, removeHs=False)
-            elif self.TYPE == 'sdf':
-                self.MOL = Chem.SDMolSupplier(file, removeHs=False)[0]
-            self.ATOMS = self.MOL.GetAtoms()
-            self.NATOMS = self.MOL.GetNumAtoms()
-        except Exception as e:
-            print('no structure file found -', file)
-            print(e)
-            sys.exit()
-
-    def Reference_Vector(self, tip, tail=None, plane=None):
-        print(self)
-        self.TIP_N = tip
-        if tail:
-            self.TAIL_N = tail
-            self.Vector = BindingVector(self.MOL, self.TIP_N, self.TAIL_N)
-        else:
-            self.PLN1_N = plane[0]
-            self.PLN2_N = plane[1]
-            self.Vector = BindingVector(self.MOL, self.TIP_N, [self.PLN1_N, self.PLN2_N])
-
-    def Assess_Geometry(self, geom=None, metalID=None, bindingAtoms=None, TOL=20):
-        if geom == 'octahedral':
-            if not len(bindingAtoms) == 5:
-                print('Cannot compute octahedral geometry from these atoms:')
-                print(bindingAtoms)
-                sys.exit()
-            self.Vector = GeometryVector(self.MOL, self.TIP_N, octahedral(self.MOL, metalID, bindingAtoms))
-        elif geom == 'tetrahedral':
-            if not len(bindingAtoms) == 3:
-                print('Cannot compute tetrahedral geometry from these atoms:')
-                print(bindingAtoms)
-                sys.exit()
-            self.Vector = GeometryVector(self.MOL, self.TIP_N, tetrahedral(self.MOL, metalID, bindingAtoms))
-        elif geom ==  'trigonal':
-            if not len(bindingAtoms) == 2:
-                print('Cannot compute trigonal geometry from these atoms:')
-                print(bindingAtoms)
-                sys.exit()
-            self.Vector = GeometryVector(self.MOL, self.TIP_N, trigonal(self.MOL, metalID, bindingAtoms))
-        else:
-            print('please a specify geometry')
-            sys.exit()
-
-class Structure:
-    # initialize single structure coordinates
-    def __init__(self, name, mol, path=os.getcwd()):
-    #file type, name, (path)
-        try:
-            self.NAME = name
-            self.MOL = mol
-            self.ATOMS = self.MOL.GetAtoms()
-            self.NATOMS = self.MOL.GetNumAtoms()
-        except Exception as e:
-            print('no structure file found -', file)
-            print(e)
-            sys.exit()
-
-    def Reference_Vector(self, tip, tail=None, plane=None):
-        self.TIP_N = tip
-        if tail:
-            self.TAIL_N = tail
-            self.Vector = BindingVector(self.MOL, self.TIP_N, self.TAIL_N)
-        elif plane:
-            self.PLN1_N = plane[0]
-            self.PLN2_N = plane[1]
-            self.Vector = BindingVector(self.MOL, self.TIP_N, [self.PLN1_N, self.PLN2_N])
-        else:
-            print('specify reference atom(s)')
-            sys.exit()
-
-    def Assess_Geometry(self, geom=None, metalID=None, bindingAtoms=None, TOL=20):
-        if geom == 'octahedral':
-            if not len(bindingAtoms) == 5:
-                print('Cannot compute octahedral geometry from these atoms:')
-                print(bindingAtoms)
-                sys.exit()
-            self.Vector = GeometryVector(self.MOL, self.TIP_N, octahedral(self.MOL, metalID, bindingAtoms))
-        elif geom == 'tetrahedral':
-            if not len(bindingAtoms) == 3:
-                print('Cannot compute tetrahedral geometry from these atoms:')
-                print(bindingAtoms)
-                sys.exit()
-            self.Vector = GeometryVector(self.MOL, self.TIP_N, tetrahedral(self.MOL, metalID, bindingAtoms))
-        elif geom ==  'trigonal':
-            if not len(bindingAtoms) == 2:
-                print('Cannot compute trigonal geometry from these atoms:')
-                print(bindingAtoms)
-                sys.exit()
-            self.Vector = GeometryVector(self.MOL, self.TIP_N, trigonal(self.MOL, metalID, bindingAtoms))
-        else:
-            print('please a specify geometry')
-            sys.exit()
-
-class Probe:
-    # initialize built-in probe
-    def __init__(self, probe):
-    # probe name
-        try:
-            PROBE_PATH = os.path.join(os.path.dirname(__file__), 'Probes')
-            self.NAME = probe
-            file = os.path.join(PROBE_PATH, probe+'.mol2')
-            self.MOL = Chem.MolFromMol2File(file, removeHs=False)
-            self.ATOMS = self.MOL.GetAtoms()
-            self.NATOMS = self.MOL.GetNumAtoms()
-            self.TIP_N = 0
-            self.TAIL_N = self.NATOMS-1
-        except Exception as e:
-            print('no probe found -', file)
-            print(e)
-            sys.exit()
-        self.Vector = BindingVector(self.MOL, self.TIP_N, self.TAIL_N)
-
-class GeometryVector:
-    def __init__(self, MOL, tip, tail_pos):
-        try:
-            self.TAIL_POS = tail_pos
-            self.TIP_POS = MOL.GetConformer().GetAtomPosition(int(tip))
-            v = (self.TIP_POS - self.TAIL_POS)
-            n = np.linalg.norm(v)
-            self.U = (v / n)
-        except np.linalg.LinAlgError:
-            print('invalid coordinates')
-            sys.exit()
-
-class BindingVector:
-    # calculate binding vectors
-    def __init__(self, MOL, tip, tail):
-    # ReadFiles/Probe.mol, tip atom number, tail atom number
-        try:
-            if type(tail) == list:
-                self.TIP_POS = MOL.GetConformer().GetAtomPosition(int(tip))
-                v1 = MOL.GetConformer().GetAtomPosition(int(tail[0])) - MOL.GetConformer().GetAtomPosition(int(tip))
-                n1 = np.linalg.norm(v1)
-                u1 = (v1 / n1)
-                v2 = MOL.GetConformer().GetAtomPosition(int(tail[1])) - MOL.GetConformer().GetAtomPosition(int(tip))
-                n2 = np.linalg.norm(v2)
-                u2 = (v2 / n2)
-                self.U = np.cross(u1,u2)
-            else:
-                self.TAIL_POS = MOL.GetConformer().GetAtomPosition(int(tail))
-                self.TIP_POS = MOL.GetConformer().GetAtomPosition(int(tip))
-                v = (self.TIP_POS - self.TAIL_POS)
-                n = np.linalg.norm(v)
-                self.U = (v / n)
-        except np.linalg.LinAlgError:
-            print('invalid coordinates')
-            sys.exit()
-
-class ExportStructure:
-    def __init__(self, mol, outname='out'):
-        Chem.MolToMolFile(mol, outname+'.mol')
-
 ############# ------- MAIN FNXS
-def clashCheck(conf, struc, probe):
+def _clashCheck(conf, struc, probe):
     # check for probe-structure clashes
-    for p in range(probe.NATOMS):
-        if p == probe.TIP_N or p == probe.TAIL_N:
+    for p in range(probe.getNumAtoms):
+        if p == probe.Id or p == probe.Ref:
             continue
-        for s in range(probe.NATOMS,probe.NATOMS+struc.NATOMS-1):
-            if s == struc.TIP_N:
-                #print(s,'bind')
+        for s in range(probe.getNumAtoms,probe.getNumAtoms+struc.getNumAtoms-1):
+            if s == struc.Id:
                 continue
             i_ = conf.GetConformer().GetAtomPosition(p)
             i_r = Chem.GetPeriodicTable().GetRvdw(conf.GetAtomWithIdx(p).GetAtomicNum())
@@ -236,11 +259,11 @@ def clashCheck(conf, struc, probe):
                 return True
     return False
 
-def optimizeFit(struc, probe, incr, dist, theta=5):
+def _optimizeFit(struc, probe, incr, dist, theta=5):
     # rotate probe to fit structure
-    conf = Chem.CombineMols(probe.MOL, struc.MOL)
+    conf = Chem.CombineMols(probe.Mol, struc.Mol)
     conf_ = Chem.RWMol(conf)
-    conf_.RemoveAtom(probe.TAIL_N)
+    conf_.RemoveAtom(probe.TailN)
     AllChem.SanitizeMol(conf_)
     #if AllChem.UFFHasAllMoleculeParams(conf_):
     #    ff = AllChem.UFFGetMoleculeForceField(conf_)
@@ -255,20 +278,20 @@ def optimizeFit(struc, probe, incr, dist, theta=5):
     #return conf_
     #Chem.MolToMolFile(conf_, str(theta)+'conf_.mol')
 
-    if not clashCheck(conf_, struc, probe):
+    if not _clashCheck(conf_, struc, probe):
         return conf_
     else:
         if theta < 360:
             theta += incr
             #probe_r = rotation(probe, probe.Vector.U, theta)
-            probe_r = rotation2(probe, np.array(struc.Vector.TIP_POS), probe.Vector.U, math.radians(theta))
-            return optimizeFit(struc, probe_r, incr, dist, theta)
+            probe_r = _rotation2(probe, np.array(struc.Vector.TIP_POS), probe.Vector.U, math.radians(theta))
+            return _optimizeFit(struc, probe_r, incr, dist, theta)
         else:
-            print('failed:',struc.NAME)
+            print('failed:', struc.NAME)
             return conf_
     return conf_
 
-def rotateAlign(struc, probe):
+def _rotateAlign(struc, probe):
     r = R.align_vectors([struc.Vector.U], [probe.Vector.U])
     r[0].as_matrix()
     newv = r[0].apply([np.array(probe.MOL.GetConformer().GetAtomPosition(i)) for i in range(probe.NATOMS)])
@@ -276,16 +299,16 @@ def rotateAlign(struc, probe):
     for i in range(probe.NATOMS):
         probe.MOL.GetConformer().SetAtomPosition(i, newv[i])
 
-    probe.Vector.TIP_POS = probe.MOL.GetConformer().GetAtomPosition(probe.TIP_N)
-    probe.Vector.TAIL_POS = probe.MOL.GetConformer().GetAtomPosition(probe.TAIL_N)
-    v = probe.Vector.TIP_POS  - probe.Vector.TAIL_POS
+    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.TIP_N)
+    probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.TAIL_N)
+    v = probe.Vector.TipPos  - probe.Vector.TailPos
     n = np.linalg.norm(v)
-    probe.Vector.U = v / n
+    probe.Vector.Unit = v / n
 
     return probe
 
-def rotation2(probe, tip, rotvec, theta):
-    for i in range(probe.NATOMS):
+def _rotation2(probe, tip, rotvec, theta):
+    for i in range(probe.getNumAtoms):
         a = np.array(probe.MOL.GetConformer().GetAtomPosition(i))
         dotproduct = rotvec[0]*(float(a[0]) - float(tip[0])) + rotvec[1]*(float(a[1]) - float(tip[1])) + rotvec[2]*(float(a[2]) - float(tip[2]))
         centre = [float(tip[0]) + dotproduct*rotvec[0], float(tip[1]) + dotproduct*rotvec[1], float(tip[2]) + dotproduct*rotvec[2]]
@@ -306,7 +329,7 @@ def rotation2(probe, tip, rotvec, theta):
 
     return probe
 
-def rotation(probe, rotvec, theta):
+def _rotation(probe, rotvec, theta):
     # rotate 3D about vector
     quat = mathutils.Quaternion(rotvec, math.radians(theta))
     r = R.from_quat(quat)
@@ -323,36 +346,37 @@ def rotation(probe, rotvec, theta):
 
     return probe
 
-def translate(struc, probe, dist):
+def _translate(struc, probe, dist):
     # translate to binding Point3D
-    binding_point = np.array(struc.Vector.TIP_POS) + (float(dist)*np.array(struc.Vector.U))
-    translation_v = binding_point - np.array(probe.Vector.TIP_POS)
+    #binding_point = np.array(struc.Vector.TIP_POS) + (float(dist)*np.array(struc.Vector.U))
+    translation_v = struc.BindingPos - probe.Vector.TIP_POS
 
     for i in range(probe.NATOMS):
         pt = np.array(probe.MOL.GetConformer().GetAtomPosition(i))
         translate = pt+translation_v
         probe.MOL.GetConformer().SetAtomPosition(i, translate)
 
-    probe.Vector.TIP_POS = probe.MOL.GetConformer().GetAtomPosition(probe.TIP_N)
-    probe.Vector.TAIL_POS = probe.MOL.GetConformer().GetAtomPosition(probe.TAIL_N)
+    probe.Vector.TIP_POS = probe.getMol().GetConformer().GetAtomPosition(probe.TIP_N)
+    probe.Vector.TAIL_POS = probe.getMol().GetConformer().GetAtomPosition(probe.TAIL_N)
     v = probe.Vector.TIP_POS  - probe.Vector.TAIL_POS
     n = np.linalg.norm(v)
     probe.Vector.U = v / n
 
     return probe
 
-def addProbe(struc, probe, dist=2.0, rot=5.0):
+############# ------- CTRL FNXS
+def add_probe(struc, probe, dist=2.0, rot=5.0):
+    '''addProbe: compute probe translation and rotation before docking to structure'''
     # main utility function
-    #print(struc, probe)
-    probe_r = rotateAlign(struc, probe)
+    probe_r = _rotateAlign(struc, probe)
     #Chem.MolToMolFile(probe_r.MOL, 'rot.mol')
-    probe_t = translate(struc, probe_r, dist)
+    probe_t = _translate(struc, probe_r, dist)
     #Chem.MolToMolFile(probe_t.MOL, 'transl.mol')
-    probe_optimized = optimizeFit(struc, probe_t, rot, dist)
+    probe_optimized = _optimizeFit(struc, probe_t, rot, dist)
     return probe_optimized
 
-def main(struc_file, probe_name, tip, tail, plane, dist, out):
-
+def main(struc_file, probe_name, tip, tail, plane, dist, out='SMART_probe_'):
+    '''main: ctrl function for cmd line usage'''
     name, ext = struc_file.split('.')[0], struc_file.split('.')[-1]
     # define structure
     if tail:
@@ -371,13 +395,15 @@ def main(struc_file, probe_name, tip, tail, plane, dist, out):
 
 if __name__ == '__main__':
     ##! PARSE CMDLINE INPUT !##
-    parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Probe addition Utility Package.',epilog='Add molecular probes to structures for SMART parameter generation.')
+    parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Probe Addition Utility Package.',epilog='Add molecular probes to structures for SMART parameter generation.')
     parser.add_argument('-f', required=True) #structure file
-    parser.add_argument('-o', required=False, default='SMART_probe_') #output file
-    parser.add_argument('-tip', required=True) # tip atom (0-indexed)
-    parser.add_argument('-tail', required=False) # tail atom (0-indexed)
-    parser.add_argument('-plane', required=False) # tail plane atoms (2n, 0-indexed)
+    parser.add_argument('-id', required=True) # tip atom (0-indexed)
+    parser.add_argument('-geom', required=True) # tail atom (0-indexed)
     parser.add_argument('-p', required=True) #probe name
+
+    parser.add_argument('-o', required=False, default='SMART_probe_') #output file
+    parser.add_argument('-ref', required=False) # tail atom (0-indexed)
+    parser.add_argument('-plane', required=False) # tail plane atoms (2n, 0-indexed)
     parser.add_argument('-dist', required=False, default=2.0) #probe distance
 
     args = parser.parse_args()
