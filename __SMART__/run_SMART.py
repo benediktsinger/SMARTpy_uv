@@ -18,7 +18,7 @@ structure.reference_vector(0, 1, dist=2.0)
 print(structure.Id)
 
 # Prepare probe
-probe = SMART.ReadProbe('S_SiF2_10_cyclic.mol2')
+probe = SMART.ReadProbe('S_SiF2_12_cyclic.mol2')
 probe_count = probe.NumAtoms
 # Dock probe to structure
 print('\nadding probe',probe)
