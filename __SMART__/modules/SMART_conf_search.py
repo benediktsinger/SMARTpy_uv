@@ -471,13 +471,13 @@ def main(Fin, Pin, PROTOC, name):
 if __name__ == '__main__':
     ##! PARSE CMDLINE INPUT !##
     parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Probe Conformer-Generation Utility Package.',epilog='Probe conformer search by torsional/template search')
-    parser.add_argument('-s', required=True, choices=[1,2,3,'torsional','template','custom']) #search protocol
     parser.add_argument('-f', required=True) #structure file
     parser.add_argument('-p', required=True) #parameter file
+    parser.add_argument('-method', required=True, choices=[1,2,3,'torsional','template','custom']) #search protocol
     parser.add_argument('-o', required=False, default='SMART_conformers_') #output filename
 
     args = parser.parse_args()
 
     starttime = time.time()
-    main(args.f, args.p, args.s, args.o)
+    main(args.f, args.p, args.method, args.o)
     print("--- %s seconds ---" % (time.time() - starttime))

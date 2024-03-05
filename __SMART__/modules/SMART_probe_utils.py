@@ -231,24 +231,12 @@ class ReadFile(Reference_Vector, Detect_Geometry, Reference_Angle):
         Detect_Geometry.__init__(self, tip, covalent, searchRadius)
 
 
-class ReadMol(Reference_Vector):
+class ReadMol(ReadFile):
     # initialize RDKit MOL as input
     def __init__(self, mol):
         '''ReadMol: RDKit MOL as input and base attributes'''
         self.MOL = mol
         self.NumAtoms = self.MOL.GetNumAtoms()
-
-    def reference_vector(self, tip, tail, dist=2.0):
-        Reference_Vector.__init__(self, tip, tail, dist)
-
-    def reference_angle(self, tip, tails, dist=2.0):
-        Reference_Angle.__init__(self, tip, tails, dist)
-
-    def reference_geometry(self, tip, geom, bindingAtoms, dist=2.0):
-        Define_Geometry.__init__(self, tip, geom, bindingAtoms, dist)
-
-    def detect_geometry(self, tip, covalent=True, searchRadius=None):
-        Detect_Geometry.__init__(self, tip, covalent, searchRadius)
 
 class ReadProbe(Reference_Vector):
     # initialize probe
@@ -444,14 +432,14 @@ if __name__ == '__main__':
     ##! PARSE CMDLINE INPUT !##
     parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Probe Addition Utility Package.',epilog='Add molecular probes to structures for SMART parameter generation.')
     parser.add_argument('-f', required=True) #structure file
-    parser.add_argument('-id', required=True) # tip atom (0-indexed)
-    parser.add_argument('-geom', required=True) # tail atom (0-indexed)
     parser.add_argument('-p', required=True) #probe name
+    parser.add_argument('-id', required=True) # binding (tip) atom (0-indexed)
 
-    parser.add_argument('-o', required=False, default='SMART_probe_') #output file
     parser.add_argument('-ref', required=False) # tail atom (0-indexed)
-    parser.add_argument('-plane', required=False) # tail plane atoms (2n, 0-indexed)
+    parser.add_argument('-angle', required=False) # angle reference atoms (2n, 0-indexed)
+    parser.add_argument('-geom', required=False, choices=['tetrahedral','trigonal','octahedral','auto']) # geometry
     parser.add_argument('-dist', required=False, default=2.0) #probe distance
+    parser.add_argument('-o', required=False, default='SMART_probe_') #output file
 
     args = parser.parse_args()
 

@@ -51,6 +51,7 @@ def _read_files(fname):
 
 def _coords_from_mols(confs):
     ''' convert MOL object to xyz coordinate, element name lists '''
+    print('gen coords',confs.GetNumConformers())
     coords = []
     elems = []
     for cid in range(confs.GetNumConformers()):
@@ -107,9 +108,9 @@ def DBSTEP_Properties(struc, probe, id, prox_radius=3.5):
 def Morfeus_Properties(struc, probe, id, prox_radius=3.5):
     ''' Uses morfeus package to compute properties by buried volume, sterimol, and sasa '''
 
-    print('\nComputing Morfeus descriptors')
+    print('\nComputing Morfeus descriptors\n')
     properties = {}
-    pcoords, pelems = _coords_from_mols(confs)
+    pcoords, pelems = _coords_from_mols(probe)
     scoords, selems = _coords_from_mols(struc)
     max_radius = _max_radius(pcoords, TOL=5)
 
@@ -141,10 +142,10 @@ def Morfeus_Properties(struc, probe, id, prox_radius=3.5):
 
     return properties
 
-def PyVista_Properties(struc, probe, id, prox_radius=3.5, aplha=0):
+def PyVista_Properties(struc, probe, id, prox_radius=3.5, a=0):
     ''' Uses pyvista package to assemble geometric objects and extract properties '''
 
-    print('\nComputing PyVista descriptors')
+    print('\nComputing PyVista descriptors\n')
     properties = {}
     pcoords, pelems = _coords_from_mols(confs)
     scoords, selems = _coords_from_mols(structure)
@@ -159,11 +160,11 @@ def PyVista_Properties(struc, probe, id, prox_radius=3.5, aplha=0):
     cmplx_ptcloud.cast_to_pointset()
 
     # make shape object from pt cloud (delaunay triangulation)
-    cavity = p_ptcloud.delaunay_3d(alpha=alpha)
+    cavity = p_ptcloud.delaunay_3d(alpha=a)
     cavity.extract_geometry()
-    struc = s_ptcloud.delaunay_3d(alpha=alpha)
+    struc = s_ptcloud.delaunay_3d(alpha=a)
     struc.extract_geometry()
-    cmplx = cmplx_ptcloud.delaunay_3d(alpha=alpha)
+    cmplx = cmplx_ptcloud.delaunay_3d(alpha=a)
     cmplx.extract_geometry()
 
     # proximal/distal clipping
@@ -191,16 +192,15 @@ def PyVista_Properties(struc, probe, id, prox_radius=3.5, aplha=0):
 def RDKit_Properties(struc, probe):
     ''' Uses rdkit package to compute properties '''
 
-    print('\nComputing RDKit descriptors')
+    print('\nComputing RDKit descriptors\n')
     properties = {}
-    pcoords, pelems = _coords_from_mols(confs)
+    pcoords, pelems = _coords_from_mols(probe)
     scoords, selems = _coords_from_mols(structure)
     allcoords, allelems = pcoords+scoords, pelems+selems
 
     cmplx = Chem.CombineMols(probe, struc)
     AllChem.SanitizeMol()
-
-    properties = {}
+    print('made cmplx')
     probe_radii = [Chem.GetPeriodicTable().GetRvdw(elem) for elem in pelems]
     struc_radii = [Chem.GetPeriodicTable().GetRvdw(elem) for elem in selems]
     cmplx_sradii = [Chem.GetPeriodicTable().GetRvdw(elem) for elem in allelems]
@@ -208,9 +208,10 @@ def RDKit_Properties(struc, probe):
     area_struc = rdFreeSASA.CalcSASA(struc, struc_radii)
     area_cmplx = rdFreeSASA.CalcSASA(cmplx, cmplx_sradii)
 
-    properties['RDKit_Mol_VOL_cavity'] = AllChem.ComputeMolVolume(probe)
+    #properties['RDKit_Mol_VOL_cavity'] = AllChem.ComputeMolVolume(probe)
     # SASA properties
     properties['RDKit_SASA_AREA_cavity'] = rdFreeSASA.CalcSASA(probe, probe_radii)
+    print('computed sasa')
     properties['RDKit_SASA_CSA_cavity'] = ( ( area_struc + properties['RDKit_SASA_AREA_cavity'] ) - area_cmplx ) / 2
     properties['RDKit_SASA_ESA_cavity'] = properties['RDKit_SASA_AREA_cavity'] - properties['RDKit_SASA_CSA_cavity']
     properties['RDKit_SASA_%ESA_cavity'] = 100 * ( properties['RDKit_SASA_ESA_cavity'] / properties['RDKit_SASA_AREA_cavity'] )

@@ -19,7 +19,7 @@ probe = SMART.ReadProbe('S_SiF2_12_cyclic.mol2')
 
 # Dock probe to structure
 print('\nadding probe',probe)
-docked = SMART.add_probe(structure, probe, dist=2.0)
+docked = SMART.add_probe(structure, probe)
 
 # Conf search (custom template method)
 cav, struc, cmplx = SMART_conf.CUSTOM_TEMPLATE_SEARCH(docked)
