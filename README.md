@@ -8,53 +8,99 @@ An open-source Python package for generation of SMART probe ensembles and calcul
 - scipy
 - mathutils
 - RDKit
+- morfeus (optional)
 - dbstep (optional)
 - pyvista (optional)
   
 # Instructions
 ### Step 1: Select and Add Probe to Structure(s) of Interest
+#### Option 1: Tail-to-Tip Reference Vector
+~Insert img here~
 ```
 import SMART_probe_utils as SMART
 file = 'R-TCPTTL_1'
-ext = 'mol'
-structure = SMART.ReadFile(ext, file, tip=0, tail=1) # initialize structure
-probe = SMART.Probe('acyclic_6SiH2') # initialize probe
-docked = SMART.addProbe(structure, probe, dist=2.0) # dock probe to structure
-SMART.ExportStructure(docked, file+'_probe') # (optional) export docked structure as mol file
+structure = SMART.ReadFile(file) # initialize structure
+structure.reference_vector(tip=0, tail=1, dist=2.0) # define reference binding vector
+probe = SMART.Probe('S_SiF2_12_cyclic.mol2') # initialize selected probe (in Probes/ folder)
+docked = SMART.add_probe(structure, probe) # start docking protocol
+SMART.ExportStructure(docked, file+'_probe') # (optional) export docked structure as .mol file
 ```
 Where:
 
-Tip = 0-indexed ID of binding atom
+tip = 0-indexed ID of binding atom
 
-Tail = 0-indexed ID of reference atom
+tail = 0-indexed ID of reference atom
+
+dist = distance of probe binding point from binding atom (Å)
 
 Add probe using command line interface:
 ```
-python3 SMART_probe_utils.py -f R-TCPTTL_1.mol -o R-TCPTTL_1_probe -tip 0 -tail 1 -p acyclic_6SiH2 -dist 2.0
+python3 SMART_probe_utils.py -f R-TCPTTL_1.mol2 -o R-TCPTTL_1_probe -id 0 -ref 1 -p S_SiF2_12_cyclic.mol2 -dist 2.0
 ```
+#### Option 2: Angle Cross Product Reference Vector
+Insert img here
+```
+import SMART_probe_utils as SMART
+file = 'R-TCPTTL_1'
+structure = SMART.ReadFile(file) # initialize structure
+structure.reference_angle(tip=0, tails=[50,21], dist=2.0) # define reference binding vector
+probe = SMART.Probe('S_SiF2_12_cyclic.mol2') # initialize selected probe (in Probes/ folder)
+docked = SMART.add_probe(structure, probe) # start docking protocol
+SMART.ExportStructure(docked, file+'_probe') # (optional) export docked structure as .mol file
+```
+Add probe using command line interface:
+```
+python3 SMART_probe_utils.py -f R-TCPTTL_1.mol2 -o R-TCPTTL_1_probe -id 0 -ref 1 -p S_SiF2_12_cyclic.mol2 -dist 2.0
+```
+#### Option 3: Define Geometry of Binding Center
+Insert img here
+
+#### Option 4: Auto-Detect Geometry of Binding Center
+Insert img here
+
 ### Step 2: Generate Probe Conformational Ensemble
+#### Option 1: Template Search
+Insert img here
+
+generate conformers by fitting and rotating a probe conformer ensemble template to cavity of interest
 ```
 import SMART_conf_search as SMART_conf
-PAR = {'FIXAT':[-22, 100, 1], 'NSTEP':500, 'MAXROTATION':330,'MINROTATION':30} #freeze atoms 22-100, 1
-SMART_conf.PARAMS.read_parameters(PAR) # set search parameters
+SMART_conf.PARAMS.read_parameters({'NSTEP':20, 'MINROTATION':30, 'MAXROTATION':330}) # initialize custom search parameters
 try:
-    confs = SMART_conf.start(docked) # run algorithm
-except RecursionError:
-    print('simulation failed for', file)
-
+    cavity, structure, cmplx = SMART_conf.CUSTOM_TEMPLATE_SEARCH(docked) # run template algorithm
+except Exception as e:
+    print('simulation failed for - ', file)
+    print(e)
 SMART_conf.save_out('SMART_confs_'+file) # (optional) export ensemble as mol2 file
 ```
 Run simulation using command line interface:
 ```
-python3 SMART_conf_search.py ... TBD
+python3 SMART_conf_search.py -f R-TCPTTL_1_probe.mol -method template -p PARAMS.txt
+```
+#### Option 2: Torsional Search
+Insert img here
+
+*this search method does not support cyclic probes*
+```
+import SMART_conf_search as SMART_conf
+SMART_conf.PARAMS.read_parameters({'NSTEP':500, 'MINROTATION':30, 'MAXROTATION':330}) # initialize custom search parameters
+try:
+    cavity, structure, cmplx = SMART_conf.TORSIONAL_STEP_SEARCH(docked) # run torsional algorithm
+except Exception as e:
+    print('simulation failed for - ', file)
+    print(e)
+SMART_conf.save_out('SMART_confs_'+file) # (optional) export ensemble as mol2 file
+```
+Run simulation using command line interface:
+```
+python3 SMART_conf_search.py -f R-TCPTTL_1_probe.mol -method torsional -p PARAMS.txt
 ```
 ### Step 3: Calculate Molecular Descriptors
+All descriptors can be gathered and compiled using the function ```get_all_properties()```
 ```
 import SMART_descriptors as SMART_des
 binding_ID = 0 # structure tip atom
-RDKit_props = SMART_des.RDKit_Properties(confs, binding_ID)
-DBSTEP_props = SMART_des.DBSTEP_Properties(confs, binding_ID)
-PyVista_props = SMART_des.PyVista_Properties(confs, binding_ID)
+properties = SMART_des.get_all_properties(cavity, structure, binding_ID, prox_radius=3.5, alpha=0)
 ```
 Calculate descriptors using command line interface:
 ```
