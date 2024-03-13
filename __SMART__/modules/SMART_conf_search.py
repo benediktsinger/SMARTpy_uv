@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # SMART probe conformational search utility
-#   version: b0.1 (released 10-10-2023)
+#   version: b2.0 (released 03-05-2024)
 #   developer: Beck R. Miller (beck.miller@utah.edu)
 #
 # Dev Notes:

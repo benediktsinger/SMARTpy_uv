@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # SMART probe addition utility
-#   version: b1.1 (released 01-27-2024)
+#   version: b2.0 (released 03-05-2024)
 #   developer: Beck R. Miller (beck.miller@utah.edu)
 #   GitHub:
 ############# ------- DEPENDENCIES
@@ -25,7 +25,7 @@ def _octahedral(mol, id, bindingAtoms):
             if a == b:
                 continue
             n += 1
-            angle = rdMolTransforms.GetAngleDeg(mol.GetConformer(), a-1, id-1, b-1)
+            angle = rdMolTransforms.GetAngleDeg(mol.GetConformer(), a, id, b)
             avg += angle
             if angle > max:
                 max = angle
@@ -35,14 +35,14 @@ def _octahedral(mol, id, bindingAtoms):
             return a-1
 
 def _tetrahedral(mol, bindingAtoms):
-    ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[0]-1)) +
-                np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[1]-1)) +
-                np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[2]-1)) ) / 3
+    ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[0])) +
+                np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[1])) +
+                np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[2])) ) / 3
     return ref_pos
 
 def _trigonal_planar(mol, bindingAtoms):
-    ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[0]-1)) +
-                np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[1]-1)) ) / 2
+    ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(int(bindingAtoms[0]))) +
+                np.array(mol.GetConformer().GetAtomPosition(int(bindingAtoms[1]))) ) / 2
     return ref_pos
 
 ############# ------- PROTECTED VECTOR CONSTRUCTION CLASSES
@@ -105,7 +105,7 @@ class Define_Geometry(_reference_vector):
         self.Geometry = geom
         self.Id = id
         self.RefAtoms = bindingAtoms
-        tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.Id))
+        self.tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.Id))
         if not self.RefAtoms:
             print('please specify binding atoms or use Detect_Geometry feature')
             print(bindingAtoms)
@@ -122,32 +122,33 @@ class Define_Geometry(_reference_vector):
             print(self.Geometry)
             sys.exit()
 
-        def octahedral(self):
-            if not len(self.RefAtoms) == 5:
-                print('Cannot compute octahedral geometry from these atoms:')
-                print(self.RefAtoms)
-                sys.exit()
-            tail_pos = _octahedral(self.MOL, self.TipId, self.RefAtoms)
-            self.Vector = _reference_vector.__init__(self, tip_pos, tail_pos)
-            #self.BindingPos = np.array(self.Vector.TipPos) + (float(dist)*np.array(self.Vector.U))
+    def octahedral(self):
+        if not len(self.RefAtoms) == 5:
+            print('Cannot compute octahedral geometry from these atoms:')
+            print(self.RefAtoms)
+            sys.exit()
+        tail_pos = _octahedral(self.MOL, self.tip_pos, self.RefAtoms)
+        self.Vector = _reference_vector.__init__(self, self.Id, tail_pos)
+        #self.BindingPos = np.array(self.Vector.TipPos) + (float(dist)*np.array(self.Vector.U))
 
-        def tetrahedral(self):
-            if not len(self.RefAtoms) == 3:
-                print('Cannot compute tetrahedral geometry from these atoms:')
-                print(self.RefAtoms)
-                sys.exit()
-            tail_pos = _tetrahedral(self.MOL, self.RefAtoms)
-            self.Vector = _reference_vector.__init__(self, tip_pos, tail_pos)
-            #self.BindingPos = np.array(self.Vector.TipPos) + (float(dist)*np.array(self.Vector.U))
+    def tetrahedral(self):
+        if not len(self.RefAtoms) == 3:
+            print('Cannot compute tetrahedral geometry from these atoms:')
+            print(self.RefAtoms)
+            sys.exit()
+        tail_pos = _tetrahedral(self.MOL, self.RefAtoms)
+        self.Vector = _reference_vector.__init__(self, self.tip_pos, tail_pos)
+        #self.BindingPos = np.array(self.Vector.TipPos) + (float(dist)*np.array(self.Vector.U))
 
-        def trigonal_planar(self):
-            if not len(self.RefAtoms) == 2:
-                print('Cannot compute trigonal planar geometry from these atoms:')
-                print(self.RefAtoms)
-                sys.exit()
-            tail_pos = _trigonal_planar(self.MOL, self.RefAtoms)
-            self.Vector = _reference_vector.__init__(self, tip_pos, tail_pos)
-            #self.BindingPos = np.array(self.Vector.TipPos) + (float(dist)*np.array(self.Vector.U))
+    def trigonal_planar(self):
+        if not len(self.RefAtoms) == 2:
+            print('Cannot compute trigonal planar geometry from these atoms:')
+            print(self.RefAtoms)
+            sys.exit()
+        #print(self.MOL,self.RefAtoms)
+        tail_pos = _trigonal_planar(self.MOL, self.RefAtoms)
+        self.Vector = _reference_vector.__init__(self, self.tip_pos, tail_pos)
+        #self.BindingPos = np.array(self.Vector.TipPos) + (float(dist)*np.array(self.Vector.U))
 
         #def trigonal_bipyramidal(self):
 
@@ -237,6 +238,7 @@ class ReadMol(ReadFile):
         '''ReadMol: RDKit MOL as input and base attributes'''
         self.MOL = mol
         self.NumAtoms = self.MOL.GetNumAtoms()
+        self.Name = None
 
 class ReadProbe(Reference_Vector):
     # initialize probe

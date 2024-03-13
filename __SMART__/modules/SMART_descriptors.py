@@ -1,11 +1,12 @@
 #!/usr/bin/python
 # SMART descriptor generators
-#   version: b0.1 (released 10-10-2023)
+#   version: b2.1 (released 03-13-2024)
 #   developer: Beck R. Miller (beck.miller@utah.edu)
 #
 ############# ------- DEPENDENCIES
 import math, argparse, time, sys, os
 import numpy as np
+import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import rdFreeSASA, Descriptors3D, AllChem
 
@@ -23,44 +24,159 @@ except Exception as e:
     print('pyvista is not installed')
 
 ############# ------- UTILITY FNXS
-def _read_files(fname):
-    probe, struc = None, None
+class ReadFiles():
+    def __init__():
+        pass
+    def read_separate_files(mol, probe, cmplx):
+        stuff = [mol, probe, cmplx]
+        for file in stuff:
+            name = file.split('.')[0]
+            ext = file.split('.')[1]
+            mol = None
+            if ext == 'mol2':
+                mol = Chem.MolFromMol2File(file, removeHs=False)
+            elif ext == 'mol':
+                mol = Chem.MolFromMolFile(file, removeHs=False)
+            elif ext == 'xyz':
+                mol = Chem.MolFromXYZFile(file, removeHs=False)
+            elif ext == 'pdb':
+                mol = Chem.MolFromPDBFile(file, removeHs=False)
+            elif ext == 'sdf':
+                suppl = Chem.SDMolSupplier(file, removeHs = False)
+                for m in suppl:
+                    if not mol:
+                        mol = m
+                    else:
+                        mol.AddConformer(m.GetConformer(), assignId=True)
+            stuff[stuff.index(file)] = mol
+
+    def read_prefix(fname):
+        probe, struc, cmplx = None, None, None
+        file = ''
+        try:
+            file = os.path.join(os.getcwd(),fname + '_cavity.sdf')
+            suppl = Chem.SDMolSupplier(file, removeHs = False)
+            for mol in suppl:
+                if not probe:
+                    probe = mol
+                else:
+                    probe.AddConformer(mol.GetConformer(), assignId=True)
+        except Exception as e:
+            print('No cavity file found - '+file)
+            print(e)
+        try:
+            file = os.path.join(os.getcwd(), fname + '_mol.sdf')
+            suppl = Chem.SDMolSupplier(file, removeHs = False)
+            for mol in suppl:
+                if not struc:
+                    struc = mol
+                else:
+                    struc.AddConformer(mol.GetConformer(), assignId=True)
+        except Exception as e:
+            print('No mol file found - '+file)
+            print(e)
+        try:
+            file = os.path.join(os.getcwd(), fname + '_cplx.sdf')
+            suppl = Chem.SDMolSupplier(file, removeHs = False)
+            for mol in suppl:
+                if not cmplx:
+                    cmplx = mol
+                else:
+                    cmplx.AddConformer(mol.GetConformer(), assignId=True)
+        except Exception as e:
+            print('No complex file found - '+file)
+            print(e)
+
+def read_separate_files(mol, probe, cmplx):
+    stuff = [mol, probe, cmplx]
+    for file in stuff:
+        name = file.split('.')[0]
+        ext = file.split('.')[1]
+        mol = None
+        if ext == 'mol2':
+            mol = Chem.MolFromMol2File(file, removeHs=False)
+        elif ext == 'mol':
+            mol = Chem.MolFromMolFile(file, removeHs=False)
+        elif ext == 'xyz':
+            mol = Chem.MolFromXYZFile(file, removeHs=False)
+        elif ext == 'pdb':
+            mol = Chem.MolFromPDBFile(file, removeHs=False)
+        elif ext == 'sdf':
+            suppl = Chem.SDMolSupplier(file, removeHs = False)
+            for m in suppl:
+                if not mol:
+                    mol = m
+                else:
+                    mol.AddConformer(m.GetConformer(), assignId=True)
+        stuff[stuff.index(file)] = mol
+
+    return stuff
+
+def read_files(fname):
+    probe, struc, cmplx = None, None, None
     file = ''
     try:
-        file = fname + '_cavity.sdf'
+        file = os.path.join(os.getcwd(),fname + '_cavity.sdf')
         suppl = Chem.SDMolSupplier(file, removeHs = False)
         for mol in suppl:
-            if not confs:
+            if not probe:
                 probe = mol
             else:
                 probe.AddConformer(mol.GetConformer(), assignId=True)
     except Exception as e:
         print('No cavity file found - '+file)
+        print(e)
     try:
-        file = fname + '_mol.sdf'
+        file = os.path.join(os.getcwd(), fname + '_mol.sdf')
         suppl = Chem.SDMolSupplier(file, removeHs = False)
         for mol in suppl:
-            if not confs:
+            if not struc:
                 struc = mol
             else:
                 struc.AddConformer(mol.GetConformer(), assignId=True)
     except Exception as e:
         print('No mol file found - '+file)
+        print(e)
+    try:
+        file = os.path.join(os.getcwd(), fname + '_cplx.sdf')
+        suppl = Chem.SDMolSupplier(file, removeHs = False)
+        for mol in suppl:
+            if not cmplx:
+                cmplx = mol
+            else:
+                cmplx.AddConformer(mol.GetConformer(), assignId=True)
+    except Exception as e:
+        print('No complex file found - '+file)
+        print(e)
 
-    return probe, struc
+    return probe, struc, cmplx
 
 def _coords_from_mols(confs):
-    ''' convert MOL object to xyz coordinate, element name lists '''
-    print('gen coords',confs.GetNumConformers())
+    ''' convert CONF object to xyz coordinate, element name lists '''
+    #print('gen coords',confs.GetNumConformers())
     coords = []
     elems = []
-    for cid in range(confs.GetNumConformers()):
-        for i in range(confs.GetNumAtoms()):
-            atom = confs.GetAtomWithIdx(i)
+    for c in confs.GetConformers():
+        cid = c.GetId()
+        for i, atom in enumerate(confs.GetAtoms()):
+            #atom = confs.GetAtomWithIdx(i)
             pos = confs.GetConformer(cid).GetAtomPosition(i)
             coords.append(np.array(pos))
             elem = atom.GetSymbol()
             elems.append(elem)
+    return coords, elems
+
+def _coords_from_mol(struc):
+    ''' convert MOL object to xyz coordinate, element name lists '''
+    #print('gen coords',confs.GetNumConformers())
+    coords = []
+    elems = []
+    for i, atom in enumerate(struc.GetAtoms()):
+        #atom = struc.GetAtomWithIdx(i)
+        pos = struc.GetConformer().GetAtomPosition(i)
+        coords.append(np.array(pos))
+        elem = atom.GetSymbol()
+        elems.append(elem)
     return coords, elems
 
 def _max_radius(coords, TOL=5):
@@ -83,21 +199,22 @@ def DBSTEP_Properties(struc, probe, id, prox_radius=3.5):
     print('\nComputing DBSTEP descriptors')
     properties = {}
     coords, elems = _coords_from_mols(probe)
+
     coords.append(np.array(struc.GetConformer().GetAtomPosition(int(id))))
     elems.append(struc.GetAtomWithIdx(int(id)).GetSymbol())
 
     max_radius = _max_radius(coords, TOL=5)
 
-    sterimol = db.dbstep(probe, atom1=int(id)+1+probe.GetNumAtoms(), atom2=1, sterimol=True)
-    bv = db.dbstep(probe, atom1=1, volume=True, r=prox_radius)
-    bv_max = db.dbstep(probe, atom1=1, volume=True, r=max_radius)
+    sterimol = db.dbstep(probe, atom1=int(id)+probe.GetNumAtoms(), atom2=0, sterimol=True)
+    bv = db.dbstep(probe, atom1=0, volume=True, r=prox_radius)
+    bv_max = db.dbstep(probe, atom1=0, volume=True, r=max_radius)
 
     # VBur cavity properties
     properties['dbstep_VBur_VOL_cavity'] = (bv_max.bur_vol/100)*((4/3)*np.pi*((max_radius)**3))
     properties['dbstep_VBur_%VOL_cavity'] = bv_max.bur_vol
     properties['dbstep_VBur_proxVOL_cavity'] = (bv.bur_vol/100)*((4/3)*np.pi*((prox_radius)**3))
     properties['dbstep_VBur_%proxVOL_cavity'] = bv.bur_vol
-    properties['dbstep_VBur_distVOL_cavity'] = properties['VBurFULLcavity'] - properties['VBurPROXcavity']
+    properties['dbstep_VBur_distVOL_cavity'] = properties['dbstep_VBur_VOL_cavity'] - properties['dbstep_VBur_proxVOL_cavity']
     # Sterimol cavity properties
     properties['dbstep_Sterimol_L_cavity'] = sterimol.L
     properties['dbstep_Sterimol_B1_cavity'] = sterimol.Bmin
@@ -116,19 +233,22 @@ def Morfeus_Properties(struc, probe, id, prox_radius=3.5):
 
     bv = BuriedVolume(pelems, pcoords, 0, radius=prox_radius).compute_distal_volume(method="buried_volume")
     bv_max = BuriedVolume(pelems, pcoords, 0, radius=max_radius).compute_distal_volume(method="buried_volume")
+
     probe_sasa = SASA(pelems, pcoords)
     struc_sasa = SASA(selems, scoords)
     cmplx_sasa = SASA(pelems+selems, pcoords+scoords)
 
-    pcoords.append(np.array(struc.GetConformer().GetAtomPosition(int(id))))
-    pelems.append(struc.GetAtomWithIdx(int(id)).GetSymbol())
-    sterimol = Sterimol(pelems, pcoords, len(pcoords)-1, 0)
+    #print('Sterimol')
+    #pcoords.append(np.array(struc.GetConformer().GetAtomPosition(int(id))))
+    #pelems.append(struc.GetAtomWithIdx(int(id)).GetSymbol())
+    #sterimol = Sterimol(pelems, pcoords, len(pcoords)-1, 0)
 
     # SASA cavity properties
+    struc
     properties['morfeus_SASA_AREA_cavity'] = probe_sasa.area
     properties['morfeus_SASA_CSA_cavity'] = ( (probe_sasa.area + struc_sasa.area) - cmplx_sasa.area) / 2
-    properties['morfeus_SASA_ESA_cavity'] = probe_sasa.area - properties['morfeus_SASA_CSA_structure']
-    properties['morfeus_SASA_%ESA_cavity'] = 100 * ( properties['morfeus_SASA_ESA_structure'] / probe_sasa.area )
+    properties['morfeus_SASA_ESA_cavity'] = probe_sasa.area - properties['morfeus_SASA_CSA_cavity']
+    properties['morfeus_SASA_%ESA_cavity'] = 100 * ( properties['morfeus_SASA_ESA_cavity'] / probe_sasa.area )
     # VBur cavity properties
     properties['morfeus_VBur_VOL_cavity'] = bv_max.buried_volume
     properties['morfeus_VBur_%VOL_cavity'] = bv_max.percent_buried_volume
@@ -136,9 +256,9 @@ def Morfeus_Properties(struc, probe, id, prox_radius=3.5):
     properties['morfeus_VBur_%proxVOL_cavity'] = bv.percent_buried_volume
     properties['morfeus_VBur_distVOL_cavity'] = bv.distal_volume
     # Sterimol cavity properties
-    properties['morfeus_Sterimol_L_cavity'] = sterimol.L_value
-    properties['morfeus_Sterimol_B1_catvity'] = sterimol.B_1_value
-    properties['morfeus_Sterimol_B5_cavity'] = sterimol.B_5_value
+    #properties['morfeus_Sterimol_L_cavity'] = sterimol.L_value
+    #properties['morfeus_Sterimol_B1_catvity'] = sterimol.B_1_value
+    #properties['morfeus_Sterimol_B5_cavity'] = sterimol.B_5_value
 
     return properties
 
@@ -147,8 +267,8 @@ def PyVista_Properties(struc, probe, id, prox_radius=3.5, a=0):
 
     print('\nComputing PyVista descriptors\n')
     properties = {}
-    pcoords, pelems = _coords_from_mols(confs)
-    scoords, selems = _coords_from_mols(structure)
+    pcoords, pelems = _coords_from_mols(probe)
+    scoords, selems = _coords_from_mols(struc)
     pt = scoords[id]
 
     # gen point cloud from 3D coords
@@ -161,49 +281,57 @@ def PyVista_Properties(struc, probe, id, prox_radius=3.5, a=0):
 
     # make shape object from pt cloud (delaunay triangulation)
     cavity = p_ptcloud.delaunay_3d(alpha=a)
-    cavity.extract_geometry()
+    cavity = cavity.extract_geometry()
+    cavity = cavity.extract_surface().triangulate()
     struc = s_ptcloud.delaunay_3d(alpha=a)
-    struc.extract_geometry()
+    struc = struc.extract_geometry()
+    struc = struc.extract_surface().triangulate()
     cmplx = cmplx_ptcloud.delaunay_3d(alpha=a)
-    cmplx.extract_geometry()
+    cmplx = cmplx.extract_geometry()
+    cmplx = cmplx.extract_surface().triangulate()
 
     # proximal/distal clipping
     sphere = pv.Sphere(radius=prox_radius, center=pt)
-    #p_ptcloud.compute_implicit_distance(sphere, inplace=True)
     prox = p_ptcloud.clip_surface(sphere, invert=True)
-    prox.extract_geometry()
-    dist = p_ptcloud.clip_surface(sphere, invert=False)
-    dist.extract_geometry()
+    prox = prox.delaunay_3d(alpha=a)
+    prox = prox.extract_geometry()
+    prox = prox.extract_surface().triangulate()
+
+    #p = pv.Plotter()
+    #p.add_mesh(p_ptcloud, color='gold', label='full', opacity=0.75)
+    #p.add_mesh(sphere, color='black', label='full', opacity=0.75)
+    #p.add_mesh(prox, color='blue', label='prox', opacity=0.75)
+    #p.add_mesh(dist, color='red', label='dist', opacity=0.75)
+    #p.add_legend()
+    #p.show()
+
+    #print('cavity', cavity.volume, cavity.area)
+    #print('struc',  struc.volume, struc.area)
+    #print('cmplx',  cmplx.volume, cmplx.area)
+    #print('proximal', prox.volume, prox.area)
 
     # full cavity properties
-    properties['pyVista_delaunay_VOL_cavity'] =  cavity.volume
-    properties['pyVista_delaunay_AREA_cavity'] = cavity.area
-    properties['pyVista_delaunay_CSA_cavity'] =  ( ( struc.area + cavity.area ) - cmplx.area ) / 2
-    properties['pyVista_delaunay_ESA_cavity'] = cavity.area - properties['pyVista_delaunay_CSA_cavity']
-    properties['pyVista_delaunay_%ESA_cavity'] = 100 * ( properties['pyVista_delaunay_ESA_cavity'] / cavity.area )
+    properties['pyVista_delaunay_VOL_cavity'] =  float(cavity.volume)
+    properties['pyVista_delaunay_AREA_cavity'] = float(cavity.area)
+    properties['pyVista_delaunay_CSA_cavity'] =  ( ( float(struc.area) + float(cavity.area) ) - float(cmplx.area) ) / 2
+    properties['pyVista_delaunay_ESA_cavity'] = float(cavity.area) - properties['pyVista_delaunay_CSA_cavity']
+    properties['pyVista_delaunay_%ESA_cavity'] = 100 * ( properties['pyVista_delaunay_ESA_cavity'] / float(cavity.area) )
     # prox/dist cavity properties
     properties['pyVista_delaunay_proxVOL_cavity'] =  prox.volume
     properties['pyVista_delaunay_proxAREA_cavity'] = prox.area
-    properties['pyVista_delaunay_distVOL_cavity'] =  dist.volume
-    properties['pyVista_delaunay_distAREA_cavity'] = dist.area
+    properties['pyVista_delaunay_distVOL_cavity'] =  cavity.volume - prox.volume
+    #properties['pyVista_delaunay_distAREA_cavity'] = cavity.area - prox.area
 
     return properties
 
-def RDKit_Properties(struc, probe):
+def RDKit_Properties(struc, probe, cmplx):
     ''' Uses rdkit package to compute properties '''
 
     print('\nComputing RDKit descriptors\n')
     properties = {}
-    pcoords, pelems = _coords_from_mols(probe)
-    scoords, selems = _coords_from_mols(structure)
-    allcoords, allelems = pcoords+scoords, pelems+selems
-
-    cmplx = Chem.CombineMols(probe, struc)
-    AllChem.SanitizeMol()
-    print('made cmplx')
-    probe_radii = [Chem.GetPeriodicTable().GetRvdw(elem) for elem in pelems]
-    struc_radii = [Chem.GetPeriodicTable().GetRvdw(elem) for elem in selems]
-    cmplx_sradii = [Chem.GetPeriodicTable().GetRvdw(elem) for elem in allelems]
+    probe_radii = [Chem.GetPeriodicTable().GetRvdw(atom.GetAtomicNum()) for atom in probe.GetAtoms()]
+    struc_radii = [Chem.GetPeriodicTable().GetRvdw(atom.GetAtomicNum()) for atom in struc.GetAtoms()]
+    cmplx_sradii = [Chem.GetPeriodicTable().GetRvdw(atom.GetAtomicNum()) for atom in cmplx.GetAtoms()]
 
     area_struc = rdFreeSASA.CalcSASA(struc, struc_radii)
     area_cmplx = rdFreeSASA.CalcSASA(cmplx, cmplx_sradii)
@@ -211,7 +339,7 @@ def RDKit_Properties(struc, probe):
     #properties['RDKit_Mol_VOL_cavity'] = AllChem.ComputeMolVolume(probe)
     # SASA properties
     properties['RDKit_SASA_AREA_cavity'] = rdFreeSASA.CalcSASA(probe, probe_radii)
-    print('computed sasa')
+    #print('computed sasa')
     properties['RDKit_SASA_CSA_cavity'] = ( ( area_struc + properties['RDKit_SASA_AREA_cavity'] ) - area_cmplx ) / 2
     properties['RDKit_SASA_ESA_cavity'] = properties['RDKit_SASA_AREA_cavity'] - properties['RDKit_SASA_CSA_cavity']
     properties['RDKit_SASA_%ESA_cavity'] = 100 * ( properties['RDKit_SASA_ESA_cavity'] / properties['RDKit_SASA_AREA_cavity'] )
@@ -225,29 +353,44 @@ def RDKit_Properties(struc, probe):
     return properties
 
 ############# ------- HANDLER FNXS
-def get_all_properties(struc, probe, id, prox_radius=3.5, alpha=0):
-    properties = {}
+def get_all_properties(struc, probe, cmplx, id, prox_radius=3.5, alpha=0):
+    properties = pd.DataFrame()
+    props = {}
     try:
-        props = RDKit_Properties(struc, probe)
-        pd.concat(properties, props)
+        props = RDKit_Properties(struc, probe, cmplx)
+        print(pd.DataFrame(props, index=[0]))
+        properties = pd.DataFrame(props, index=[0])
+        #properties = pd.concat([properties, pd.DataFrame(props, index=[0])])
     except Exception as e:
         print('Error gathering RDKit properties ...')
         print(e)
     try:
-        props = PyVista_Properties(struc, probe, id, prox_radius, aplha)
-        pd.concat(properties, props)
+        props = PyVista_Properties(struc, probe, id, prox_radius, alpha)
+        print(pd.DataFrame(props, index=[0]))
+        if properties.empty:
+            properties = pd.DataFrame(props, index=[0])
+        else:
+            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
     except Exception as e:
         print('Error gathering PyVista properties ...')
         print(e)
     try:
         props = Morfeus_Properties(struc, probe, id, prox_radius)
-        pd.concat(properties, props)
+        print(pd.DataFrame(props, index=[0]))
+        if properties.empty:
+            properties = pd.DataFrame(props, index=[0])
+        else:
+            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
     except Exception as e:
         print('Error gathering Morfeus properties ...')
         print(e)
     try:
         props = DBSTEP_Properties(struc, probe, id, prox_radius)
-        pd.concat(properties, props)
+        print(pd.DataFrame(props, index=[0]))
+        if properties.empty:
+            properties = pd.DataFrame(props, index=[0])
+        else:
+            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
     except Exception as e:
         print('Error gathering DBSTEP properties ...')
         print(e)
@@ -265,8 +408,8 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
     if rdkit:
         try:
             props = RDKit_Properties(struc, probe)
-            print(props)
-            pd.concat(properties, props)
+            print(pd.DataFrame(props, index=[0]))
+            properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
         except Exception as e:
             print('Error gathering RDKit properties ...')
             print(e)
@@ -274,8 +417,8 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
     if dbstep:
         try:
             props = DBSTEP_Properties(struc, probe, id, prox_radius)
-            print(props)
-            pd.concat(properties, props)
+            print(pd.DataFrame(props, index=[0]))
+            properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
         except Exception as e:
             print('Error gathering DBSTEP properties ...')
             print(e)
@@ -283,17 +426,17 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
     if morfeus:
         try:
             props = Morfeus_Properties(struc, probe, id, prox_radius)
-            print(props)
-            pd.concat(properties, props)
+            print(pd.DataFrame(props, index=[0]))
+            properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
         except Exception as e:
             print('Error gathering Morfeus properties ...')
             print(e)
 
     if pyvista:
         try:
-            props = PyVista_Properties(struc, probe, id, prox_radius, aplha)
-            print(props)
-            pd.concat(properties, props)
+            props = PyVista_Properties(struc, probe, id, prox_radius, alpha)
+            print(pd.DataFrame(props, index=[0]))
+            properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
         except Exception as e:
             print('Error gathering PyVista properties ...')
             print(e)
