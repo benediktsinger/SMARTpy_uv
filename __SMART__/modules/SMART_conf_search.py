@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # SMART probe conformational search utility
-#   version: b2.0 (released 03-05-2024)
+#   version: b2.1 (released 03-14-2024)
 #   developer: Beck R. Miller (beck.miller@utah.edu)
 #
 # Dev Notes:
@@ -49,13 +49,11 @@ class PARAMS:
                 else:
                     PAR[line.split()[0]] = line.split()[1]
         PARAMS.read_parameters(PAR)
-#PARAMS.DEFAULT = 0
-#PARAMS.FREEAT = []
-#PARAMS.FIXAT = []
 PARAMS.MAXROTATION = 330
 PARAMS.MINROTATION = 30
-PARAMS.NSTEP = 10 #500
+PARAMS.NSTEP = 10 #500 for torsional; 20 for template
 PARAMS.SEED = None
+PARAMS.CLASHTOL = 0.0
 
 class TEMPLATE():
     def __init__(self):
@@ -125,8 +123,8 @@ def read_structure(Fin):
     return MOL_INIT.MOL
 
 def clash_check(mol, probe):
-    TOL = 0.01
-    #clashes = 0
+    #TOL = 0.01
+
     for p in range(probe.GetNumAtoms()):
         for s in range(mol.GetNumAtoms()):
                 i_ = probe.GetConformer().GetAtomPosition(p)
@@ -134,7 +132,7 @@ def clash_check(mol, probe):
                 j_ = mol.GetConformer().GetAtomPosition(s)
                 j_r = Chem.GetPeriodicTable().GetRvdw(mol.GetAtomWithIdx(s).GetAtomicNum())
                 d = (i_-j_).LengthSq()
-                r_d = i_r + j_r + TOL
+                r_d = i_r + j_r + PARAMS.CLASHTOL
                 if (d - r_d) <= 0:
                     return True
     return False
@@ -358,6 +356,7 @@ def TEMPLATE_SEARCH(mol=None):
     CONFS.PROBES = None
     MOL_INIT.MOL = mol
     CONFS.CPLX = MOL_INIT.MOL
+    CONFS.CPLX_CONFS = None
 
     # print search parameters
     if PARAMS.SEED:
@@ -374,9 +373,9 @@ def TEMPLATE_SEARCH(mol=None):
 
     print('***************** Finished *****************')
     print("--- Time Elapsed: %s seconds ---" % (time.time() - starttime))
-    try:
+    if CONFS.PROBES != None:
         print('---',CONFS.PROBES.GetNumConformers(), 'conformers saved ---')
-    except Exception as e:
+    else:
         print('SIMULATION FAILED')
 
     return CONFS.PROBES, CONFS.MOL, CONFS.CPLX_CONFS
@@ -391,6 +390,7 @@ def CUSTOM_TEMPLATE_SEARCH(mol=None):
     CONFS.PROBES = None
     MOL_INIT.MOL = mol
     CONFS.CPLX = MOL_INIT.MOL
+    CONFS.CPLX_CONFS = None
 
     # print search parameters
     if PARAMS.SEED:
@@ -408,9 +408,9 @@ def CUSTOM_TEMPLATE_SEARCH(mol=None):
 
     print('***************** Finished *****************')
     print("--- Time Elapsed: %s seconds ---" % (time.time() - starttime))
-    try:
+    if CONFS.PROBES != None:
         print('---',CONFS.PROBES.GetNumConformers(), 'conformers saved ---')
-    except Exception as e:
+    else:
         print('SIMULATION FAILED')
 
     return CONFS.PROBES, CONFS.MOL, CONFS.CPLX_CONFS
@@ -425,6 +425,7 @@ def TORSIONAL_STEP_SEARCH(mol=None):
     CONFS.PROBES = None
     MOL_INIT.MOL = mol
     CONFS.CPLX = MOL_INIT.MOL
+    CONFS.CPLX_CONFS = None
 
     # print search parameters
     if PARAMS.SEED:
@@ -442,9 +443,9 @@ def TORSIONAL_STEP_SEARCH(mol=None):
 
     print('***************** Finished *****************')
     print("--- Time Elapsed: %s seconds ---" % (time.time() - starttime))
-    try:
+    if CONFS.PROBES != None:
         print('---',CONFS.PROBES.GetNumConformers(), 'conformers saved ---')
-    except Exception as e:
+    else:
         print('SIMULATION FAILED')
 
     return CONFS.PROBES, CONFS.MOL, CONFS.CPLX_CONFS

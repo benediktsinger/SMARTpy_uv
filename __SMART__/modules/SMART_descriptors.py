@@ -398,7 +398,7 @@ def get_all_properties(struc, probe, cmplx, id, prox_radius=3.5, alpha=0):
     return properties
 
 def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
-    properties = {}
+    properties = pd.DataFrame()
     struc, probe = _read_files(fname)
 
     if not rdkit and not dbstep and not morfeus and not pyvista:
@@ -409,7 +409,7 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
         try:
             props = RDKit_Properties(struc, probe)
             print(pd.DataFrame(props, index=[0]))
-            properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
+            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
         except Exception as e:
             print('Error gathering RDKit properties ...')
             print(e)
@@ -418,7 +418,7 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
         try:
             props = DBSTEP_Properties(struc, probe, id, prox_radius)
             print(pd.DataFrame(props, index=[0]))
-            properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
+            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
         except Exception as e:
             print('Error gathering DBSTEP properties ...')
             print(e)
@@ -427,7 +427,7 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
         try:
             props = Morfeus_Properties(struc, probe, id, prox_radius)
             print(pd.DataFrame(props, index=[0]))
-            properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
+            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
         except Exception as e:
             print('Error gathering Morfeus properties ...')
             print(e)
@@ -436,7 +436,7 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
         try:
             props = PyVista_Properties(struc, probe, id, prox_radius, alpha)
             print(pd.DataFrame(props, index=[0]))
-            properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
+            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
         except Exception as e:
             print('Error gathering PyVista properties ...')
             print(e)

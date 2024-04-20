@@ -18,17 +18,22 @@ structure.reference_vector(0, 1, dist=2.0) #tip=0, tail =1
 probe = SMART.ReadProbe('S_SiF2_12_cyclic.mol2')
 #probe_count = probe.NumAtoms
 
+# Adjust clash tolerance (default: 0.0)
+SMART.PARAMS.CLASHTOL = 0.05 # 0.05 Å further
+#SMART.PARAMS.ClashTol = -0.05 # 0.05 Å closer
+
 # Dock probe to structure
 print('\nadding probe S_SiF2_12_cyclic.mol2 to '+file)
 docked = SMART.add_probe(structure, probe)
 
-SMART_conf.PARAMS.read_parameters({'NSTEP':20})
+
+SMART_conf.PARAMS.read_parameters({'NSTEP':20, 'CLASHTOL': 0.05})
 try:
     # Conf search (custom template method)
     cav, struc, cmplx = SMART_conf.CUSTOM_TEMPLATE_SEARCH(docked)
-    SMART_conf.save_out(file.split('.')[0]+'_S_SiF2_8_cyclic')
+    #SMART_conf.save_out(file.split('.')[0]+'_S_SiF2_8_cyclic')
 except:
     sys.exit()
 # Compute properties
 properties = SMART_des.get_all_properties(struc, cav, cmplx, 0, prox_radius=5.0, alpha=0)
-properties.to_excel('OUT.xlsx')
+#properties.to_excel('OUT.xlsx')

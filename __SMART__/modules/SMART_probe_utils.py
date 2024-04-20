@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # SMART probe addition utility
-#   version: b2.0 (released 03-05-2024)
+#   version: b2.1 (released 03-14-2024)
 #   developer: Beck R. Miller (beck.miller@utah.edu)
 #   GitHub:
 ############# ------- DEPENDENCIES
@@ -83,8 +83,8 @@ class Reference_Vector(_reference_vector):
     def __init__(self, id, ref, dist=2.0):
         '''Reference_Vector: probe binding vector based on tail/tip vector definition'''
         self.Id = id
-        self.Ref = ref
-        tip_pos = self.MOL.GetConformer().GetAtomPosition(int(id))
+        self.RefId = ref
+        tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.Id))
         tail_pos = self.MOL.GetConformer().GetAtomPosition(int(self.Ref))
         self.Vector = _reference_vector.__init__(self, tip_pos, tail_pos)
         #return self
@@ -112,11 +112,11 @@ class Define_Geometry(_reference_vector):
             sys.exit()
 
         if self.Geometry == 'octahedral':
-            self.octahedral()
+            self.Ref = self.octahedral()
         elif self.Geometry == 'tetrahedral':
-            self.tetrahedral()
+            self.Ref = self.tetrahedral()
         elif self.Geometry ==  'trigonal':
-            self.trigonal_planar()
+            self.Ref = self.trigonal_planar()
         else:
             print('please specify a known geometry: trigonal, tetrahedral, octahedral')
             print(self.Geometry)
@@ -187,6 +187,11 @@ class Detect_Geometry(Define_Geometry):
             print('Unknown geometry. Try covalent=False or Define_Geometry')
 
 ############# ------- INPUT/OUTPUT UTILITY CLASSES
+class PARAMS():
+    def __init__(self):
+        pass
+PARAMS.CLASHTOL = 0.0
+
 class ReadFile(Reference_Vector, Detect_Geometry, Reference_Angle):
     # initialize single structure coordinates
     def __init__(self, fname, path=os.getcwd()):
@@ -290,8 +295,8 @@ def _clashCheck(conf, struc, probe):
             j_ = conf.GetConformer().GetAtomPosition(s)
             j_r = Chem.GetPeriodicTable().GetRvdw(conf.GetAtomWithIdx(s).GetAtomicNum())
             d = (i_-j_).LengthSq()
-            r_d = i_r + j_r# + TOL
-            if d < r_d:
+            r_d = i_r + j_r + PARAMS.ClashTol
+            if d <= r_d:
                 return True
     return False
 
@@ -335,11 +340,13 @@ def _rotateAlign(struc, probe):
     for i in range(probe.NumAtoms):
         probe.MOL.GetConformer().SetAtomPosition(i, newv[i])
 
-    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
-    v = probe.Vector.TipPos  - probe.Vector.TailPos
-    n = np.linalg.norm(v)
-    probe.Vector.Unit = v / n
+    probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
+
+    #probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
+    #probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
+    #v = probe.Vector.TipPos  - probe.Vector.TailPos
+    #n = np.linalg.norm(v)
+    #probe.Vector.Unit = v / n
 
     return probe
 
@@ -357,11 +364,13 @@ def _rotation2(probe, tip, rotvec, theta):
 
         probe.MOL.GetConformer().SetAtomPosition(i, newv)
 
-    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
-    v = probe.Vector.TipPos  - probe.Vector.TailPos
-    n = np.linalg.norm(v)
-    probe.Vector.U = v / n
+    probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
+
+    #probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
+    #probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
+    #v = probe.Vector.TipPos  - probe.Vector.TailPos
+    #n = np.linalg.norm(v)
+    #probe.Vector.U = v / n
 
     return probe
 
@@ -374,15 +383,17 @@ def _rotation(probe, rotvec, theta):
     for i in range(probe.NumAtoms):
         probe.MOL.GetConformer().SetAtomPosition(i, newv[i])
 
-    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
-    v = probe.Vector.TipPos  - probe.Vector.TailPos
-    n = np.linalg.norm(v)
-    probe.Vector.U = v / n
+    probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
+
+    #probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
+    #probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
+    #v = probe.Vector.TipPos  - probe.Vector.TailPos
+    #n = np.linalg.norm(v)
+    #probe.Vector.U = v / n
 
     return probe
 
-def _translate(struc, probe, dist):
+def _translate(struc, probe):
     # translate to binding Point3D
     #binding_point = np.array(struc.Vector.TIP_POS) + (float(dist)*np.array(struc.Vector.U))
     translation_v = struc.BindingPos - probe.Vector.TipPos
@@ -392,17 +403,18 @@ def _translate(struc, probe, dist):
         translate = pt+translation_v
         probe.MOL.GetConformer().SetAtomPosition(i, translate)
 
+    probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), struc.MOL.GetConformer().GetAtomPosition(struc.Id))
 
-    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
-    v = probe.Vector.TipPos  - probe.Vector.TailPos
-    n = np.linalg.norm(v)
-    probe.Vector.U = v / n
+    #probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
+    #probe.Vector.TailPos = struc.MOL.GetConformer().GetAtomPosition(struc.Id)
+    #v = probe.Vector.TipPos  - probe.Vector.TailPos
+    #n = np.linalg.norm(v)
+    #probe.Vector.U = v / n
 
     return probe
 
 ############# ------- CTRL FNXS
-def add_probe(struc, probe, dist=2.0, rot=5.0):
+def add_probe(struc, probe, rot=5.0):
     '''addProbe: compute probe translation and rotation before docking to structure'''
     # main utility function
     probe_r = _rotateAlign(struc, probe)
