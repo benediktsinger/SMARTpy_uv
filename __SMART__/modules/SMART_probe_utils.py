@@ -85,7 +85,7 @@ class Reference_Vector(_reference_vector):
         self.Id = id
         self.RefId = ref
         tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.Id))
-        tail_pos = self.MOL.GetConformer().GetAtomPosition(int(self.Ref))
+        tail_pos = self.MOL.GetConformer().GetAtomPosition(int(self.RefId))
         self.Vector = _reference_vector.__init__(self, tip_pos, tail_pos)
         #return self
 
@@ -236,7 +236,6 @@ class ReadFile(Reference_Vector, Detect_Geometry, Reference_Angle):
     def detect_geometry(self, tip, covalent=True, searchRadius=None):
         Detect_Geometry.__init__(self, tip, covalent, searchRadius)
 
-
 class ReadMol(ReadFile):
     # initialize RDKit MOL as input
     def __init__(self, mol):
@@ -260,8 +259,7 @@ class ReadProbe(Reference_Vector):
         else:
             try:
                 PROBE_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Probes')
-                print(PROBE_PATH)
-                #os.path.isfile(os.path.join(PROBE_PATH, file))
+                os.path.isfile(os.path.join(PROBE_PATH, probe))
             except Exception as e:
                 print('no probe file found -', PROBE_PATH, probe)
 
@@ -295,12 +293,12 @@ def _clashCheck(conf, struc, probe):
             j_ = conf.GetConformer().GetAtomPosition(s)
             j_r = Chem.GetPeriodicTable().GetRvdw(conf.GetAtomWithIdx(s).GetAtomicNum())
             d = (i_-j_).LengthSq()
-            r_d = i_r + j_r + PARAMS.ClashTol
+            r_d = i_r + j_r + PARAMS.CLASHTOL
             if d <= r_d:
                 return True
     return False
 
-def _optimizeFit(struc, probe, incr, dist, theta=5):
+def _optimizeFit(struc, probe, incr, theta=5):
     # rotate probe to fit structure
     conf = Chem.CombineMols(probe.MOL, struc.MOL)
     conf_ = Chem.RWMol(conf)
@@ -326,7 +324,7 @@ def _optimizeFit(struc, probe, incr, dist, theta=5):
             theta += incr
             #probe_r = rotation(probe, probe.Vector.U, theta)
             probe_r = _rotation2(probe, np.array(struc.Vector.TipPos), probe.Vector.U, math.radians(theta))
-            return _optimizeFit(struc, probe_r, incr, dist, theta)
+            return _optimizeFit(struc, probe_r, incr, theta)
         else:
             print('failed:', struc.Name)
             return conf_
@@ -340,13 +338,13 @@ def _rotateAlign(struc, probe):
     for i in range(probe.NumAtoms):
         probe.MOL.GetConformer().SetAtomPosition(i, newv[i])
 
-    probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
+    #probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
 
-    #probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    #probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
-    #v = probe.Vector.TipPos  - probe.Vector.TailPos
-    #n = np.linalg.norm(v)
-    #probe.Vector.Unit = v / n
+    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
+    probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
+    v = probe.Vector.TipPos  - probe.Vector.TailPos
+    n = np.linalg.norm(v)
+    probe.Vector.Unit = v / n
 
     return probe
 
@@ -364,13 +362,13 @@ def _rotation2(probe, tip, rotvec, theta):
 
         probe.MOL.GetConformer().SetAtomPosition(i, newv)
 
-    probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
+    #probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
 
-    #probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    #probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
-    #v = probe.Vector.TipPos  - probe.Vector.TailPos
-    #n = np.linalg.norm(v)
-    #probe.Vector.U = v / n
+    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
+    probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
+    v = probe.Vector.TipPos  - probe.Vector.TailPos
+    n = np.linalg.norm(v)
+    probe.Vector.U = v / n
 
     return probe
 
@@ -383,13 +381,13 @@ def _rotation(probe, rotvec, theta):
     for i in range(probe.NumAtoms):
         probe.MOL.GetConformer().SetAtomPosition(i, newv[i])
 
-    probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
+    #probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
 
-    #probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    #probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
-    #v = probe.Vector.TipPos  - probe.Vector.TailPos
-    #n = np.linalg.norm(v)
-    #probe.Vector.U = v / n
+    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
+    probe.Vector.TailPos = probe.MOL.GetConformer().GetAtomPosition(probe.Ref)
+    v = probe.Vector.TipPos  - probe.Vector.TailPos
+    n = np.linalg.norm(v)
+    probe.Vector.U = v / n
 
     return probe
 
@@ -403,13 +401,13 @@ def _translate(struc, probe):
         translate = pt+translation_v
         probe.MOL.GetConformer().SetAtomPosition(i, translate)
 
-    probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), struc.MOL.GetConformer().GetAtomPosition(struc.Id))
+    #probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), struc.MOL.GetConformer().GetAtomPosition(struc.Id))
 
-    #probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    #probe.Vector.TailPos = struc.MOL.GetConformer().GetAtomPosition(struc.Id)
-    #v = probe.Vector.TipPos  - probe.Vector.TailPos
-    #n = np.linalg.norm(v)
-    #probe.Vector.U = v / n
+    probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
+    probe.Vector.TailPos = struc.MOL.GetConformer().GetAtomPosition(struc.Id)
+    v = probe.Vector.TipPos  - probe.Vector.TailPos
+    n = np.linalg.norm(v)
+    probe.Vector.U = v / n
 
     return probe
 
@@ -419,9 +417,9 @@ def add_probe(struc, probe, rot=5.0):
     # main utility function
     probe_r = _rotateAlign(struc, probe)
     #Chem.MolToMolFile(probe_r.MOL, 'rot.mol')
-    probe_t = _translate(struc, probe_r, dist)
+    probe_t = _translate(struc, probe_r)
     #Chem.MolToMolFile(probe_t.MOL, 'transl.mol')
-    probe_optimized = _optimizeFit(struc, probe_t, rot, dist)
+    probe_optimized = _optimizeFit(struc, probe_t, rot)
     return probe_optimized
 
 def main(struc_file, probe_name, tip, tail, plane, dist, out='SMART_probe_'):
