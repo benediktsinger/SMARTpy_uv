@@ -24,132 +24,68 @@ except Exception as e:
     print('pyvista is not installed')
 
 ############# ------- UTILITY FNXS
-class ReadFiles():
-    def __init__():
-        pass
-    def read_separate_files(mol, probe, cmplx):
-        stuff = [mol, probe, cmplx]
-        for file in stuff:
-            name = file.split('.')[0]
-            ext = file.split('.')[1]
-            mol = None
-            if ext == 'mol2':
-                mol = Chem.MolFromMol2File(file, removeHs=False)
-            elif ext == 'mol':
-                mol = Chem.MolFromMolFile(file, removeHs=False)
-            elif ext == 'xyz':
-                mol = Chem.MolFromXYZFile(file, removeHs=False)
-            elif ext == 'pdb':
-                mol = Chem.MolFromPDBFile(file, removeHs=False)
-            elif ext == 'sdf':
-                suppl = Chem.SDMolSupplier(file, removeHs = False)
-                for m in suppl:
-                    if not mol:
-                        mol = m
-                    else:
-                        mol.AddConformer(m.GetConformer(), assignId=True)
-            stuff[stuff.index(file)] = mol
-
-    def read_prefix(fname):
-        probe, struc, cmplx = None, None, None
-        file = ''
-        try:
-            file = os.path.join(os.getcwd(),fname + '_cavity.sdf')
-            suppl = Chem.SDMolSupplier(file, removeHs = False)
-            for mol in suppl:
-                if not probe:
-                    probe = mol
-                else:
-                    probe.AddConformer(mol.GetConformer(), assignId=True)
-        except Exception as e:
-            print('No cavity file found - '+file)
-            print(e)
-        try:
-            file = os.path.join(os.getcwd(), fname + '_mol.sdf')
-            suppl = Chem.SDMolSupplier(file, removeHs = False)
-            for mol in suppl:
-                if not struc:
-                    struc = mol
-                else:
-                    struc.AddConformer(mol.GetConformer(), assignId=True)
-        except Exception as e:
-            print('No mol file found - '+file)
-            print(e)
-        try:
-            file = os.path.join(os.getcwd(), fname + '_cplx.sdf')
-            suppl = Chem.SDMolSupplier(file, removeHs = False)
-            for mol in suppl:
-                if not cmplx:
-                    cmplx = mol
-                else:
-                    cmplx.AddConformer(mol.GetConformer(), assignId=True)
-        except Exception as e:
-            print('No complex file found - '+file)
-            print(e)
-
-def read_separate_files(mol, probe, cmplx):
-    stuff = [mol, probe, cmplx]
-    for file in stuff:
-        name = file.split('.')[0]
-        ext = file.split('.')[1]
-        mol = None
-        if ext == 'mol2':
-            mol = Chem.MolFromMol2File(file, removeHs=False)
-        elif ext == 'mol':
-            mol = Chem.MolFromMolFile(file, removeHs=False)
-        elif ext == 'xyz':
-            mol = Chem.MolFromXYZFile(file, removeHs=False)
-        elif ext == 'pdb':
-            mol = Chem.MolFromPDBFile(file, removeHs=False)
-        elif ext == 'sdf':
-            suppl = Chem.SDMolSupplier(file, removeHs = False)
-            for m in suppl:
-                if not mol:
-                    mol = m
-                else:
-                    mol.AddConformer(m.GetConformer(), assignId=True)
-        stuff[stuff.index(file)] = mol
-
-    return stuff
-
-def read_files(fname):
-    probe, struc, cmplx = None, None, None
-    file = ''
-    try:
-        file = os.path.join(os.getcwd(),fname + '_cavity.sdf')
+def read_CAVITY_file(cavity_file):
+    name = cavity_file.split('.')[0]
+    ext = cavity_file.split('.')[1]
+    cav = None
+    if ext == 'mol2':
+        cav = Chem.MolFromMol2File(file, removeHs=False)
+    elif ext == 'mol':
+        cav = Chem.MolFromMolFile(file, removeHs=False)
+    elif ext == 'xyz':
+        cav = Chem.MolFromXYZFile(file, removeHs=False)
+    elif ext == 'pdb':
+        cav = Chem.MolFromPDBFile(file, removeHs=False)
+    elif ext == 'sdf':
         suppl = Chem.SDMolSupplier(file, removeHs = False)
-        for mol in suppl:
-            if not probe:
-                probe = mol
+        for m in suppl:
+            if not mol:
+                cav = m
             else:
-                probe.AddConformer(mol.GetConformer(), assignId=True)
-    except Exception as e:
-        print('No cavity file found - '+file)
-        print(e)
-    try:
-        file = os.path.join(os.getcwd(), fname + '_mol.sdf')
-        suppl = Chem.SDMolSupplier(file, removeHs = False)
-        for mol in suppl:
-            if not struc:
-                struc = mol
-            else:
-                struc.AddConformer(mol.GetConformer(), assignId=True)
-    except Exception as e:
-        print('No mol file found - '+file)
-        print(e)
-    try:
-        file = os.path.join(os.getcwd(), fname + '_cplx.sdf')
-        suppl = Chem.SDMolSupplier(file, removeHs = False)
-        for mol in suppl:
-            if not cmplx:
-                cmplx = mol
-            else:
-                cmplx.AddConformer(mol.GetConformer(), assignId=True)
-    except Exception as e:
-        print('No complex file found - '+file)
-        print(e)
+                cav.AddConformer(m.GetConformer(), assignId=True)
+    return cav
 
-    return probe, struc, cmplx
+def read_STRUCTURE_file(mol_file):
+    name = mol_file.split('.')[0]
+    ext = mol_file.split('.')[1]
+    mol = None
+    if ext == 'mol2':
+        mol = Chem.MolFromMol2File(file, removeHs=False)
+    elif ext == 'mol':
+        mol = Chem.MolFromMolFile(file, removeHs=False)
+    elif ext == 'xyz':
+        mol = Chem.MolFromXYZFile(file, removeHs=False)
+    elif ext == 'pdb':
+        mol = Chem.MolFromPDBFile(file, removeHs=False)
+    elif ext == 'sdf':
+        suppl = Chem.SDMolSupplier(file, removeHs = False)
+        for m in suppl:
+            if not mol:
+                mol = m
+            else:
+                mol.AddConformer(m.GetConformer(), assignId=True)
+    return mol
+
+def read_CPLX_file(cplx_file):
+    name = cplx_file.split('.')[0]
+    ext = cplx_file.split('.')[1]
+    cplx = None
+    if ext == 'mol2':
+        cplx = Chem.MolFromMol2File(file, removeHs=False)
+    elif ext == 'mol':
+        cplx = Chem.MolFromMolFile(file, removeHs=False)
+    elif ext == 'xyz':
+        cplx = Chem.MolFromXYZFile(file, removeHs=False)
+    elif ext == 'pdb':
+        cplx = Chem.MolFromPDBFile(file, removeHs=False)
+    elif ext == 'sdf':
+        suppl = Chem.SDMolSupplier(file, removeHs = False)
+        for m in suppl:
+            if not mol:
+                cplx = m
+            else:
+                cplx.AddConformer(m.GetConformer(), assignId=True)
+    return cplx
 
 def _coords_from_mols(confs):
     ''' convert CONF object to xyz coordinate, element name lists '''
@@ -244,7 +180,6 @@ def Morfeus_Properties(struc, probe, id, prox_radius=3.5):
     #sterimol = Sterimol(pelems, pcoords, len(pcoords)-1, 0)
 
     # SASA cavity properties
-    struc
     properties['morfeus_SASA_AREA_cavity'] = probe_sasa.area
     properties['morfeus_SASA_CSA_cavity'] = ( (probe_sasa.area + struc_sasa.area) - cmplx_sasa.area) / 2
     properties['morfeus_SASA_ESA_cavity'] = probe_sasa.area - properties['morfeus_SASA_CSA_cavity']

@@ -94,10 +94,13 @@ def save_out(name):
     print('writing conformers to file',name+'_cavity.sdf')
     for cid in [conf.GetId() for conf in CONFS.PROBES.GetConformers()]:#range(1, CONFS.PROBES.GetNumConformers()):
         writer.write(CONFS.PROBES, confId=cid)
-    writer = Chem.SDWriter(name+'_mol.sdf')
-    writer.write(CONFS.MOL)
+    #print('copying input MOL to file',name+'_mol.sdf')
+    #writer = Chem.SDWriter(name+'_mol.sdf')
+    #writer.write(MOL_INIT.MOL)
     writer = Chem.SDWriter(name+'_cplx.sdf')
-    writer.write(CONFS.CPLX)
+    print('writing full complex conformers to file',name+'_cplx.sdf')
+    for cid in [conf.GetId() for conf in CONFS.CPLX_CONFS.GetConformers()]:#range(1, CONFS.PROBES.GetNumConformers()):
+        writer.write(CONFS.CPLX_CONFS, confId=cid)
 
 def ConfToMol(mol, conf_id):
     conf = mol.GetConformer(conf_id)
