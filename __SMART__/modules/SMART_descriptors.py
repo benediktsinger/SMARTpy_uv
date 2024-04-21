@@ -332,9 +332,11 @@ def get_all_properties(struc, probe, cmplx, id, prox_radius=3.5, alpha=0):
 
     return properties
 
-def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
+def main(cav_file, cplx_file, mol_file, id, rdkit, dbstep, morfeus, pyvista, out='out'):
     properties = pd.DataFrame()
-    struc, probe = _read_files(fname)
+    struc = read_STRUCTURE_file(mol_file)
+    probe = read_CAVITY_file(cav_file)
+    cplx = read_CPLX_file(cplx_file)
 
     if not rdkit and not dbstep and not morfeus and not pyvista:
         print('No Descriptor method selected.')
@@ -381,11 +383,13 @@ def main(fname, id, rdkit, dbstep, morfeus, pyvista, out='out'):
 if __name__ == '__main__':
     ##! PARSE CMDLINE INPUT !##
     parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Molecular Descriptor Calculations.',epilog='Uses multiple open-source python packages to compute SMART molecular descriptors.')
-    parser.add_argument('-f', required=True) # file prefixes (cavity and structure)
-    parser.add_argument('-id', required=True) # metal ID
+    parser.add_argument('-cav', required=True) # cavity conformer file
+    parser.add_argument('-cplx', required=True) # complex conformer file
+    parser.add_argument('-struc', required=True) # structure file
+    parser.add_argument('-id', required=True) # metal/binding site ID
     parser.add_argument('-r', required=False, default=3.5) # proximal radius (pyvista, morfeus, dbstep)
     parser.add_argument('-a', required=False, default=0) # alpha (pyvista)
-    parser.add_argument('-o', required=False, default='out') # output xlsx name #action='store_true'
+    parser.add_argument('-o', required=False, default='out') # output xlsx name
     parser.add_argument('--pyvista', required=False, action='store_true', default=False)
     parser.add_argument('--rdkit', required=False, action='store_true', default=False)
     parser.add_argument('--dbstep', required=False, action='store_true', default=False)
@@ -394,5 +398,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     starttime = time.time()
-    main(args.f, args.id, args.rdkit, args.dbstep, args.morfeus, args.pyvista, args.o) #rdkit, dbstep, morfeus, pyvista, out
+    main(args.cav, args.cplx, args.struc, args.id, args.rdkit, args.dbstep, args.morfeus, args.pyvista, args.o) #rdkit, dbstep, morfeus, pyvista, out
     print("--- %s seconds ---" % (time.time() - starttime))
