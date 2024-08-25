@@ -1,0 +1,9 @@
+pandas
+numpy
+mathutils
+argparse
+scipy
+rdkit
+morfeus
+pyvista
+dbstep
