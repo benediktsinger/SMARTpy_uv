@@ -12,9 +12,8 @@
 import sys, os, random, math, argparse, time, mathutils
 sys.setrecursionlimit(10000)
 import numpy as np
-#from multiprocessing import Pool
+#from multiprocessing import Pool # TODO
 from scipy.spatial.transform import Rotation as R
-#from scipy.stats import ortho_group
 from rdkit import Chem
 from rdkit.Chem import AllChem, rdMolAlign
 from rdkit import ForceField
@@ -22,7 +21,10 @@ from rdkit import RDLogger
 from rdkit.Geometry import Point3D
 RDLogger.DisableLog('rdApp.*')
 
-TEMPLATE_PATH = os.path.join(os.path.dirname(__file__),'templates')
+from SMART import ReadProbe
+from SMART.utils import cont_to_mol_, clash_check_, vectorize_, rotation_
+
+TEMPLATE_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)),'templates')
 PROBE_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Probes')
 ############# ------- UTILITY CLASSES
 class PARAMS:
@@ -73,6 +75,7 @@ PARAMS.NPROCS = 4
 
 class TEMPLATE():
     def __init__(self):
+        super().__init__()
         pass
     def is_template(template):
         global TEMPLATE_PATH
@@ -80,23 +83,31 @@ class TEMPLATE():
             return True
         else:
             return False
-    def GenerateTemplate(template, numConfs=200, pruneRmsThresh=0.1):
+    def GenerateTemplate(template, numConfs=200, pruneRmsThresh=0.1, overwrite=True):
         global TEMPLATE_PATH, PROBE_PATH
         try:
             starttime = time.time()
             # get probe MOL
             TEMPLATE.NAME = template
-            TEMPLATE.MOLS = read_structure(os.path.join(PROBE_PATH, template+'.mol2'))
+            TEMPLATE.MOLS = ReadProbe(os.path.join(PROBE_PATH, template+'.mol2')).MOL
+            #print('mol init')
             # generate template conformers
             AllChem.EmbedMultipleConfs(TEMPLATE.MOLS, numConfs=numConfs, pruneRmsThresh=pruneRmsThresh, useRandomCoords=True, useMacrocycleTorsions=True, useSmallRingTorsions=True)
             TEMPLATE.NCONFS = TEMPLATE.MOLS.GetNumConformers()
             # save template to sdf file
+            if overwrite:
+                if os.path.isfile(os.path.join(TEMPLATE_PATH, template+'.sdf')):
+                    os.remove(os.path.join(TEMPLATE_PATH, template+'.sdf'))
+            else:
+                if os.path.isfile(os.path.join(TEMPLATE_PATH, template+'.sdf')):
+                    print('already exits')
+                    sys.exit()
             writer = Chem.SDWriter(os.path.join(TEMPLATE_PATH, template+'.sdf'))
             print('writing template to file: ', template+'.sdf')
             for cid in [conf.GetId() for conf in TEMPLATE.MOLS.GetConformers()]:
                 writer.write(TEMPLATE.MOLS, confId=cid)
             print('***************** Done *****************')
-            print("--- Time Elapsed: %s seconds ---" % (time.time() - starttime))
+            print("--- Template Construction Time: %s seconds ---" % (time.time() - starttime))
         except Exception as e:
             print('Invalid probe structure')
             print(e)
@@ -129,85 +140,6 @@ MOL_INIT.INIT_MOL = None
 MOL_INIT.SAVE_CONFS = None
 
 ############# ------- MAIN FNXS
-def save_out(name, mol=None):
-    writer = Chem.SDWriter(name+'.sdf')
-    print('writing conformers to file',name+'.sdf')
-    if mol:
-        m = mol
-    else:
-        m = MOL_INIT.SAVE_CONFS
-
-    for cid in [conf.GetId() for conf in m.GetConformers()]:#range(1, CONFS.PROBES.GetNumConformers()):
-        writer.write(m, confId=cid)
-
-def ConfToMol(mol, conf):
-    id = conf.GetId()
-    new_mol = Chem.Mol(mol)
-    new_mol.RemoveAllConformers()
-    new_mol.AddConformer(mol.GetConformer(id))
-    return new_mol
-
-def read_structure(Fin):
-    # open file and read structure
-    MOL_INIT.FNAME = Fin.split('.')[0]
-    MOL_INIT.TYPE = Fin.split('.')[1]
-    if MOL_INIT.TYPE == 'mol2':
-        MOL_INIT.MOL = Chem.MolFromMol2File(Fin, removeHs=False)
-    elif MOL_INIT.TYPE == 'mol':
-        MOL_INIT.MOL = Chem.MolFromMolFile(Fin, removeHs=False)
-    elif MOL_INIT.TYPE == 'xyz':
-        MOL_INIT.MOL = Chem.MolFromXYZFile(Fin, removeHs=False)
-    elif MOL_INIT.TYPE == 'pdb':
-        MOL_INIT.MOL = Chem.MolFromPDBFile(Fin, removeHs=False)
-    elif MOL_INIT.TYPE == 'sdf':
-        MOL_INIT.MOL = Chem.SDMolSupplier(Fin, removeHs=False)[0]
-    return MOL_INIT.MOL
-
-def clash_check(mol, probe, cid):
-
-    for p in range(1, probe.GetNumAtoms()):
-        for s in range(mol.GetNumAtoms()):
-                i_ = probe.GetConformer(cid).GetAtomPosition(p)
-                i_r = Chem.GetPeriodicTable().GetRvdw(probe.GetAtomWithIdx(p).GetAtomicNum())
-                j_ = mol.GetConformer().GetAtomPosition(s)
-                j_r = Chem.GetPeriodicTable().GetRvdw(mol.GetAtomWithIdx(s).GetAtomicNum())
-                d = (i_-j_).LengthSq()
-                r_d = i_r + j_r + PARAMS.CLASHTOL
-                if (d - r_d) <= 0:
-                    return True
-    return False
-
-def vectorize(frag, tip, atoms, rotvec, theta):
-    # rotate 3D about vector
-    vecs = []
-    for i in atoms:
-        a = np.array(frag.GetConformer().GetAtomPosition(i.GetIdx()))
-        dotproduct = rotvec[0]*(float(a[0]) - float(tip[0])) + rotvec[1]*(float(a[1]) - float(tip[1])) + rotvec[2]*(float(a[2]) - float(tip[2]))
-        centre = [float(tip[0]) + dotproduct*rotvec[0], float(tip[1]) + dotproduct*rotvec[1], float(tip[2]) + dotproduct*rotvec[2]]
-        v = [float(a[0]) - centre[0], float(a[1]) - centre[1], float(a[2]) - centre[2]]
-        d = math.sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2])
-        px = v[0]*math.cos(theta) + v[1]*math.sin(theta)*rotvec[2] - v[2]*math.sin(theta)*rotvec[1]
-        py = v[1]*math.cos(theta) + v[2]*math.sin(theta)*rotvec[0] - v[0]*math.sin(theta)*rotvec[2]
-        pz = v[2]*math.cos(theta) + v[0]*math.sin(theta)*rotvec[1] - v[1]*math.sin(theta)*rotvec[0]
-        newv = [px + centre[0], py + centre[1], pz + centre[2]]
-
-        vecs.append(newv)
-    return vecs
-
-def rotation(theta):
-    # rotate 3D about vector
-    cid_ = TEMPLATE.MOLS.GetConformers()[0].GetId()
-    rotvec = TEMPLATE.MOLS.GetConformer(cid_).GetAtomPosition(0) - TEMPLATE.MOLS.GetConformer(cid_).GetAtomPosition(1) / np.linalg.norm(TEMPLATE.MOLS.GetConformer(cid_).GetAtomPosition(0) - TEMPLATE.MOLS.GetConformer(cid_).GetAtomPosition(1))
-    quat = mathutils.Quaternion(rotvec, theta)
-    r = R.from_quat(quat)
-    r.as_quat()
-
-    for cid in [conf.GetId() for conf in TEMPLATE.MOLS.GetConformers()]:
-        newv = r.apply([np.array(TEMPLATE.MOLS.GetConformer(cid).GetAtomPosition(i)) for i in range(TEMPLATE.MOLS.GetNumAtoms())])
-        for i in range(TEMPLATE.MOLS.GetNumAtoms()):
-            TEMPLATE.MOLS.GetConformer(cid).SetAtomPosition(i, newv[i])
-    #save_out(str(math.degrees(theta)), TEMPLATE.MOLS)
-
 def template_search(step=1):
     if PARAMS.VERBOSE:
         print('step ',step,' / ',PARAMS.NSTEP)
@@ -219,9 +151,9 @@ def template_search(step=1):
             translate = pt+translation_v
             conf.SetAtomPosition(i, translate)
         # check for probe-structure clashes
-        if not clash_check(MOL_INIT.MOL, TEMPLATE.MOLS, conf.GetId()):
+        if not clash_check_(MOL_INIT.MOL, TEMPLATE.MOLS, conf.GetId(), PARAMS.CLASHTOL):
             if not MOL_INIT.SAVE_CONFS:
-                MOL_INIT.SAVE_CONFS = ConfToMol(TEMPLATE.MOLS, conf)
+                MOL_INIT.SAVE_CONFS = conf_to_mol(TEMPLATE.MOLS, conf)
                 if PARAMS.VERBOSE:
                     print('-saving conformer-', 1)
             else:
@@ -230,7 +162,7 @@ def template_search(step=1):
                     print('-saving conformer-', MOL_INIT.SAVE_CONFS.GetNumConformers())
 
     # rotate template for next iteration
-    rotation(math.radians(RANDOM_ROT))
+    TEMPLATE.MOLS = rotation_(TEMPLATE.MOLS, math.radians(RANDOM_ROT))
     # end conditions
     if step < PARAMS.NSTEP:
         step +=1
@@ -272,25 +204,5 @@ def TEMPLATE_SEARCH(mol=None):
             print('---', MOL_INIT.SAVE_CONFS.GetNumConformers(), 'conformers saved ---')
     else:
         print('SIMULATION FAILED')
-        sys.exit()
 
     return MOL_INIT.SAVE_CONFS
-
-def main(Fin, Pin, name):
-    dock = read_structure(Fin)
-    errtags = PARAMS.read_parameter_file(Pin)
-    if errtags:
-        print('Could not parse parameters in file',errtags)
-        sys.exit()
-
-    save_out(name)
-
-if __name__ == '__main__':
-    ##! PARSE CMDLINE INPUT !##
-    parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Probe Conformer-Generation Utility Package.',epilog='Probe conformer search by torsional/template search')
-    parser.add_argument('-f', required=True) #structure file
-    parser.add_argument('-p', required=True) #parameter file
-    parser.add_argument('-o', required=False, default='SMART_ENS_') #output filename
-
-    args = parser.parse_args()
-    main(args.f, args.p, args.o)
