@@ -78,10 +78,8 @@ def vectorize_(frag, tip, atoms, rotvec, theta):
         vecs.append(newv)
     return vecs
 
-def rotation_(mol, theta):
+def rotation_(mol, theta, rotvec):
     # rotate 3D about vector
-    cid_ = mol.GetConformers()[0].GetId()
-    rotvec = mol.GetConformer(cid_).GetAtomPosition(0) - mol.GetConformer(cid_).GetAtomPosition(1) / np.linalg.norm(mol.GetConformer(cid_).GetAtomPosition(0) - mol.GetConformer(cid_).GetAtomPosition(1))
     quat = mathutils.Quaternion(rotvec, theta)
     r = R.from_quat(quat)
     r.as_quat()
@@ -104,7 +102,7 @@ def translate_(struc, probe):
     return probe
 
 ############# ------- GENRAL UTILITY FNXS
-def cont_to_mol_(mol, conf):
+def conf_to_mol_(mol, conf):
     id = conf.GetId()
     new_mol = Chem.Mol(mol)
     new_mol.RemoveAllConformers()

@@ -52,9 +52,9 @@ class _crossproduct_vector:
 
 ############# ------- VECTOR INIT CLASSES
 class Reference_Vector(_reference_vector):
-    def __init__(self, tip_id=None, ref_id=None, tip_pos=None, ref_pos=None, dist=0.0):
+    def __init__(self, tip_id=None, tip_pos=None, ref_id=None, ref_pos=None, dist=0.0):
         '''Reference_Vector: probe binding vector based on tail/tip vector definition'''
-        if tip_pos:
+        if not tip_pos is None:
             self.TipPos = tip_pos
         elif tip_id != None:
             self.TipId = tip_id
@@ -64,7 +64,7 @@ class Reference_Vector(_reference_vector):
             print(tip_id)
             sys.exit()
 
-        if ref_pos:
+        if not ref_pos is None:
             self.RefPos = tip_pos
         elif ref_id != None:
             self.RefId = ref_id
@@ -78,7 +78,7 @@ class Reference_Vector(_reference_vector):
 class Reference_Angle(_crossproduct_vector):
     def __init__(self, tip_id=None, tip_pos=None, refs_id=None, refs_pos=None, dist=0.0):
         '''Reference_Angle: cross product of input angle as binding reference vector'''
-        if tip_pos:
+        if not tip_pos is None:
             self.TipPos = tip_pos
         elif tip_id != None:
             self.TipId = tip_id
@@ -87,13 +87,13 @@ class Reference_Angle(_crossproduct_vector):
             print('Please supply tip_id or tip_pos')
             sys.exit()
 
-        if refs_pos:
+        if not refs_pos is None:
             if len(refs_pos) == 2:
                 tail1_pos = refs_pos[0]
                 tail2_pos = refs_pos[1]
             else:
                 print('Please supply 2 ref points')
-        elif refs_id!= None:
+        elif refs_id != None:
             if len(refs_id) == 2:
                 tail1_pos = self.MOL.GetConformer().GetAtomPosition(int(refs_id[0]))
                 tail2_pos = self.MOL.GetConformer().GetAtomPosition(int(refs_id[1]))
@@ -109,9 +109,9 @@ class Define_Geometry(_reference_vector):
         '''Define_Geometry: define binding center geometry and reference atoms'''
         self.Geometry = geom
         self.RefAtoms = bindingAtoms
-        if tip_pos:
+        if not tip_pos is None:
             self.TipPos = tip_pos
-        elif tip_id!= None:
+        elif tip_id != None:
             self.TipId = tip_id
             self.TipPos = self.MOL.GetConformer().GetAtomPosition(int(self.TipId))
         else:
@@ -166,7 +166,7 @@ class Detect_Geometry(Define_Geometry):
         print('Detect_Geometry: currently not availiable')
         sys.exit()
 
-        if tip_id!= None:
+        if tip_id != None:
             self.TipId = tip_id
             self.TipPos = self.MOL.GetConformer().GetAtomPosition(int(self.TipId))
         else:
@@ -290,4 +290,8 @@ class ReadProbe(Reference_Vector):
 class ExportStructure:
     def __init__(self, mol, outname='out'):
         '''ExportStructure: export structure as mol file'''
-        Chem.MolToPDBFile(mol, outname+'.pdb')
+        writer = Chem.SDWriter(outname+'.sdf')
+        for cid in [i.GetId() for i in mol.GetConformers()]:
+            writer.write(mol, confId=cid)
+        writer.close()
+        

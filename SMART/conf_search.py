@@ -22,7 +22,7 @@ from rdkit.Geometry import Point3D
 RDLogger.DisableLog('rdApp.*')
 
 from SMART import ReadProbe
-from SMART.utils import cont_to_mol_, clash_check_, vectorize_, rotation_
+from SMART.utils import conf_to_mol_, clash_check_, vectorize_, rotation_
 
 TEMPLATE_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)),'templates')
 PROBE_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Probes')
@@ -49,6 +49,8 @@ class PARAMS:
                     PARAMS.MINROTATION = float(PAR[i])
                 elif i == 'BINDING_POS':
                     PARAMS.BINDING_POS = np.array(PAR[i])
+                elif i == 'REF_POS':
+                    PARAMS.REF_POS = np.array(PAR[i])
                 elif i == 'VERBOSE':
                     PARAMS.VERBOSE = PAR[i]
                 elif i == 'NPROCS':
@@ -70,6 +72,7 @@ PARAMS.NSTEP = 10
 PARAMS.SEED = None
 PARAMS.CLASHTOL = 0.0
 PARAMS.BINDING_POS = None
+PARAMS.REF_POS = None
 PARAMS.VERBOSE = True
 PARAMS.NPROCS = 4
 
@@ -153,7 +156,7 @@ def template_search(step=1):
         # check for probe-structure clashes
         if not clash_check_(MOL_INIT.MOL, TEMPLATE.MOLS, conf.GetId(), PARAMS.CLASHTOL):
             if not MOL_INIT.SAVE_CONFS:
-                MOL_INIT.SAVE_CONFS = conf_to_mol(TEMPLATE.MOLS, conf)
+                MOL_INIT.SAVE_CONFS = conf_to_mol_(TEMPLATE.MOLS, conf)
                 if PARAMS.VERBOSE:
                     print('-saving conformer-', 1)
             else:
@@ -161,8 +164,9 @@ def template_search(step=1):
                 if PARAMS.VERBOSE:
                     print('-saving conformer-', MOL_INIT.SAVE_CONFS.GetNumConformers())
 
+    rotvec = (PARAMS.BINDING_POS - PARAMS.REF_POS) / np.linalg.norm(PARAMS.BINDING_POS - PARAMS.REF_POS)
     # rotate template for next iteration
-    TEMPLATE.MOLS = rotation_(TEMPLATE.MOLS, math.radians(RANDOM_ROT))
+    TEMPLATE.MOLS = rotation_(TEMPLATE.MOLS, math.radians(RANDOM_ROT), rotvec)
     # end conditions
     if step < PARAMS.NSTEP:
         step +=1
