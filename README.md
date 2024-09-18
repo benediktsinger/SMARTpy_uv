@@ -16,7 +16,7 @@ An open-source Python package for generation of SMART probe ensembles and calcul
 
 # Instructions
 ## Step 1: Set up the System for Analysis
-#### 1.1. Reading a structure
+#### Reading a structure
 ```
 import SMART as smart
 
@@ -27,7 +27,7 @@ structure = smart.ReadFile(path)
 structure = smart.ReadMol(mol)
 ```
 
-#### 1.2. Define a reference binding vector
+#### Define a reference binding vector
 ```
 # multiple reference vector computations are supported,
 # select one from below
