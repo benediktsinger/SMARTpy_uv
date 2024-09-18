@@ -17,7 +17,7 @@ An open-source Python package for generation of SMART probe ensembles and calcul
 # Instructions
 ## Step 1: Set up the System for Analysis
 #### Reading a structure
-```
+```python
 import SMART as smart
 
 # read from a file (.pdb, .sdf, .mol2, or .xyz)
@@ -28,7 +28,7 @@ structure = smart.ReadMol(mol)
 ```
 
 #### Define a reference binding vector
-```
+```python
 # multiple reference vector computations are supported,
 # select one from below
 
@@ -58,7 +58,7 @@ structure.export_alignment(out=file.split('.')[0]+'_align', dummy='X')
 
 ## Step 2: Run Molecular Probe Conformational Sampling
 #### Read probe file and find template
-```
+```python
 from SMART import conf_search as search
 
 # set name of probe .mol2 file (default probes in folder /Probes/)
@@ -74,7 +74,7 @@ else:
 ```
 
 #### Set conformational search parameters and perform template search
-```
+```python
 # performs 50 steps of fitting
 search.PARAMS.read_parameters({'NSTEP':50, 'VERBOSE':True})
 
@@ -86,7 +86,7 @@ smart.ExportStructure(ensemble, 'SMART_out')
 ```
 
 ## Step 3: Compute SMART Descriptors
-```
+```python
 from SMART import descriptors as desc
 
 # compute SMART descriptors using triangulation
