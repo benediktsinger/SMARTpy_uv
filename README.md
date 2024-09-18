@@ -67,7 +67,7 @@ if search.TEMPLATE.is_template(probe_name):
       # perform free conformer search to make template
       print('get template')
       search.TEMPLATE.GetTemplate(probe_name)
-  else:
+else:
       # load pre-existing template
       print('gen template')
       search.TEMPLATE.GenerateTemplate(probe_name)
