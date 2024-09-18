@@ -1,0 +1,325 @@
+
+Computing PyVista descriptors
+
+cavity 420.86725517671243 319.38632305904974
+proximal 44.67936435876717 76.29543298065843
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   420.867255  ...                       376.187891
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0                471.66069  ...                   385.818354
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1a5b1e1f0> / Bmin:  1.74 / Bmax: 10.95 / L: 11.40
+      R/Å     %V_Bur     %S_Bur
+     5.00      27.21       0.00
+      R/Å     %V_Bur     %S_Bur
+     7.08      14.87       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              221.074337  ...                  10.954679
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 569.709894346174 371.9010877697728
+proximal 44.54490346148899 76.26068019795406
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   569.709894  ...                       525.164991
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               614.117179  ...                   525.386922
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad942d50> / Bmin:  2.97 / Bmax: 10.71 / L: 13.25
+      R/Å     %V_Bur     %S_Bur
+     5.00      28.02       0.00
+      R/Å     %V_Bur     %S_Bur
+     7.14      17.52       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              266.980761  ...                  10.707474
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 737.5497509100401 467.5240396810838
+proximal 43.60850748405018 76.13905006043659
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   737.549751  ...                       693.941243
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               670.686352  ...                   547.622542
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad9425e0> / Bmin:  4.38 / Bmax: 12.95 / L: 12.00
+      R/Å     %V_Bur     %S_Bur
+     5.00      27.36       0.00
+      R/Å     %V_Bur     %S_Bur
+    10.41       8.92       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              421.326501  ...                  12.946814
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 424.04146707901936 343.09073529742557
+proximal 44.66812257099185 76.2984257576131
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   424.041467  ...                       379.373345
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               506.766968  ...                   394.942825
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad942d50> / Bmin:  1.69 / Bmax: 13.11 / L: 13.45
+      R/Å     %V_Bur     %S_Bur
+     5.00      27.22       0.00
+      R/Å     %V_Bur     %S_Bur
+     8.71      10.21       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              282.254467  ...                  13.107727
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 368.18611142934674 282.61582007351626
+proximal 44.60250783339633 76.24481480472011
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   368.186111  ...                       323.583604
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               475.310882  ...                   367.694688
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1a5b1e1f0> / Bmin:  3.53 / Bmax:  9.82 / L: 11.35
+      R/Å     %V_Bur     %S_Bur
+     5.00      28.15       0.00
+      R/Å     %V_Bur     %S_Bur
+     6.39      20.20       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              220.603479  ...                    9.82306
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 368.04744333076894 282.7146239809587
+proximal 44.63324915581499 76.24616825341099
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   368.047443  ...                       323.414194
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               475.635826  ...                   368.905222
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad942d50> / Bmin:  2.73 / Bmax:  9.31 / L: 10.80
+      R/Å     %V_Bur     %S_Bur
+     5.00      28.16       0.00
+      R/Å     %V_Bur     %S_Bur
+     6.40      20.14       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              221.353314  ...                   9.312626
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 941.4798343319261 533.4774858506634
+proximal 44.680839364895505 76.24516527102172
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   941.479834  ...                       896.798995
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               743.330821  ...                   656.345481
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad9425e0> / Bmin:  2.84 / Bmax: 13.53 / L: 16.35
+      R/Å     %V_Bur     %S_Bur
+     5.00      27.24       0.00
+      R/Å     %V_Bur     %S_Bur
+     9.85       9.92       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              397.496688  ...                   13.53163
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 443.52077165959395 327.52470896769466
+proximal 44.657071880722995 76.23263694512231
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   443.520772  ...                         398.8637
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0                566.90377  ...                   471.548388
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad942d50> / Bmin:  2.82 / Bmax: 11.02 / L: 12.40
+      R/Å     %V_Bur     %S_Bur
+     5.00      27.23       0.00
+      R/Å     %V_Bur     %S_Bur
+     7.17      14.56       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              224.610365  ...                  11.016805
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 608.6589534561169 428.11265742241176
+proximal 44.56262960603567 76.25074369846043
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   608.658953  ...                       564.096324
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               609.695984  ...                   521.367079
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad9425e0> / Bmin:  2.56 / Bmax: 14.18 / L: 16.35
+      R/Å     %V_Bur     %S_Bur
+     5.00      27.25       0.00
+      R/Å     %V_Bur     %S_Bur
+    10.13       8.09       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              352.838466  ...                  14.178593
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 431.69605749236575 319.25732372862734
+proximal 44.668605543769985 76.25071721526072
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   431.696057  ...                       387.027452
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               502.069729  ...                     426.1072
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad942d50> / Bmin:  3.70 / Bmax: 10.78 / L: 12.55
+      R/Å     %V_Bur     %S_Bur
+     5.00      28.14       0.00
+      R/Å     %V_Bur     %S_Bur
+     7.62      15.54       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              288.418218  ...                  10.782393
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 513.6237052962988 418.2834688378299
+proximal 44.45157068154782 76.29901829275403
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   513.623705  ...                       469.172135
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0               573.245847  ...                   486.469843
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad942d50> / Bmin:  3.11 / Bmax: 13.87 / L: 16.15
+      R/Å     %V_Bur     %S_Bur
+     5.00      27.21       0.00
+      R/Å     %V_Bur     %S_Bur
+    10.41       7.19       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              339.673513  ...                  13.865875
+
+[1 rows x 8 columns]
+
+Computing PyVista descriptors
+
+cavity 287.4674622089948 252.76592874547848
+proximal 44.505870736678155 76.32110968221018
+   pyVista_delaunay_VOL_cavity  ...  pyVista_delaunay_distVOL_cavity
+0                   287.467462  ...                       242.961591
+
+[1 rows x 5 columns]
+
+Computing Morfeus descriptors
+
+   morfeus_VBur_VOL_cavity  ...  morfeus_VBur_distVOL_cavity
+0                388.72233  ...                    317.06047
+
+[1 rows x 5 columns]
+
+Computing DBSTEP descriptors
+   <rdkit.Chem.rdchem.Mol object at 0x1ad9425e0> / Bmin:  2.02 / Bmax: 10.16 / L: 12.30
+      R/Å     %V_Bur     %S_Bur
+     5.00      27.21       0.00
+      R/Å     %V_Bur     %S_Bur
+     6.23      18.54       0.00
+   dbstep_VBur_VOL_cavity  ...  dbstep_Sterimol_B5_cavity
+0              187.383384  ...                  10.159724
+
+[1 rows x 8 columns]
+DONE

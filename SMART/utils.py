@@ -41,15 +41,13 @@ def tetrahedral_(mol, bindingAtoms):
                 np.array(mol.GetConformer().GetAtomPosition(bindingAtoms[2])) ) / 3
     return ref_pos
 
-def trigonal_planar_(mol, bindingAtoms):
-    ref_pos = ( np.array(mol.GetConformer().GetAtomPosition(int(bindingAtoms[0]))) +
-                np.array(mol.GetConformer().GetAtomPosition(int(bindingAtoms[1]))) ) / 2
+def trigonal_planar_(refs_pos):
+    ref_pos = np.array(refs_pos).mean(axis=0)
     return ref_pos
-
 
 ############# ------- CONF SEARCH UTILITY FNXS
 def clash_check_(mol, probe, cid, CLASHTOL=0.0):
-    for p in range(1, probe.GetNumAtoms()):
+    for p in range(1, probe.GetNumAtoms()-1):
         for s in range(mol.GetNumAtoms()):
                 i_ = probe.GetConformer(cid).GetAtomPosition(p)
                 i_r = Chem.GetPeriodicTable().GetRvdw(probe.GetAtomWithIdx(p).GetAtomicNum())
@@ -74,7 +72,6 @@ def vectorize_(frag, tip, atoms, rotvec, theta):
         py = v[1]*math.cos(theta) + v[2]*math.sin(theta)*rotvec[0] - v[0]*math.sin(theta)*rotvec[2]
         pz = v[2]*math.cos(theta) + v[0]*math.sin(theta)*rotvec[1] - v[1]*math.sin(theta)*rotvec[0]
         newv = [px + centre[0], py + centre[1], pz + centre[2]]
-
         vecs.append(newv)
     return vecs
 

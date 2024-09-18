@@ -27,6 +27,7 @@ class _reference_vector:
             n = np.linalg.norm(v)
             self.U = np.array(v / n)
             self.BindingPos = np.array(self.TipPos) + (float(dist)*self.U)
+        #print(self.U)
         except np.linalg.LinAlgError:
             print('invalid coordinates')
             sys.exit()
@@ -36,7 +37,7 @@ class _crossproduct_vector:
     # calculate binding vectors
     def __init__(self, idPos, refPos1, refPos2, dist):
         try:
-            self.TipPos = idPos
+            self.TipPos = np.array(idPos)
             v1 = refPos1 - self.TipPos
             n1 = np.linalg.norm(v1)
             self.V1 = (v1 / n1)
@@ -44,15 +45,16 @@ class _crossproduct_vector:
             n2 = np.linalg.norm(v2)
             self.V2 = (v2 / n2)
             self.U = np.cross(self.V1, self.V2)
-            self.BindingPos = np.array(self.TipPos) + (float(dist)*np.array(self.U))
+            self.BindingPos = np.array(self.TipPos) + (float(dist)*self.U)
+            print(self.U)
         except np.linalg.LinAlgError:
             print('invalid coordinates')
             sys.exit()
-        #return self
+        return self
 
 ############# ------- VECTOR INIT CLASSES
 class Reference_Vector(_reference_vector):
-    def __init__(self, tip_id=None, tip_pos=None, ref_id=None, ref_pos=None, dist=0.0):
+    def __init__(self, tip_id=None, tip_pos=None, ref_id=None, ref_pos=None, dist=1.0):
         '''Reference_Vector: probe binding vector based on tail/tip vector definition'''
         if not tip_pos is None:
             self.TipPos = tip_pos
@@ -65,7 +67,7 @@ class Reference_Vector(_reference_vector):
             sys.exit()
 
         if not ref_pos is None:
-            self.RefPos = tip_pos
+            self.RefPos = ref_pos
         elif ref_id != None:
             self.RefId = ref_id
             self.RefPos = self.MOL.GetConformer().GetAtomPosition(int(self.RefId))
@@ -76,7 +78,7 @@ class Reference_Vector(_reference_vector):
         self.Vector = _reference_vector.__init__(self, self.TipPos, self.RefPos, dist)
 
 class Reference_Angle(_crossproduct_vector):
-    def __init__(self, tip_id=None, tip_pos=None, refs_id=None, refs_pos=None, dist=0.0):
+    def __init__(self, tip_id=None, tip_pos=None, refs_id=None, refs_pos=None, dist=1.0):
         '''Reference_Angle: cross product of input angle as binding reference vector'''
         if not tip_pos is None:
             self.TipPos = tip_pos
@@ -102,13 +104,13 @@ class Reference_Angle(_crossproduct_vector):
         else:
             print('Please supply refs_id or refs_pos')
             sys.exit()
-        self.Vector= _crossproduct_vector.__init__(self, self.TipPos, tail1_pos, tail2_pos)
+        self.Vector= _crossproduct_vector.__init__(self, self.TipPos, tail1_pos, tail2_pos, dist)
 
 class Define_Geometry(_reference_vector):
-    def __init__(self, tip_id=None, tip_pos=None, bindingAtoms=None, geom=None, dist=0.0):
+    def __init__(self, tip_id=None, tip_pos=None, refs_ids=None, refs_pos=None, geom=None, dist=1.0):
         '''Define_Geometry: define binding center geometry and reference atoms'''
         self.Geometry = geom
-        self.RefAtoms = bindingAtoms
+        self.RefsPos = refs_pos
         if not tip_pos is None:
             self.TipPos = tip_pos
         elif tip_id != None:
@@ -118,44 +120,44 @@ class Define_Geometry(_reference_vector):
             print('Please supply tip_id or tip_pos')
             sys.exit()
 
-        if not self.RefAtoms:
+        if not self.RefsPos:
             print('please specify binding atoms or use Detect_Geometry feature')
-            print(bindingAtoms)
+            print(refs_pos)
             sys.exit()
 
         if self.Geometry == 'octahedral':
-            self.RefPos = self.octahedral(dist)
+            self.RefsPos = self.octahedral(dist)
         elif self.Geometry == 'tetrahedral':
-            self.RefPos = self.tetrahedral(dist)
+            self.RefsPos = self.tetrahedral(dist)
         elif self.Geometry ==  'trigonal':
-            self.RefPos = self.trigonal_planar(dist)
+            self.RefsPos = self.trigonal_planar(dist)
         else:
             print('please specify a known geometry: trigonal, tetrahedral, octahedral')
             print(self.Geometry)
             sys.exit()
 
     def octahedral(self, dist):
-        if not len(self.RefAtoms) == 5:
+        if not len(self.RefsPos) == 5:
             print('Cannot compute octahedral geometry from these atoms:')
-            print(self.RefAtoms)
+            print(self.RefsPos)
             sys.exit()
-        self.RefPos = octahedral_(self.MOL, self.TipPos, self.RefAtoms)
+        self.RefPos = octahedral_(self.MOL, self.TipPos, self.RefsPos)
         self.Vector = _reference_vector.__init__(self, self.TipPos, self.RefPos, dist)
 
     def tetrahedral(self, dist):
-        if not len(self.RefAtoms) == 3:
+        if not len(self.RefsPos) == 3:
             print('Cannot compute tetrahedral geometry from these atoms:')
-            print(self.RefAtoms)
+            print(sself.RefsPos)
             sys.exit()
-        self.RefPos = tetrahedral_(self.MOL, self.RefAtoms)
+        self.RefPos = tetrahedral_(self.MOL, self.RefsPos)
         self.Vector = _reference_vector.__init__(self, self.TipPos, self.RefPos, dist)
 
     def trigonal_planar(self, dist):
-        if not len(self.RefAtoms) == 2:
+        if not len(self.RefsPos) == 2:
             print('Cannot compute trigonal planar geometry from these atoms:')
-            print(self.RefAtoms)
+            print(self.RefsPos)
             sys.exit()
-        self.RefPos = trigonal_planar_(self.MOL, self.RefAtoms)
+        self.RefPos = trigonal_planar_(self.RefsPos)
         self.Vector = _reference_vector.__init__(self, self.TipPos, self.RefPos, dist)
 
         #def trigonal_bipyramidal(self):
@@ -243,11 +245,14 @@ class ReadFile(Reference_Vector, Detect_Geometry, Reference_Angle):
     def reference_angle(self, tip_id=None, tip_pos=None, refs_id=None, refs_pos=None, dist=0.0):
         Reference_Angle.__init__(self, tip_id, tip_pos, refs_id, refs_pos, dist)
 
-    def reference_geometry(self, tip_id=None, tip_pos=None, bindingAtoms=None, geom=None, dist=0.0):
-        Define_Geometry.__init__(self, tip_id, tip_pos, bindingAtoms, geom, dist)
+    def reference_geometry(self, tip_id=None, tip_pos=None, refs_id=None, refs_pos=None, geom=None, dist=0.0):
+        Define_Geometry.__init__(self, tip_id, tip_pos, refs_id, refs_pos, geom, dist)
 
     def detect_geometry(self, tip_id=None, tip_pos=None, covalent=True, searchRadius=None):
         Detect_Geometry.__init__(self, tip_id, tip_pos, covalent, searchRadius)
+
+    def export_alignment(self, out='out_align', dummy='X'):
+        Export_Alignment.__init__(self, out, dummy)
 
 class ReadMol(ReadFile):
     # initialize RDKit MOL as input
@@ -287,11 +292,18 @@ class ReadProbe(Reference_Vector):
         self.RefId = self.NumAtoms-1
         Reference_Vector.__init__(self, tip_id=self.TipId, tip_pos=None, ref_id=self.RefId, ref_pos=None)
 
+class Export_Alignment:
+    def __init__(self, out, dummy):
+        Chem.MolToXYZFile(self.MOL, out+'.xyz')
+        with open(out+'.xyz', 'a+') as f:
+            f.write('\t'.join([dummy]+[str(i) for i in self.Vector.BindingPos.tolist()]))
+            #f.write('\t'.join(['X']+list(self.Vector.BindingPos)))
+
 class ExportStructure:
     def __init__(self, mol, outname='out'):
         '''ExportStructure: export structure as mol file'''
         writer = Chem.SDWriter(outname+'.sdf')
         for cid in [i.GetId() for i in mol.GetConformers()]:
+            #print(mol.GetConformer(cid).GetAtomPosition(0))
             writer.write(mol, confId=cid)
         writer.close()
-        

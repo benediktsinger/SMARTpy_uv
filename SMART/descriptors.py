@@ -48,32 +48,8 @@ def read_CAVITY_file(cavity_file):
                 cav.AddConformer(m.GetConformer(), assignId=True)
     return cav
 
-def read_STRUCTURE_file(mol_file):
-    ''' read exported structure file into STRUCT object
-    '''
-
-    name = mol_file.split('.')[0]
-    ext = mol_file.split('.')[1]
-    mol = None
-    if ext == 'mol2':
-        mol = Chem.MolFromMol2File(mol_file, removeHs=False, sanitize=False)
-    elif ext == 'mol':
-        mol = Chem.MolFromMolFile(mol_file, removeHs=False, sanitize=False)
-    elif ext == 'xyz':
-        mol = Chem.MolFromXYZFile(mol_file, removeHs=False, sanitize=False)
-    elif ext == 'pdb':
-        mol = Chem.MolFromPDBFile(mol_file, removeHs=False, sanitize=False)
-    elif ext == 'sdf':
-        suppl = Chem.SDMolSupplier(mol_file, removeHs = False, sanitize=False)
-        for m in suppl:
-            if not mol:
-                mol = m
-            else:
-                mol.AddConformer(m.GetConformer(), assignId=True)
-    return mol
-
 def ConfToMol(mol, conf):
-    ''' convert CONF object to MOL object
+    ''' convert rdkit CONF object to rdkit MOL object
     '''
 
     mol_ = Chem.Mol(mol)
@@ -82,7 +58,7 @@ def ConfToMol(mol, conf):
     return mol_
 
 def _coords_from_mols(confs):
-    ''' convert CONF object to xyz coordinate, element name lists
+    ''' convert rdkit CONF object to xyz coordinate and element name lists
     '''
 
     coords = []
@@ -180,7 +156,6 @@ def Morfeus_QO_Properties(struc, probe, id=0, z_axis=[], xz_plane=[], prox_radiu
         - Quadrant volume (O00_, O01_, O10_, O11_)
         - Octant volume (Q(+/-)00_, Q(+/-)01_, Q(+/-)10_, Q(+/-)11_)
     '''
-
     print('\nComputing Morfeus -OCTANT/QUADRANT- descriptors\n')
     properties = {}
     pcoords, pelems = _coords_from_mols(probe)
@@ -189,7 +164,7 @@ def Morfeus_QO_Properties(struc, probe, id=0, z_axis=[], xz_plane=[], prox_radiu
     max_radius = _max_radius(pcoords, TOL=2)
 
     bv = BuriedVolume(pelems+selems, pcoords+scoords, 0, z_axis_atoms=[i+len(pcoords) for i in z_axis], xz_plane_atoms=[i+len(pcoords) for i in xz_plane], radius=prox_radius)#.compute_distal_volume(method="buried_volume")
-    bv_max = BuriedVolume(pelems+selems, pcoords+scoords, 0, z_axis_atoms=z_axis, xz_plane_atoms=xz_plane, radius=max_radius)#.compute_distal_volume(method="buried_volume")
+    bv_max = BuriedVolume(pelems+selems, pcoords+scoords, 0, z_axis_atoms=[i+len(pcoords) for i in z_axis], xz_plane_atoms=[i+len(pcoords) for i in xz_plane], radius=max_radius)#.compute_distal_volume(method="buried_volume"), , radius=max_radius
 
     if octant:
         bv.octant_analysis()
@@ -292,7 +267,7 @@ def Morfeus_Properties(struc, probe, id=0, prox_radius=3.5, vol=True, sasa=False
 
     if sterimol:
         # Sterimol cavity properties
-        sterimol = Sterimol(celems, ccoords, id, 0)
+        sterimol = Sterimol(celems, ccoords, dummy_index=id+len(pcoords), attached_index=1)
         properties['morfeus_Sterimol_L_cavity'] = sterimol.L_value
         properties['morfeus_Sterimol_B1_catvity'] = sterimol.B_1_value
         properties['morfeus_Sterimol_B5_cavity'] = sterimol.B_5_value

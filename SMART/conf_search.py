@@ -21,6 +21,7 @@ from rdkit import RDLogger
 from rdkit.Geometry import Point3D
 RDLogger.DisableLog('rdApp.*')
 
+import SMART as smart
 from SMART import ReadProbe
 from SMART.utils import conf_to_mol_, clash_check_, vectorize_, rotation_
 
@@ -93,9 +94,8 @@ class TEMPLATE():
             # get probe MOL
             TEMPLATE.NAME = template
             TEMPLATE.MOLS = ReadProbe(os.path.join(PROBE_PATH, template+'.mol2')).MOL
-            #print('mol init')
             # generate template conformers
-            AllChem.EmbedMultipleConfs(TEMPLATE.MOLS, numConfs=numConfs, pruneRmsThresh=pruneRmsThresh, useRandomCoords=True, useMacrocycleTorsions=True, useSmallRingTorsions=True)
+            AllChem.EmbedMultipleConfs(TEMPLATE.MOLS, numConfs=numConfs, pruneRmsThresh=pruneRmsThresh, useRandomCoords=True, useBasicKnowledge=True, useMacrocycleTorsions=True, useSmallRingTorsions=True)
             TEMPLATE.NCONFS = TEMPLATE.MOLS.GetNumConformers()
             # save template to sdf file
             if overwrite:
@@ -147,29 +147,43 @@ def template_search(step=1):
     if PARAMS.VERBOSE:
         print('step ',step,' / ',PARAMS.NSTEP)
     RANDOM_ROT = random.randint(PARAMS.MINROTATION, PARAMS.MAXROTATION)
+    ref_rotvec = (PARAMS.BINDING_POS - PARAMS.REF_POS) / np.linalg.norm(PARAMS.BINDING_POS - PARAMS.REF_POS)
     for conf in TEMPLATE.MOLS.GetConformers():
+        rot_v = np.array(np.array(conf.GetAtomPosition(0)-conf.GetAtomPosition(TEMPLATE.MOLS.GetNumAtoms()-1)))/np.linalg.norm(np.array(np.array(conf.GetAtomPosition(0)-conf.GetAtomPosition(TEMPLATE.MOLS.GetNumAtoms()-1))))
+        r = R.align_vectors([ref_rotvec], [rot_v])
+        r[0].as_rotvec()
+        # calculate vector-aligned atom position
+        newv = r[0].apply([np.array(conf.GetAtomPosition(i)) for i in range(TEMPLATE.MOLS.GetNumAtoms())])
+        for i in range(TEMPLATE.MOLS.GetNumAtoms()):
+            # set vector-aligned atom position
+            conf.SetAtomPosition(i, newv[i])
+        #smart.ExportStructure(conf_to_mol_(TEMPLATE.MOLS, conf), str(conf.GetId())+'_rotate')
+        # calculate translation vector
         translation_v =  PARAMS.BINDING_POS - np.array(conf.GetAtomPosition(0))
         for i in range(TEMPLATE.MOLS.GetNumAtoms()):
             pt = np.array(conf.GetAtomPosition(i))
+            # calculate translated atom position
             translate = pt+translation_v
+            # set to translated atom position
             conf.SetAtomPosition(i, translate)
+        #smart.ExportStructure(conf_to_mol_(TEMPLATE.MOLS, conf), str(conf.GetId())+'_transl')
         # check for probe-structure clashes
         if not clash_check_(MOL_INIT.MOL, TEMPLATE.MOLS, conf.GetId(), PARAMS.CLASHTOL):
             if not MOL_INIT.SAVE_CONFS:
                 MOL_INIT.SAVE_CONFS = conf_to_mol_(TEMPLATE.MOLS, conf)
+                #MOL_INIT.SAVE_CONFS = conf_
                 if PARAMS.VERBOSE:
                     print('-saving conformer-', 1)
             else:
                 MOL_INIT.SAVE_CONFS.AddConformer(conf, assignId=True)
                 if PARAMS.VERBOSE:
                     print('-saving conformer-', MOL_INIT.SAVE_CONFS.GetNumConformers())
-
-    rotvec = (PARAMS.BINDING_POS - PARAMS.REF_POS) / np.linalg.norm(PARAMS.BINDING_POS - PARAMS.REF_POS)
+        #break
     # rotate template for next iteration
-    TEMPLATE.MOLS = rotation_(TEMPLATE.MOLS, math.radians(RANDOM_ROT), rotvec)
+    TEMPLATE.MOLS = rotation_(TEMPLATE.MOLS, math.radians(RANDOM_ROT), ref_rotvec)
     # end conditions
     if step < PARAMS.NSTEP:
-        step +=1
+        step += 1
         return template_search(step)
     return
 
@@ -181,8 +195,12 @@ def TEMPLATE_SEARCH(mol=None):
         sys.exit()
 
     if mol:
-        MOL_INIT.MOL = mol
+        MOL_INIT.MOL = mol.MOL
         MOL_INIT.SAVE_CONFS = None
+
+        PARAMS.BINDING_POS = mol.Vector.BindingPos
+        PARAMS.REF_POS = mol.Vector.TipPos
+        #print(PARAMS.BINDING_POS, PARAMS.REF_POS)
     else:
         print('no input structure!')
         sys.exit()
@@ -206,7 +224,13 @@ def TEMPLATE_SEARCH(mol=None):
     if MOL_INIT.SAVE_CONFS != None and MOL_INIT.SAVE_CONFS.GetNumConformers() != 0:
         if PARAMS.VERBOSE:
             print('---', MOL_INIT.SAVE_CONFS.GetNumConformers(), 'conformers saved ---')
+            MOL_OUT = Chem.RWMol(MOL_INIT.SAVE_CONFS)
+            MOL_OUT.RemoveAtom(TEMPLATE.MOLS.GetNumAtoms()-1)
+            AllChem.SanitizeMol(MOL_OUT)
+            MOL_INIT.SAVE_CONFS = MOL_OUT
     else:
         print('SIMULATION FAILED')
+
+
 
     return MOL_INIT.SAVE_CONFS

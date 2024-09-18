@@ -65,18 +65,14 @@ class _crossproduct_vector:
     def __init__(self, idPos, refPos1, refPos2, dist=2.0):
         try:
             self.TipPos = idPos
-            v1 = refPos1 - self.TipPos
-            n1 = np.linalg.norm(v1)
-            self.V1 = (v1 / n1)
-            v2 = refPos2 - self.TipPos
-            n2 = np.linalg.norm(v2)
-            self.V2 = (v2 / n2)
+            self.V1 = (refPos1 - self.TipPos) / np.linalg.norm(refPos1 - self.TipPos)
+            self.V2 = (refPos2 - self.TipPos) / np.linalg.norm(refPos2 - self.TipPos)
             self.U = np.cross(self.V1, self.V2)
             self.BindingPos = np.array(self.TipPos) + (float(dist)*np.array(self.U))
         except np.linalg.LinAlgError:
             print('invalid coordinates')
             sys.exit()
-        #return self
+        return self
 
 ############# ------- VECTOR INIT CLASSES
 class Reference_Vector(_reference_vector):
@@ -86,18 +82,21 @@ class Reference_Vector(_reference_vector):
         self.RefId = ref
         tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.Id))
         tail_pos = self.MOL.GetConformer().GetAtomPosition(int(self.RefId))
-        self.Vector = _reference_vector.__init__(self, tip_pos, tail_pos)
-        #return self
+        self.Vector = _reference_vector.__init__(self, tip_pos, tail_pos, dist)
+        return self
 
 class Reference_Angle(_crossproduct_vector):
-    def __init__(self, id, refs, dist=2.0):
+    def __init__(self, id=None, id_pos=None, refs=None, dist=2.0):
         '''Reference_Angle: cross product of input angle as binding reference vector'''
-        self.Id = id
+        if id_pos is not None:
+            self.TipPos = id_pos
+        else:
+            self.Id = id
+            self.TipPos = self.MOL.GetConformer().GetAtomPosition(int(self.Id))
         self.RefIds = refs
-        tip_pos = self.MOL.GetConformer().GetAtomPosition(int(self.Id))
-        tail1_pos = self.MOL.GetConformer().GetAtomPosition(int(self.RefIds[0]))
-        tail2_pos = self.MOL.GetConformer().GetAtomPosition(int(self.RefIds[1]))
-        self.Vector= _crossproduct_vector.__init__(self, tip_pos, tail1_pos, tail2_pos)
+        tail1_pos = np.array(self.MOL.GetConformer().GetAtomPosition(int(self.RefIds[0])))
+        tail2_pos = np.array(self.MOL.GetConformer().GetAtomPosition(int(self.RefIds[1])))
+        self.Vector = _crossproduct_vector.__init__(self, self.TipPos, tail1_pos, tail2_pos, dist)
 
 class Define_Geometry(_reference_vector):
     def __init__(self, id, geom, bindingAtoms, dist=2.0):
@@ -227,8 +226,8 @@ class ReadFile(Reference_Vector, Detect_Geometry, Reference_Angle):
     def reference_vector(self, tip, tail, dist=2.0):
         Reference_Vector.__init__(self, tip, tail, dist)
 
-    def reference_angle(self, tip, tails, dist=2.0):
-        Reference_Angle.__init__(self, tip, tails, dist)
+    def reference_angle(self, tip=None, tip_pos=None, tails=None, dist=2.0):
+        Reference_Angle.__init__(self, tip, tip_pos, tails, dist)
 
     def reference_geometry(self, tip, geom, bindingAtoms, dist=2.0):
         Define_Geometry.__init__(self, tip, geom, bindingAtoms, dist)
@@ -341,7 +340,7 @@ def _rotateAlign(struc, probe):
     #probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), probe.MOL.GetConformer().GetAtomPosition(probe.Ref))
 
     probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    probe.Vector.TailPos = struc.MOL.GetConformer().GetAtomPosition(struc.Id)
+    probe.Vector.TailPos = struc.Vector.TipPos
     v = probe.Vector.TipPos  - probe.Vector.TailPos
     n = np.linalg.norm(v)
     probe.Vector.Unit = v / n
@@ -404,7 +403,7 @@ def _translate(struc, probe):
     #probe.Vector = _reference_vector(probe.MOL.GetConformer().GetAtomPosition(probe.Id), struc.MOL.GetConformer().GetAtomPosition(struc.Id))
 
     probe.Vector.TipPos = probe.MOL.GetConformer().GetAtomPosition(probe.Id)
-    probe.Vector.TailPos = struc.MOL.GetConformer().GetAtomPosition(struc.Id)
+    probe.Vector.TailPos = struc.Vector.TipPos
     v = probe.Vector.TipPos  - probe.Vector.TailPos
     n = np.linalg.norm(v)
     probe.Vector.U = v / n
