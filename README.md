@@ -1,5 +1,5 @@
 # Spatial Molding for Approachable Rigid Targets (SMART)
-<img width="195" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/6da48469-0a27-4084-bf85-a8d474757127"> <img width="200" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/84905748-9780-4411-a9cb-8d97dcc63e2a">
+<img width="400" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/6da48469-0a27-4084-bf85-a8d474757127"> <img width="400" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/84905748-9780-4411-a9cb-8d97dcc63e2a">
 
 An open-source Python package for generation of SMART probe ensembles and calculation of SMART molecular descriptors.
 
@@ -7,105 +7,100 @@ An open-source Python package for generation of SMART probe ensembles and calcul
 - pandas
 - scipy
 - mathutils
+- argparse
 - RDKit
 - morfeus (optional)
 - dbstep (optional)
 - pyvista (optional)
-  
+- chimera (optional)
+
 # Instructions
-### Step 1: Select and Add Probe to Structure(s) of Interest
-#### Option 1: Tail-to-Tip Reference Vector
-~Insert img here~
+## Step 1: Set up the System for Analysis
+#### 1.1. Reading a structure
 ```
-import SMART_probe_utils as SMART
-file = 'R-TCPTTL_1'
-structure = SMART.ReadFile(file) # initialize structure
-structure.reference_vector(tip=0, tail=1, dist=2.0) # define reference binding vector
-probe = SMART.Probe('S_SiF2_12_cyclic.mol2') # initialize selected probe (in Probes/ folder)
-docked = SMART.add_probe(structure, probe) # start docking protocol
-SMART.ExportStructure(docked, file+'_probe') # (optional) export docked structure as .mol file
-```
-Where:
+import SMART as smart
 
-tip = 0-indexed ID of binding atom
+# read from a file (.pdb, .sdf, .mol2, or .xyz)
+structure = smart.ReadFile(path)
 
-tail = 0-indexed ID of reference atom
+# or pass MOL directly from RDKit
+structure = smart.ReadMol(mol)
+```
 
-dist = distance of probe binding point from binding atom (Å)
+#### 1.2. Define a reference binding vector
+```
+# multiple reference vector computations are supported,
+# select one from below
 
-Add probe using command line interface:
-```
-python3 SMART_probe_utils.py -f R-TCPTTL_1.mol2 -o R-TCPTTL_1_probe -id 0 -ref 1 -p S_SiF2_12_cyclic.mol2 -dist 2.0
-```
-#### Option 2: Angle Cross Product Reference Vector
-Insert img here
-```
-import SMART_probe_utils as SMART
-file = 'R-TCPTTL_1'
-structure = SMART.ReadFile(file) # initialize structure
-structure.reference_angle(tip=0, tails=[50,21], dist=2.0) # define reference binding vector
-probe = SMART.Probe('S_SiF2_12_cyclic.mol2') # initialize selected probe (in Probes/ folder)
-docked = SMART.add_probe(structure, probe) # start docking protocol
-SMART.ExportStructure(docked, file+'_probe') # (optional) export docked structure as .mol file
-```
-Add probe using command line interface:
-```
-python3 SMART_probe_utils.py -f R-TCPTTL_1.mol2 -o R-TCPTTL_1_probe -id 0 -ref 1 -p S_SiF2_12_cyclic.mol2 -dist 2.0
-```
-#### Option 3: Define Geometry of Binding Center
-Insert img here
+# define a linear reference vector from atom ids
+binding_atom = 0
+ref_atom = 1
+structure.reference_vector(tip_id=binding_atom, ref_id=ref_atom, dist=2.0)
 
-#### Option 4: Auto-Detect Geometry of Binding Center
-Insert img here
+# define a linear reference vector from atom positions
+binding_atom = np.array([0,0,0])
+ref_atom = np.array([0,0,1])
+structure.reference_vector(tip_pos=binding_atom, ref_pos=ref_atom, dist=2.0)
 
-### Step 2: Generate Probe Conformational Ensemble
-#### Option 1: Template Search
-Insert img here
+# define a cross-product reference vector from atom positions
+# (follows the right-hand-rule)
+structure.reference_angle(tip_pos=binding_atom, ref_pos=ref_atom, dist=2.0)
 
-generate conformers by fitting and rotating a probe conformer ensemble template to cavity of interest
-```
-import SMART_conf_search as SMART_conf
-SMART_conf.PARAMS.read_parameters({'NSTEP':20, 'MINROTATION':30, 'MAXROTATION':330}) # initialize custom search parameters
-try:
-    cavity, structure, cmplx = SMART_conf.CUSTOM_TEMPLATE_SEARCH(docked) # run template algorithm
-except Exception as e:
-    print('simulation failed for - ', file)
-    print(e)
-SMART_conf.save_out('SMART_confs_'+file) # (optional) export ensemble as mol2 file
-```
-Run simulation using command line interface:
-```
-python3 SMART_conf_search.py -f R-TCPTTL_1_probe.mol -method template -p PARAMS.txt
-```
-#### Option 2: Torsional Search
-Insert img here
+# define a geometry and find empty coordination site
+binding_atom = np.array([0,0,0])
+ref_atom1, ref_atom2 = 1, 2
+structure.reference_geometry(tip_pos=binding_atom, refs_ids=[ref_atom1, ref_atom2], geom='trigonal', dist=2.0)
 
-*this search method does not support cyclic probes*
+# (Optional: for debugging)
+# Export .pdb file with a dummy atom at the computed binding site
+structure.export_alignment(out=file.split('.')[0]+'_align', dummy='X')
 ```
-import SMART_conf_search as SMART_conf
-SMART_conf.PARAMS.read_parameters({'NSTEP':500, 'MINROTATION':30, 'MAXROTATION':330}) # initialize custom search parameters
-try:
-    cavity, structure, cmplx = SMART_conf.TORSIONAL_STEP_SEARCH(docked) # run torsional algorithm
-except Exception as e:
-    print('simulation failed for - ', file)
-    print(e)
-SMART_conf.save_out('SMART_confs_'+file) # (optional) export ensemble as mol2 file
+
+## Step 2: Run Molecular Probe Conformational Sampling
+#### Read probe file and find template
 ```
-Run simulation using command line interface:
+from SMART import conf_search as search
+
+# set name of probe .mol2 file (default probes in folder /Probes/)
+probe_name = 'S_SiH2_12_cyclic'
+if search.TEMPLATE.is_template(probe_name):
+      # perform free conformer search to make template
+      print('get template')
+      search.TEMPLATE.GetTemplate(probe_name)
+  else:
+      # load pre-existing template
+      print('gen template')
+      search.TEMPLATE.GenerateTemplate(probe_name)
 ```
-python3 SMART_conf_search.py -f R-TCPTTL_1_probe.mol -method torsional -p PARAMS.txt
+
+#### Set conformational search parameters and perform template search
 ```
-### Step 3: Calculate Molecular Descriptors
-All descriptors can be gathered and compiled using the function ```get_all_properties()```
+# performs 50 steps of fitting
+search.PARAMS.read_parameters({'NSTEP':50, 'VERBOSE':True})
+
+# !! start the search !!
+ensemble = search.TEMPLATE_SEARCH(structure) # output conformers
+
+# (Optional: export ensemble to single .pdb file)
+smart.ExportStructure(ensemble, 'SMART_out')
 ```
-import SMART_descriptors as SMART_des
-binding_ID = 0 # structure tip atom
-properties = SMART_des.get_all_properties(cavity, structure, binding_ID, prox_radius=3.5, alpha=0)
+
+## Step 3: Compute SMART Descriptors
 ```
-Calculate descriptors using command line interface:
+from SMART import descriptors as desc
+
+# compute SMART descriptors using triangulation
+properties_tri = desc.get_Cloud_Properties(structure.MOL, ensemble, id=binding_atom, prox_radius=4.0, alpha=0)
+
+# compute SMART descriptors using Buried Volume
+properties_tri = desc.get_BuriedVolume_Properties(structure.MOL, ensemble, id=binding_atom, prox_radius=4.0)
 ```
-python3 SMART_descriptors.py ... TBD
-```
+
+Alternatively, compute SMART descriptors using UCSF Chimera through the script ```chimera_descriptors.py```
+
+See documentation for more information.
+
+
 # Citations
 This package:
 - pending...
