@@ -93,7 +93,11 @@ from SMART import descriptors as desc
 properties_tri = desc.get_Cloud_Properties(structure.MOL, ensemble, id=binding_atom, prox_radius=4.0, alpha=0)
 
 # compute SMART descriptors using Buried Volume
-properties_tri = desc.get_BuriedVolume_Properties(structure.MOL, ensemble, id=binding_atom, prox_radius=4.0)
+properties_bv = desc.get_BuriedVolume_Properties(structure.MOL, ensemble, id=binding_atom, prox_radius=4.0, sterimol=True, sasa=False, vol=True)
+
+# compute octants and quadrants
+ref_atom1, ref_atom2 = 1, 2
+properties_bv_oc = desc.get_Octant_Properties(structure.MOL, ensemble, id=binding_atom, xz_axis=[ref_atom1, ref_atom2],  prox_radius=4.0, quadrants=False)
 ```
 
 Alternatively, compute SMART descriptors using UCSF Chimera through the script ```chimera_descriptors.py```
