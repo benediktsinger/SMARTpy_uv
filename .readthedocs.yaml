@@ -7,9 +7,8 @@ build:
  tools:
    python: "3.12"
 
-# TBD
-#sphinx:
-#  configuration: docs/conf.py
+sphinx:
+  configuration: docs/conf.py
 
 python:
   install:
