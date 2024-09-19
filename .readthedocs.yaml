@@ -7,7 +7,7 @@ build:
     
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
-  configuration: docs/config.py
+  configuration: source/config.py
 
 python:
   install:
