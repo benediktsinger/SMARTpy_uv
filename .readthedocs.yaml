@@ -8,7 +8,7 @@ build:
    python: "3.12"
 
 sphinx:
-  configuration: source/config.py
+  configuration: source/conf.py
 
 python:
   install:
