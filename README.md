@@ -1,5 +1,5 @@
 # Spatial Molding for Approachable Rigid Targets (SMART)
-<img width="400" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/6da48469-0a27-4084-bf85-a8d474757127"> <img width="400" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/84905748-9780-4411-a9cb-8d97dcc63e2a">
+<img width="300" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/6da48469-0a27-4084-bf85-a8d474757127"> <img width="300" alt="image" src="https://github.com/SigmanGroup/SMART-molecular-descriptors/assets/84196711/84905748-9780-4411-a9cb-8d97dcc63e2a">
 
 An open-source Python package for generation of SMART probe ensembles and calculation of SMART molecular descriptors.
 
@@ -16,8 +16,8 @@ An open-source Python package for generation of SMART probe ensembles and calcul
 
 # Instructions
 ## Step 1: Set up the System for Analysis
-#### 1.1. Reading a structure
-```
+#### Reading a structure
+```python
 import SMART as smart
 
 # read from a file (.pdb, .sdf, .mol2, or .xyz)
@@ -27,8 +27,8 @@ structure = smart.ReadFile(path)
 structure = smart.ReadMol(mol)
 ```
 
-#### 1.2. Define a reference binding vector
-```
+#### Define a reference binding vector
+```python
 # multiple reference vector computations are supported,
 # select one from below
 
@@ -58,7 +58,7 @@ structure.export_alignment(out=file.split('.')[0]+'_align', dummy='X')
 
 ## Step 2: Run Molecular Probe Conformational Sampling
 #### Read probe file and find template
-```
+```python
 from SMART import conf_search as search
 
 # set name of probe .mol2 file (default probes in folder /Probes/)
@@ -67,14 +67,14 @@ if search.TEMPLATE.is_template(probe_name):
       # perform free conformer search to make template
       print('get template')
       search.TEMPLATE.GetTemplate(probe_name)
-  else:
+else:
       # load pre-existing template
       print('gen template')
       search.TEMPLATE.GenerateTemplate(probe_name)
 ```
 
 #### Set conformational search parameters and perform template search
-```
+```python
 # performs 50 steps of fitting
 search.PARAMS.read_parameters({'NSTEP':50, 'VERBOSE':True})
 
@@ -86,14 +86,18 @@ smart.ExportStructure(ensemble, 'SMART_out')
 ```
 
 ## Step 3: Compute SMART Descriptors
-```
+```python
 from SMART import descriptors as desc
 
 # compute SMART descriptors using triangulation
 properties_tri = desc.get_Cloud_Properties(structure.MOL, ensemble, id=binding_atom, prox_radius=4.0, alpha=0)
 
 # compute SMART descriptors using Buried Volume
-properties_tri = desc.get_BuriedVolume_Properties(structure.MOL, ensemble, id=binding_atom, prox_radius=4.0)
+properties_bv = desc.get_BuriedVolume_Properties(structure.MOL, ensemble, id=binding_atom, prox_radius=4.0, sterimol=True, sasa=False, vol=True)
+
+# compute octants and quadrants
+ref_atom1, ref_atom2 = 1, 2
+properties_bv_oc = desc.get_Octant_Properties(structure.MOL, ensemble, id=binding_atom, xz_axis=[ref_atom1, ref_atom2],  prox_radius=4.0, quadrants=False)
 ```
 
 Alternatively, compute SMART descriptors using UCSF Chimera through the script ```chimera_descriptors.py```
