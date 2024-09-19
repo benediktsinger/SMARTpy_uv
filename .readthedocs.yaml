@@ -7,9 +7,9 @@ build:
  tools:
    python: "3.12"
 
-# Build documentation in the "docs/" directory with Sphinx
-sphinx:
-  configuration: docs/conf.py
+# TBD
+#sphinx:
+#  configuration: docs/conf.py
 
 python:
   install:
