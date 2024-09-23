@@ -14,6 +14,8 @@ An open-source Python package for generation of SMART probe ensembles and calcul
 - pyvista (optional)
 - chimera (optional)
 
+See documentation for version-specific syntax (https://smart-molecular-descriptors.readthedocs.io/en/latest/)
+
 # Instructions
 ## Step 1: Set up the System for Analysis
 #### Reading a structure
