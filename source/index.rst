@@ -3,12 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-SMART-molecular-descriptors documentation
+SMARTpy documentation
 =========================================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+This site is currently under construction, please see our Git repository for instructions in the meantime!
 
 
 .. toctree::
