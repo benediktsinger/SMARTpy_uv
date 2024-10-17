@@ -12,9 +12,6 @@ Spatial Molding for Approchable Rigid Targets (SMART) is a package of molecular 
 
    This site is currently under construction, please see the GitHub for basic usage in the meantime!
 
-Contents
---------
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
