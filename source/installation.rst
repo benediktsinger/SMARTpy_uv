@@ -4,7 +4,7 @@ Download SMARTpy from GutHub main branch
 
 Configure dependencies and executable
 
-``cd /path/to/SMARTpy
-pip install -r requirements.txt
-export PYTHONPATH=$PYTHONPATH:/path/to/SMARTpy/SMART/
-``
+``cd /path/to/SMARTpy``
+``pip install -r requirements.txt``
+``export PYTHONPATH=$PYTHONPATH:/path/to/SMARTpy/SMART/``
+
