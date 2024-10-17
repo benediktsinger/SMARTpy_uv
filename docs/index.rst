@@ -8,19 +8,5 @@ SMARTpy documentation
 
 Spatial Molding for Approchable Rigid Targets (SMART) is a package of molecular descriptors of open-faced cavity features, including volume entry surface area, and shape of an active catalyst site. These descriptors can be used for QSSR, MLR, cheminformatics, and more.
 
-User Documentation
-
-.. toctree::
-   :caption: requirements
-
 .. toctree::
    :caption: installation
-
-.. toctree::
-   :caption: getting_started
-
-.. toctree::
-   :caption: support
-
-.. toctree::
-   :caption: licensing
