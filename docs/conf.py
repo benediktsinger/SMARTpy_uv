@@ -17,7 +17,7 @@ release = '09-2024'
 extensions = []
 
 templates_path = ['_templates']
-exclude_patterns = []
+#exclude_patterns = []
 master_doc = "index"
 
 
