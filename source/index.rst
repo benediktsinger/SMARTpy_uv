@@ -12,10 +12,26 @@ User Documentation
 
 .. toctree::
    :maxdepth: 2
-   requirements
-   installation
-   getting_started
-   support
-   licensing  
+   :hidden:
+   :caption: requirements
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: installation
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: getting_started
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: support
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: licensing
 
