@@ -16,8 +16,6 @@ This site is currently under construction, please see our Git repository for ins
    installation
    getting_started
    support
-   contribution
    licensing  
-   faq
 
 
