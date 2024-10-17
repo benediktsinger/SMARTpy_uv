@@ -11,5 +11,13 @@ This site is currently under construction, please see our Git repository for ins
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: User Documentation
+   requirements
+   installation
+   getting_started
+   support
+   contribution
+   licensing  
+   faq
+
 
