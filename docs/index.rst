@@ -11,26 +11,16 @@ Spatial Molding for Approchable Rigid Targets (SMART) is a package of molecular 
 User Documentation
 
 .. toctree::
-   :maxdepth: 2
-   :hidden:
    :caption: requirements
 
 .. toctree::
-   :maxdepth: 2
-   :hidden:
    :caption: installation
 
 .. toctree::
-   :maxdepth: 2
-   :hidden:
    :caption: getting_started
 
 .. toctree::
-   :maxdepth: 2
-   :hidden:
    :caption: support
 
 .. toctree::
-   :maxdepth: 2
-   :hidden:
    :caption: licensing
