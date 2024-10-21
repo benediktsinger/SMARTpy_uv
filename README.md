@@ -1,6 +1,6 @@
 # Spatial Molding for Approachable Rigid Targets (SMART)
 
-![abstract_img](https://github.com/user-attachments/assets/91c39dce-7342-4ae0-80d8-7bddd884fd1a)
+![abstract_img](https://github.com/user-attachments/assets/dada31b1-de95-4b86-915c-f59605e8140f)
 
 An open-source Python package for generation of SMART probe ensembles and calculation of SMART molecular descriptors.
 
