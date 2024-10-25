@@ -143,7 +143,7 @@ def DBSTEP_Properties(struc, probe, id, prox_radius=3.5, vol=True, sterimol=Fals
 
     return properties
 
-def Morfeus_QO_Properties(struc, probe, id=0, z_axis=[], xz_plane=[], prox_radius=3.5, octant=True, quadrant=False):
+def get_Octant_Properties(struc, probe, id=0, z_axis=[], xz_plane=[], prox_radius=3.5, octant=True, quadrant=False):
     ''' Compute quadrant and octant analysis using the Morfeus package
         Parameters:
         - struct = STRUCT object
@@ -233,7 +233,7 @@ def Morfeus_QO_Properties(struc, probe, id=0, z_axis=[], xz_plane=[], prox_radiu
 
     return properties
 
-def Morfeus_Properties(struc, probe, id=0, prox_radius=3.5, vol=True, sasa=False, sterimol=False):
+def get_BuriedVolume_Properties(struc, probe, id=0, prox_radius=3.5, vol=True, sasa=False, sterimol=False):
     ''' Uses morfeus package to compute SMART descriptors
         Parameters:
         - struct = STRUCT object
@@ -284,7 +284,7 @@ def Morfeus_Properties(struc, probe, id=0, prox_radius=3.5, vol=True, sasa=False
 
     return properties
 
-def PyVista_Properties(struc, probe, id, prox_radius=3.5, a=0):
+def get_Cloud_Properties(struc, probe, id, prox_radius=3.5, a=0):
     ''' Uses pyvista package to assemble geometric objects and extract properties '''
 
     print('\nComputing PyVista descriptors\n')
@@ -366,110 +366,11 @@ def RDKit_Properties(struc, probe):
 
     return properties
 
-############# ------- HANDLER FNXS
-def get_all_properties(struc, probe, id, prox_radius=3.5, alpha=0):
-    ''' Get all main properties
-        Calls functions:
-           Morfeus_Properties()
-           PyVista_Properties()
-           DBSTEP_Properties()
-         Returns:
-           DataFrame
-    '''
-
-    properties = pd.DataFrame()
-    props = {}
-    #try:
-    ##    props = RDKit_Properties(struc, probe)
-    #    print(pd.DataFrame(props, index=[0]))
-    #    properties = pd.DataFrame(props, index=[0])
-        #properties = pd.concat([properties, pd.DataFrame(props, index=[0])])
-    #except Exception as e:
-    #    print('Error gathering RDKit properties ...')
-    #    print(e)
-    try:
-        props = PyVista_Properties(struc, probe, id, prox_radius, alpha)
-        print(pd.DataFrame(props, index=[0]))
-        if properties.empty:
-            properties = pd.DataFrame(props, index=[0])
-        else:
-            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
-    except Exception as e:
-        print('Error gathering PyVista properties ...')
-        print(e)
-    try:
-        props = Morfeus_Properties(struc, probe, id, prox_radius)
-        print(pd.DataFrame(props, index=[0]))
-        if properties.empty:
-            properties = pd.DataFrame(props, index=[0])
-        else:
-            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
-    except Exception as e:
-        print('Error gathering Morfeus properties ...')
-        print(e)
-    try:
-        props = DBSTEP_Properties(struc, probe, id, prox_radius)
-        print(pd.DataFrame(props, index=[0]))
-        if properties.empty:
-            properties = pd.DataFrame(props, index=[0])
-        else:
-            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
-    except Exception as e:
-        print('Error gathering DBSTEP properties ...')
-        print(e)
-
-    return properties
-
-def main(cav_file, mol_file, id, rdkit, dbstep, morfeus, pyvista, out='out'):
-    properties = pd.DataFrame()
-    struc = read_STRUCTURE_file(mol_file)
-    probe = read_CAVITY_file(cav_file)
-    #cplx = read_CPLX_file(cplx_file)
-
-    if not rdkit and not dbstep and not morfeus and not pyvista:
-        print('No Descriptor method selected.')
-        sys.exit()
-
-    if rdkit:
-        try:
-            props = RDKit_Properties(struc, probe)
-            print(pd.DataFrame(props, index=[0]))
-            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
-        except Exception as e:
-            print('Error gathering RDKit properties ...')
-            print(e)
-
-    if dbstep:
-        try:
-            props = DBSTEP_Properties(struc, probe, id, prox_radius)
-            print(pd.DataFrame(props, index=[0]))
-            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
-        except Exception as e:
-            print('Error gathering DBSTEP properties ...')
-            print(e)
-
-    if morfeus:
-        try:
-            props = Morfeus_Properties(struc, probe, id, prox_radius)
-            print(pd.DataFrame(props, index=[0]))
-            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
-        except Exception as e:
-            print('Error gathering Morfeus properties ...')
-            print(e)
-
-    if pyvista:
-        try:
-            props = PyVista_Properties(struc, probe, id, prox_radius, alpha)
-            print(pd.DataFrame(props, index=[0]))
-            properties = properties.merge(pd.DataFrame(props, index=[0]), how='inner', left_index=True, right_index=True)
-        except Exception as e:
-            print('Error gathering PyVista properties ...')
-            print(e)
-
-    export_descriptors(properties, out)
-
 if __name__ == '__main__':
     ##! PARSE CMDLINE INPUT !##
+    print('CLI under construction, please use as a module!')
+    sys.exit()
+    
     parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Molecular Descriptor Calculations.',epilog='Uses multiple open-source python packages to compute SMART molecular descriptors.')
     parser.add_argument('-cav', required=True) # cavity conformer file
     parser.add_argument('-cplx', required=True) # complex conformer file
