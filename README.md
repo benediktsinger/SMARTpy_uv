@@ -31,6 +31,9 @@ structure = smart.ReadMol(mol)
 ```
 
 #### Define a reference binding vector
+
+![vecs](https://github.com/user-attachments/assets/f1881f38-e312-49ce-8a09-ce2249051e8c)
+
 ```python
 # multiple reference vector computations are supported,
 # select one from below
