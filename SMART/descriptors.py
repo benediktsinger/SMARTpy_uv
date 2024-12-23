@@ -79,9 +79,9 @@ def _coords_from_mol(struc):
 
     coords = []
     elems = []
-    for i, atom in enumerate(struc.GetAtoms()):
+    for i, atom in enumerate(struc.MOL.GetAtoms()):
         #atom = struc.GetAtomWithIdx(i)
-        pos = struc.GetConformer().GetAtomPosition(i)
+        pos = struc.MOL.GetConformer().GetAtomPosition(i)
         coords.append(np.array(pos))
         elem = atom.GetSymbol()
         elems.append(elem)
@@ -284,7 +284,7 @@ def get_BuriedVolume_Properties(struc, probe, id=0, prox_radius=3.5, vol=True, s
 
     return properties
 
-def get_Cloud_Properties(struc, probe, id, prox_radius=3.5, a=0):
+def get_Cloud_Properties(struc, probe, id, prox_radius=3.5, alpha=0):
     ''' Uses pyvista package to assemble geometric objects and extract properties '''
 
     print('\nComputing PyVista descriptors\n')
@@ -296,7 +296,7 @@ def get_Cloud_Properties(struc, probe, id, prox_radius=3.5, a=0):
     p_ptcloud.cast_to_pointset()
 
     # make shape object from pt cloud (delaunay triangulation)
-    cavity = p_ptcloud.delaunay_3d(alpha=a)
+    cavity = p_ptcloud.delaunay_3d(alpha=alpha)
     cavity = cavity.extract_geometry()
     cavity = cavity.extract_surface().triangulate()
 
@@ -305,7 +305,7 @@ def get_Cloud_Properties(struc, probe, id, prox_radius=3.5, a=0):
     # proximal/distal clipping
     sphere = pv.Sphere(radius=prox_radius, center=pcoords[0])
     prox = p_ptcloud.clip_surface(sphere, invert=True)
-    prox = prox.delaunay_3d(alpha=a)
+    prox = prox.delaunay_3d(alpha=alpha)
     prox = prox.extract_geometry()
     prox = prox.extract_surface().triangulate()
 
@@ -370,7 +370,7 @@ if __name__ == '__main__':
     ##! PARSE CMDLINE INPUT !##
     print('CLI under construction, please use as a module!')
     sys.exit()
-    
+
     parser = argparse.ArgumentParser(prog='Spatial Molding for Approchable Rigid Targets (SMART)',description='Molecular Descriptor Calculations.',epilog='Uses multiple open-source python packages to compute SMART molecular descriptors.')
     parser.add_argument('-cav', required=True) # cavity conformer file
     parser.add_argument('-cplx', required=True) # complex conformer file

@@ -1,0 +1,5442 @@
+RhRh_ACB4_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 175.77
+
+molmap res 2.8:  area = 331.37
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_10_sp res 2.8 = 35.37
+
+molmap res 2.8 masked:  volume = 86.5
+
+molmap res 2.8 masked:  area = 158.99
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_10_sp res 2.8 = 35.09
+
+RhRh_ACB4_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 400.91
+
+molmap res 2.8:  area = 372.3
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_10_sp res 2.8 = 85.64
+
+molmap res 2.8 masked:  volume = 166.29
+
+molmap res 2.8 masked:  area = 171.26
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_10_sp res 2.8 = 70.27
+
+RhRh_ACB4_13_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 272.64
+
+molmap res 2.8:  area = 325.78
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_13_sp res 2.8 = 55.21
+
+molmap res 2.8 masked:  volume = 126.46
+
+molmap res 2.8 masked:  area = 165.49
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_13_sp res 2.8 = 53.77
+
+RhRh_ACB4_13_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 161.02
+
+molmap res 2.8:  area = 319.9
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_13_sp res 2.8 = 56.56
+
+molmap res 2.8 masked:  volume = 83.827
+
+molmap res 2.8 masked:  area = 158.22
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_13_sp res 2.8 = 55.37
+
+RhRh_ACB4_14_redo_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 55.019
+
+molmap res 2.8:  area = 169.61
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_14_redo_sp res 2.8 = 20.29
+
+molmap res 2.8 masked:  volume = 20.761
+
+molmap res 2.8 masked:  area = 66.433
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_14_redo_sp res 2.8 = 19.68
+
+RhRh_ACB4_14_redo_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 480.49
+
+molmap res 2.8:  area = 389.93
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_14_redo_sp res 2.8 = 86.22
+
+molmap res 2.8 masked:  volume = 211.29
+
+molmap res 2.8 masked:  area = 197.13
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_14_redo_sp res 2.8 = 83.64
+
+RhRh_ACB4_16_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 718.88
+
+molmap res 2.8:  area = 444.97
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_16_sp res 2.8 = 91.57
+
+molmap res 2.8 masked:  volume = 270.45
+
+molmap res 2.8 masked:  area = 224.18
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_16_sp res 2.8 = 83.09
+
+RhRh_ACB4_16_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 272.09
+
+molmap res 2.8:  area = 315.33
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_16_sp res 2.8 = 73.71
+
+molmap res 2.8 masked:  volume = 116.96
+
+molmap res 2.8 masked:  area = 156.3
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_16_sp res 2.8 = 69.02
+
+RhRh_ACB4_18_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 101.12
+
+molmap res 2.8:  area = 269.71
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_18_sp res 2.8 = 28.71
+
+molmap res 2.8 masked:  volume = 54.297
+
+molmap res 2.8 masked:  area = 125.6
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_18_sp res 2.8 = 28.71
+
+RhRh_ACB4_18_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 375.94
+
+molmap res 2.8:  area = 315.92
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_18_sp res 2.8 = 72.2
+
+molmap res 2.8 masked:  volume = 161.91
+
+molmap res 2.8 masked:  area = 172.07
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_18_sp res 2.8 = 63.33
+
+RhRh_ACB4_19_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 311.87
+
+molmap res 2.8:  area = 335.63
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_19_sp res 2.8 = 55.29
+
+molmap res 2.8 masked:  volume = 130.43
+
+molmap res 2.8 masked:  area = 170.34
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_19_sp res 2.8 = 54.34
+
+RhRh_ACB4_19_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 416.36
+
+molmap res 2.8:  area = 334.47
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_19_sp res 2.8 = 74.41
+
+molmap res 2.8 masked:  volume = 151.46
+
+molmap res 2.8 masked:  area = 158.53
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_19_sp res 2.8 = 63.55
+
+RhRh_ACB4_20_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 16.402
+
+molmap res 2.8:  area = 87.075
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_20_sp res 2.8 = 8.532
+
+molmap res 2.8 masked:  volume = 8.3564
+
+molmap res 2.8 masked:  area = 41.876
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_20_sp res 2.8 = 8.532
+
+RhRh_ACB4_20_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 394.89
+
+molmap res 2.8:  area = 437.22
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_20_sp res 2.8 = 70.27
+
+molmap res 2.8 masked:  volume = 179.37
+
+molmap res 2.8 masked:  area = 205.46
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_20_sp res 2.8 = 67.01
+
+RhRh_ACB4_21_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 39.782
+
+molmap res 2.8:  area = 143.55
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_21_sp res 2.8 = 15.72
+
+molmap res 2.8 masked:  volume = 21.901
+
+molmap res 2.8 masked:  area = 71.383
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_21_sp res 2.8 = 15.72
+
+RhRh_ACB4_21_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 662.59
+
+molmap res 2.8:  area = 412.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_21_sp res 2.8 = 96.26
+
+molmap res 2.8 masked:  volume = 267.23
+
+molmap res 2.8 masked:  area = 226.11
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_21_sp res 2.8 = 89.62
+
+RhRh_ACB4_23_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 0.7107
+
+molmap res 2.8:  area = 7.0823
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_23_sp res 2.8 = 1.847
+
+molmap res 2.8 masked:  volume = 0.54074
+
+molmap res 2.8 masked:  area = 5.1162
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_23_sp res 2.8 = 1.847
+
+RhRh_ACB4_23_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 373.92
+
+molmap res 2.8:  area = 368.03
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_23_sp res 2.8 = 45.89
+
+molmap res 2.8 masked:  volume = 166.62
+
+molmap res 2.8 masked:  area = 196.15
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_23_sp res 2.8 = 45.89
+
+RhRh_ACB4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 93.974
+
+molmap res 2.8:  area = 232.56
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_6_sp res 2.8 = 18.93
+
+molmap res 2.8 masked:  volume = 37.093
+
+molmap res 2.8 masked:  area = 94.297
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_6_sp res 2.8 = 18.71
+
+RhRh_ACB4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 523.12
+
+molmap res 2.8:  area = 358.2
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_6_sp res 2.8 = 81.56
+
+molmap res 2.8 masked:  volume = 208.26
+
+molmap res 2.8 masked:  area = 200.89
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_6_sp res 2.8 = 77.05
+
+RhRh_ACB4_8_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 605.81
+
+molmap res 2.8:  area = 379.23
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_8_sp res 2.8 = 93.28
+
+molmap res 2.8 masked:  volume = 236.89
+
+molmap res 2.8 masked:  area = 205.5
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_8_sp res 2.8 = 84.48
+
+RhRh_ACB4_8_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 334.23
+
+molmap res 2.8:  area = 364.4
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_8_sp res 2.8 = 55.54
+
+molmap res 2.8 masked:  volume = 126.77
+
+molmap res 2.8 masked:  area = 155.88
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_8_sp res 2.8 = 53.95
+
+RhRh_ACB4_9_redo_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 348.74
+
+molmap res 2.8:  area = 365.54
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_9_redo_sp res 2.8 = 84.39
+
+molmap res 2.8 masked:  volume = 142.81
+
+molmap res 2.8 masked:  area = 166.22
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_9_redo_sp res 2.8 = 76.68
+
+RhRh_ACB4_9_redo_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 199.85
+
+molmap res 2.8:  area = 368.09
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACB4_9_redo_sp res 2.8 = 47.18
+
+molmap res 2.8 masked:  volume = 81.659
+
+molmap res 2.8 masked:  area = 144.74
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACB4_9_redo_sp res 2.8 = 46.4
+
+RhRh_ACH4_11_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 664.44
+
+molmap res 2.8:  area = 408.04
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_11_sp res 2.8 = 67.86
+
+molmap res 2.8 masked:  volume = 240.54
+
+molmap res 2.8 masked:  area = 206.99
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_11_sp res 2.8 = 66.92
+
+RhRh_ACH4_11_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 352.3
+
+molmap res 2.8:  area = 329.54
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_11_sp res 2.8 = 78.86
+
+molmap res 2.8 masked:  volume = 156.33
+
+molmap res 2.8 masked:  area = 174.3
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_11_sp res 2.8 = 69.32
+
+RhRh_ACH4_12_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 34.82
+
+molmap res 2.8:  area = 122.26
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_12_sp res 2.8 = 11.9
+
+molmap res 2.8 masked:  volume = 20.267
+
+molmap res 2.8 masked:  area = 59.221
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_12_sp res 2.8 = 10.71
+
+RhRh_ACH4_12_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 404.36
+
+molmap res 2.8:  area = 369.6
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_12_sp res 2.8 = 64.49
+
+molmap res 2.8 masked:  volume = 175.45
+
+molmap res 2.8 masked:  area = 177.06
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_12_sp res 2.8 = 63.43
+
+RhRh_ACH4_13_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 576.33
+
+molmap res 2.8:  area = 373.86
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_13_sp res 2.8 = 99.93
+
+molmap res 2.8 masked:  volume = 233.68
+
+molmap res 2.8 masked:  area = 204.93
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_13_sp res 2.8 = 92.69
+
+RhRh_ACH4_13_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 275.53
+
+molmap res 2.8:  area = 352.31
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_13_sp res 2.8 = 50.49
+
+molmap res 2.8 masked:  volume = 110.77
+
+molmap res 2.8 masked:  area = 164.53
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_13_sp res 2.8 = 50.34
+
+RhRh_ACH4_16_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 435.03
+
+molmap res 2.8:  area = 375.6
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_16_sp res 2.8 = 69.19
+
+molmap res 2.8 masked:  volume = 167.13
+
+molmap res 2.8 masked:  area = 187.38
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_16_sp res 2.8 = 65.26
+
+RhRh_ACH4_16_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 319.82
+
+molmap res 2.8:  area = 358.11
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_16_sp res 2.8 = 62.56
+
+molmap res 2.8 masked:  volume = 120.76
+
+molmap res 2.8 masked:  area = 161.85
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_16_sp res 2.8 = 53.86
+
+RhRh_ACH4_18_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 260.34
+
+molmap res 2.8:  area = 298.46
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_18_sp res 2.8 = 59.34
+
+molmap res 2.8 masked:  volume = 103.47
+
+molmap res 2.8 masked:  area = 152.92
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_18_sp res 2.8 = 58.31
+
+RhRh_ACH4_18_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 798.48
+
+molmap res 2.8:  area = 445.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_18_sp res 2.8 = 108.5
+
+molmap res 2.8 masked:  volume = 291.87
+
+molmap res 2.8 masked:  area = 236.1
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_18_sp res 2.8 = 96.4
+
+RhRh_ACH4_22_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 682.25
+
+molmap res 2.8:  area = 425.73
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_22_sp res 2.8 = 98.3
+
+molmap res 2.8 masked:  volume = 247.94
+
+molmap res 2.8 masked:  area = 215.1
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_22_sp res 2.8 = 86.94
+
+RhRh_ACH4_22_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 649.27
+
+molmap res 2.8:  area = 420.39
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_22_sp res 2.8 = 83.58
+
+molmap res 2.8 masked:  volume = 234.5
+
+molmap res 2.8 masked:  area = 208.1
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_22_sp res 2.8 = 77.22
+
+RhRh_ACH4_23_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 460.96
+
+molmap res 2.8:  area = 337.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_23_sp res 2.8 = 80.08
+
+molmap res 2.8 masked:  volume = 171.9
+
+molmap res 2.8 masked:  area = 176.56
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_23_sp res 2.8 = 70.22
+
+RhRh_ACH4_23_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 697.63
+
+molmap res 2.8:  area = 450.91
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_23_sp res 2.8 = 68.57
+
+molmap res 2.8 masked:  volume = 243.07
+
+molmap res 2.8 masked:  area = 210.44
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_23_sp res 2.8 = 66.49
+
+RhRh_ACH4_24_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 236.79
+
+molmap res 2.8:  area = 393.98
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_24_sp res 2.8 = 43.57
+
+molmap res 2.8 masked:  volume = 102.99
+
+molmap res 2.8 masked:  area = 163.35
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_24_sp res 2.8 = 41.57
+
+RhRh_ACH4_24_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 501.83
+
+molmap res 2.8:  area = 379.51
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_24_sp res 2.8 = 78.6
+
+molmap res 2.8 masked:  volume = 197.83
+
+molmap res 2.8 masked:  area = 192.66
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_24_sp res 2.8 = 75
+
+RhRh_ACH4_28_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 53.332
+
+molmap res 2.8:  area = 174.74
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_28_sp res 2.8 = 13.92
+
+molmap res 2.8 masked:  volume = 29.074
+
+molmap res 2.8 masked:  area = 89.828
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_28_sp res 2.8 = 13.88
+
+RhRh_ACH4_28_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 178.93
+
+molmap res 2.8:  area = 308.54
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_28_sp res 2.8 = 33.35
+
+molmap res 2.8 masked:  volume = 68.852
+
+molmap res 2.8 masked:  area = 124.29
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_28_sp res 2.8 = 33.11
+
+RhRh_ACH4_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 1.7193
+
+molmap res 2.8:  area = 15.64
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_2_sp res 2.8 = 6.265
+
+molmap res 2.8 masked:  volume = 1.4368
+
+molmap res 2.8 masked:  area = 12.805
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_2_sp res 2.8 = 6.232
+
+RhRh_ACH4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 545.18
+
+molmap res 2.8:  area = 395.56
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_2_sp res 2.8 = 91.79
+
+molmap res 2.8 masked:  volume = 214.79
+
+molmap res 2.8 masked:  area = 208.45
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_2_sp res 2.8 = 82.6
+
+RhRh_ACH4_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 384.91
+
+molmap res 2.8:  area = 420.19
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_3_sp res 2.8 = 47.09
+
+molmap res 2.8 masked:  volume = 161.84
+
+molmap res 2.8 masked:  area = 176.16
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_3_sp res 2.8 = 46.5
+
+RhRh_ACH4_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 1.2439
+
+molmap res 2.8:  area = 10.572
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_3_sp res 2.8 = 0.2191
+
+molmap res 2.8 masked:  volume = 0.19846
+
+molmap res 2.8 masked:  area = 2.6504
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_3_sp res 2.8 = 0.2191
+
+RhRh_ACH4_7_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 478.97
+
+molmap res 2.8:  area = 340.9
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_7_sp res 2.8 = 68.74
+
+molmap res 2.8 masked:  volume = 207.78
+
+molmap res 2.8 masked:  area = 207.68
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_7_sp res 2.8 = 68.54
+
+RhRh_ACH4_7_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 132.7
+
+molmap res 2.8:  area = 280.24
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_7_sp res 2.8 = 36.27
+
+molmap res 2.8 masked:  volume = 60.128
+
+molmap res 2.8 masked:  area = 113.21
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_7_sp res 2.8 = 35.49
+
+RhRh_ACH4_8_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 693.86
+
+molmap res 2.8:  area = 455.18
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_8_sp res 2.8 = 77.84
+
+molmap res 2.8 masked:  volume = 248.2
+
+molmap res 2.8 masked:  area = 214.65
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_8_sp res 2.8 = 72.94
+
+RhRh_ACH4_8_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 236.36
+
+molmap res 2.8:  area = 385.3
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACH4_8_sp res 2.8 = 53.7
+
+molmap res 2.8 masked:  volume = 103.32
+
+molmap res 2.8 masked:  area = 148.11
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACH4_8_sp res 2.8 = 51.64
+
+RhRh_ACyPentyl4_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 285.4
+
+molmap res 2.8:  area = 353.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_10_sp res 2.8 = 58.91
+
+molmap res 2.8 masked:  volume = 120.72
+
+molmap res 2.8 masked:  area = 177.69
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_10_sp res 2.8 = 56.6
+
+RhRh_ACyPentyl4_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 162.77
+
+molmap res 2.8:  area = 311.61
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_10_sp res 2.8 = 43.51
+
+molmap res 2.8 masked:  volume = 70.72
+
+molmap res 2.8 masked:  area = 139.94
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_10_sp res 2.8 = 42.05
+
+RhRh_ACyPentyl4_12_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 581.91
+
+molmap res 2.8:  area = 375.7
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_12_sp res 2.8 = 96.1
+
+molmap res 2.8 masked:  volume = 242.23
+
+molmap res 2.8 masked:  area = 209.18
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_12_sp res 2.8 = 85.12
+
+RhRh_ACyPentyl4_12_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 109.84
+
+molmap res 2.8:  area = 266.43
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_12_sp res 2.8 = 29.41
+
+molmap res 2.8 masked:  volume = 51.457
+
+molmap res 2.8 masked:  area = 124.26
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_12_sp res 2.8 = 29.34
+
+RhRh_ACyPentyl4_13_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 145.77
+
+molmap res 2.8:  area = 264.44
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_13_sp res 2.8 = 48.26
+
+molmap res 2.8 masked:  volume = 86.656
+
+molmap res 2.8 masked:  area = 140.89
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_13_sp res 2.8 = 40.28
+
+RhRh_ACyPentyl4_13_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 425.75
+
+molmap res 2.8:  area = 371.68
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_13_sp res 2.8 = 55.11
+
+molmap res 2.8 masked:  volume = 170.8
+
+molmap res 2.8 masked:  area = 179.89
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_13_sp res 2.8 = 54.9
+
+RhRh_ACyPentyl4_14_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+failed for RhRh_ACyPentyl4_14_sp.mol2
+RhRh_ACyPentyl4_14_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 595.57
+
+molmap res 2.8:  area = 392.17
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_14_sp res 2.8 = 80
+
+molmap res 2.8 masked:  volume = 247.98
+
+molmap res 2.8 masked:  area = 219.07
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_14_sp res 2.8 = 78.57
+
+RhRh_ACyPentyl4_15_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 253.27
+
+molmap res 2.8:  area = 334.56
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_15_sp res 2.8 = 50.85
+
+molmap res 2.8 masked:  volume = 111.85
+
+molmap res 2.8 masked:  area = 153.22
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_15_sp res 2.8 = 50.52
+
+RhRh_ACyPentyl4_15_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 63.256
+
+molmap res 2.8:  area = 175.35
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_15_sp res 2.8 = 23.88
+
+molmap res 2.8 masked:  volume = 45.592
+
+molmap res 2.8 masked:  area = 112.97
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_15_sp res 2.8 = 23.88
+
+RhRh_ACyPentyl4_16_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 717.58
+
+molmap res 2.8:  area = 446.15
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_16_sp res 2.8 = 107.2
+
+molmap res 2.8 masked:  volume = 261.75
+
+molmap res 2.8 masked:  area = 218.7
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_16_sp res 2.8 = 89.89
+
+RhRh_ACyPentyl4_16_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 179.59
+
+molmap res 2.8:  area = 310.56
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_16_sp res 2.8 = 45.74
+
+molmap res 2.8 masked:  volume = 76.243
+
+molmap res 2.8 masked:  area = 139.35
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_16_sp res 2.8 = 44.71
+
+RhRh_ACyPentyl4_17_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 132.7
+
+molmap res 2.8:  area = 245.42
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_17_sp res 2.8 = 29.64
+
+molmap res 2.8 masked:  volume = 71.594
+
+molmap res 2.8 masked:  area = 134.2
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_17_sp res 2.8 = 29.63
+
+RhRh_ACyPentyl4_17_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 215.87
+
+molmap res 2.8:  area = 334.26
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_17_sp res 2.8 = 59.98
+
+molmap res 2.8 masked:  volume = 92.689
+
+molmap res 2.8 masked:  area = 149.49
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_17_sp res 2.8 = 55.89
+
+RhRh_ACyPentyl4_18_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 2.8675
+
+molmap res 2.8:  area = 27.87
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_18_sp res 2.8 = 3.51
+
+molmap res 2.8 masked:  volume = 1.1507
+
+molmap res 2.8 masked:  area = 12
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_18_sp res 2.8 = 3.51
+
+RhRh_ACyPentyl4_18_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 945.71
+
+molmap res 2.8:  area = 503.24
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_18_sp res 2.8 = 102.4
+
+molmap res 2.8 masked:  volume = 319.82
+
+molmap res 2.8 masked:  area = 248.33
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_18_sp res 2.8 = 90.48
+
+RhRh_ACyPentyl4_19_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+failed for RhRh_ACyPentyl4_19_sp.mol2
+RhRh_ACyPentyl4_19_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 0.33516
+
+molmap res 2.8:  area = 3.5518
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_19_sp res 2.8 = 1.063
+
+molmap res 2.8 masked:  volume = 0.33516
+
+molmap res 2.8 masked:  area = 3.5518
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_19_sp res 2.8 = 1.063
+
+RhRh_ACyPentyl4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 218.58
+
+molmap res 2.8:  area = 351.03
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_1_sp res 2.8 = 63.55
+
+molmap res 2.8 masked:  volume = 95.143
+
+molmap res 2.8 masked:  area = 158.72
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_1_sp res 2.8 = 59.62
+
+RhRh_ACyPentyl4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 118.06
+
+molmap res 2.8:  area = 272.4
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_1_sp res 2.8 = 41.34
+
+molmap res 2.8 masked:  volume = 70.534
+
+molmap res 2.8 masked:  area = 137.93
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_1_sp res 2.8 = 37.86
+
+RhRh_ACyPentyl4_20_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 35.826
+
+molmap res 2.8:  area = 106.13
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_20_sp res 2.8 = 11.74
+
+molmap res 2.8 masked:  volume = 15.367
+
+molmap res 2.8 masked:  area = 50.706
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_20_sp res 2.8 = 11.74
+
+RhRh_ACyPentyl4_22_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 269.59
+
+molmap res 2.8:  area = 303.32
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_22_sp res 2.8 = 83.3
+
+molmap res 2.8 masked:  volume = 101.99
+
+molmap res 2.8 masked:  area = 163.08
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_22_sp res 2.8 = 71.04
+
+RhRh_ACyPentyl4_22_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 601.81
+
+molmap res 2.8:  area = 401.38
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_22_sp res 2.8 = 83.9
+
+molmap res 2.8 masked:  volume = 233.77
+
+molmap res 2.8 masked:  area = 204.14
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_22_sp res 2.8 = 77.91
+
+RhRh_ACyPentyl4_23_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 668.18
+
+molmap res 2.8:  area = 463.55
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_23_sp res 2.8 = 90.01
+
+molmap res 2.8 masked:  volume = 238.27
+
+molmap res 2.8 masked:  area = 210.57
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_23_sp res 2.8 = 78
+
+RhRh_ACyPentyl4_23_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 339.73
+
+molmap res 2.8:  area = 345.04
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_23_sp res 2.8 = 65.04
+
+molmap res 2.8 masked:  volume = 142.31
+
+molmap res 2.8 masked:  area = 173.97
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_23_sp res 2.8 = 63.79
+
+RhRh_ACyPentyl4_25_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 298.05
+
+molmap res 2.8:  area = 371.94
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_25_sp res 2.8 = 47.94
+
+molmap res 2.8 masked:  volume = 111.33
+
+molmap res 2.8 masked:  area = 151.65
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_25_sp res 2.8 = 47.05
+
+RhRh_ACyPentyl4_25_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 56.814
+
+molmap res 2.8:  area = 178.95
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_25_sp res 2.8 = 13.69
+
+molmap res 2.8 masked:  volume = 19.819
+
+molmap res 2.8 masked:  area = 71.942
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_25_sp res 2.8 = 13.69
+
+RhRh_ACyPentyl4_26_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 81.573
+
+molmap res 2.8:  area = 211.19
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_26_sp res 2.8 = 19.74
+
+molmap res 2.8 masked:  volume = 33.431
+
+molmap res 2.8 masked:  area = 100.83
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_26_sp res 2.8 = 19.74
+
+RhRh_ACyPentyl4_26_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 0.46661
+
+molmap res 2.8:  area = 4.4569
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_26_sp res 2.8 = 0
+
+molmap res 2.8 masked:  volume = 0.18035
+
+molmap res 2.8 masked:  area = 1.8645
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_26_sp res 2.8 = 0
+
+RhRh_ACyPentyl4_28_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 144.7
+
+molmap res 2.8:  area = 300.81
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_28_sp res 2.8 = 35.75
+
+molmap res 2.8 masked:  volume = 66.436
+
+molmap res 2.8 masked:  area = 126.8
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_28_sp res 2.8 = 35.24
+
+RhRh_ACyPentyl4_28_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 167.92
+
+molmap res 2.8:  area = 262.75
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_28_sp res 2.8 = 44.43
+
+molmap res 2.8 masked:  volume = 84.813
+
+molmap res 2.8 masked:  area = 151.44
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_28_sp res 2.8 = 42.24
+
+RhRh_ACyPentyl4_29_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 500.29
+
+molmap res 2.8:  area = 400.83
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_29_sp res 2.8 = 64.71
+
+molmap res 2.8 masked:  volume = 188.23
+
+molmap res 2.8 masked:  area = 180.64
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_29_sp res 2.8 = 59.92
+
+RhRh_ACyPentyl4_29_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 117.96
+
+molmap res 2.8:  area = 250.88
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_29_sp res 2.8 = 42.69
+
+molmap res 2.8 masked:  volume = 56.372
+
+molmap res 2.8 masked:  area = 119.91
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_29_sp res 2.8 = 41.36
+
+RhRh_ACyPentyl4_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 543.69
+
+molmap res 2.8:  area = 382.67
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_2_sp res 2.8 = 95.09
+
+molmap res 2.8 masked:  volume = 230.51
+
+molmap res 2.8 masked:  area = 207.79
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_2_sp res 2.8 = 89.02
+
+RhRh_ACyPentyl4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 412.61
+
+molmap res 2.8:  area = 319.84
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_2_sp res 2.8 = 64.73
+
+molmap res 2.8 masked:  volume = 172.29
+
+molmap res 2.8 masked:  area = 180.1
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_2_sp res 2.8 = 62.66
+
+RhRh_ACyPentyl4_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 174.49
+
+molmap res 2.8:  area = 323.35
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_3_sp res 2.8 = 41.88
+
+molmap res 2.8 masked:  volume = 92.644
+
+molmap res 2.8 masked:  area = 152.25
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_3_sp res 2.8 = 41.27
+
+RhRh_ACyPentyl4_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 420.96
+
+molmap res 2.8:  area = 347.9
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_3_sp res 2.8 = 76.86
+
+molmap res 2.8 masked:  volume = 175.94
+
+molmap res 2.8 masked:  area = 186.9
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_3_sp res 2.8 = 70.85
+
+RhRh_ACyPentyl4_5_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 152.86
+
+molmap res 2.8:  area = 278.71
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_5_sp res 2.8 = 37.82
+
+molmap res 2.8 masked:  volume = 62.408
+
+molmap res 2.8 masked:  area = 122.73
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_5_sp res 2.8 = 36.7
+
+RhRh_ACyPentyl4_5_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 346.55
+
+molmap res 2.8:  area = 373.51
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_5_sp res 2.8 = 47.6
+
+molmap res 2.8 masked:  volume = 145.59
+
+molmap res 2.8 masked:  area = 168.2
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_5_sp res 2.8 = 47.6
+
+RhRh_ACyPentyl4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 44.408
+
+molmap res 2.8:  area = 144.34
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_6_sp res 2.8 = 18.23
+
+molmap res 2.8 masked:  volume = 16.76
+
+molmap res 2.8 masked:  area = 61.405
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_6_sp res 2.8 = 18.23
+
+RhRh_ACyPentyl4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 397.85
+
+molmap res 2.8:  area = 345.94
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_6_sp res 2.8 = 59.01
+
+molmap res 2.8 masked:  volume = 197.98
+
+molmap res 2.8 masked:  area = 192.35
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_6_sp res 2.8 = 58.53
+
+RhRh_ACyPentyl4_8_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 398.94
+
+molmap res 2.8:  area = 436.54
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_8_sp res 2.8 = 46.81
+
+molmap res 2.8 masked:  volume = 159.3
+
+molmap res 2.8 masked:  area = 166.57
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_8_sp res 2.8 = 46.81
+
+RhRh_ACyPentyl4_8_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 2.3352
+
+molmap res 2.8:  area = 25.609
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_8_sp res 2.8 = 2.232
+
+molmap res 2.8 masked:  volume = 0.95809
+
+molmap res 2.8 masked:  area = 9.2657
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_8_sp res 2.8 = 2.232
+
+RhRh_ACyPentyl4_9_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 402.81
+
+molmap res 2.8:  area = 370.26
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_9_sp res 2.8 = 69.68
+
+molmap res 2.8 masked:  volume = 158.13
+
+molmap res 2.8 masked:  area = 175.57
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_9_sp res 2.8 = 66.44
+
+RhRh_ACyPentyl4_9_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 89.953
+
+molmap res 2.8:  area = 241.14
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPentyl4_9_sp res 2.8 = 25
+
+molmap res 2.8 masked:  volume = 36.144
+
+molmap res 2.8 masked:  area = 112.59
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPentyl4_9_sp res 2.8 = 23.08
+
+RhRh_ACyPropyl4_11_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 560.1
+
+molmap res 2.8:  area = 386.17
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_11 res 2.8 = 84
+
+molmap res 2.8 masked:  volume = 233.72
+
+molmap res 2.8 masked:  area = 208.05
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_11 res 2.8 = 77.76
+
+RhRh_ACyPropyl4_11_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 340.55
+
+molmap res 2.8:  area = 339.62
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_11 res 2.8 = 74.88
+
+molmap res 2.8 masked:  volume = 134.31
+
+molmap res 2.8 masked:  area = 163.93
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_11 res 2.8 = 71.78
+
+RhRh_ACyPropyl4_12_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 558.67
+
+molmap res 2.8:  area = 372.06
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_12 res 2.8 = 103.8
+
+molmap res 2.8 masked:  volume = 237.69
+
+molmap res 2.8 masked:  area = 210.81
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_12 res 2.8 = 97.52
+
+RhRh_ACyPropyl4_12_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 456.68
+
+molmap res 2.8:  area = 353.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_12 res 2.8 = 72.72
+
+molmap res 2.8 masked:  volume = 194.49
+
+molmap res 2.8 masked:  area = 191.9
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_12 res 2.8 = 71.88
+
+RhRh_ACyPropyl4_19_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 630.96
+
+molmap res 2.8:  area = 421.56
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_19 res 2.8 = 96.67
+
+molmap res 2.8 masked:  volume = 250.64
+
+molmap res 2.8 masked:  area = 220.69
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_19 res 2.8 = 86.67
+
+RhRh_ACyPropyl4_19_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 159.73
+
+molmap res 2.8:  area = 308.35
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_19 res 2.8 = 39.22
+
+molmap res 2.8 masked:  volume = 70.296
+
+molmap res 2.8 masked:  area = 131.62
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_19 res 2.8 = 38.87
+
+RhRh_ACyPropyl4_22_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 742.35
+
+molmap res 2.8:  area = 452.87
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_22 res 2.8 = 97
+
+molmap res 2.8 masked:  volume = 259.95
+
+molmap res 2.8 masked:  area = 220.42
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_22 res 2.8 = 86
+
+RhRh_ACyPropyl4_22_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 184.74
+
+molmap res 2.8:  area = 299.87
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_22 res 2.8 = 52.16
+
+molmap res 2.8 masked:  volume = 91.107
+
+molmap res 2.8 masked:  area = 173.4
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_22 res 2.8 = 48.47
+
+RhRh_ACyPropyl4_24_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 58.997
+
+molmap res 2.8:  area = 164.53
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_24 res 2.8 = 17.17
+
+molmap res 2.8 masked:  volume = 27.126
+
+molmap res 2.8 masked:  area = 70.521
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_24 res 2.8 = 16.66
+
+RhRh_ACyPropyl4_24_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 402.55
+
+molmap res 2.8:  area = 393.05
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_24 res 2.8 = 51.12
+
+molmap res 2.8 masked:  volume = 175.52
+
+molmap res 2.8 masked:  area = 192.5
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_24 res 2.8 = 51
+
+RhRh_ACyPropyl4_28_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 88.109
+
+molmap res 2.8:  area = 207.98
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_28 res 2.8 = 28.07
+
+molmap res 2.8 masked:  volume = 36.525
+
+molmap res 2.8 masked:  area = 85.01
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_28 res 2.8 = 27.88
+
+RhRh_ACyPropyl4_28_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 652.75
+
+molmap res 2.8:  area = 405.55
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_28 res 2.8 = 89.55
+
+molmap res 2.8 masked:  volume = 241.33
+
+molmap res 2.8 masked:  area = 211.22
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_28 res 2.8 = 81.77
+
+RhRh_ACyPropyl4_29_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 8.5037
+
+molmap res 2.8:  area = 51.781
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_29 res 2.8 = 11.61
+
+molmap res 2.8 masked:  volume = 6.6936
+
+molmap res 2.8 masked:  area = 35.641
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_29 res 2.8 = 11.61
+
+RhRh_ACyPropyl4_29_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 813.63
+
+molmap res 2.8:  area = 484.07
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_29 res 2.8 = 76.28
+
+molmap res 2.8 masked:  volume = 297.14
+
+molmap res 2.8 masked:  area = 239.94
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_29 res 2.8 = 75.11
+
+RhRh_ACyPropyl4_33_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 785.83
+
+molmap res 2.8:  area = 482.5
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_33 res 2.8 = 71.45
+
+molmap res 2.8 masked:  volume = 285.52
+
+molmap res 2.8 masked:  area = 238.1
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_33 res 2.8 = 70.65
+
+RhRh_ACyPropyl4_33_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 214.05
+
+molmap res 2.8:  area = 359.56
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_33 res 2.8 = 49.75
+
+molmap res 2.8 masked:  volume = 90.357
+
+molmap res 2.8 masked:  area = 146.44
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_33 res 2.8 = 46.18
+
+RhRh_ACyPropyl4_39_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 446.67
+
+molmap res 2.8:  area = 400.13
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_39 res 2.8 = 82.22
+
+molmap res 2.8 masked:  volume = 187.18
+
+molmap res 2.8 masked:  area = 197.43
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_39 res 2.8 = 75.83
+
+RhRh_ACyPropyl4_39_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 404.1
+
+molmap res 2.8:  area = 343.14
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_39 res 2.8 = 76.24
+
+molmap res 2.8 masked:  volume = 184.99
+
+molmap res 2.8 masked:  area = 191.36
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_39 res 2.8 = 75.21
+
+RhRh_ACyPropyl4_5_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 312.79
+
+molmap res 2.8:  area = 386.26
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_5 res 2.8 = 62.05
+
+molmap res 2.8 masked:  volume = 138.28
+
+molmap res 2.8 masked:  area = 185.94
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_5 res 2.8 = 59.14
+
+RhRh_ACyPropyl4_5_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 59.821
+
+molmap res 2.8:  area = 176.18
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_ACyPropyl4_5 res 2.8 = 29.81
+
+molmap res 2.8 masked:  volume = 46.845
+
+molmap res 2.8 masked:  area = 117.48
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_ACyPropyl4_5 res 2.8 = 29.32
+
+RhRh_Ad-O2C4_3-1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 1026.4
+
+molmap res 2.8:  area = 557.94
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_Ad-O2C4_3-1_sp res 2.8 = 108.8
+
+molmap res 2.8 masked:  volume = 326.34
+
+molmap res 2.8 masked:  area = 259.86
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_Ad-O2C4_3-1_sp res 2.8 = 93.04
+
+RhRh_Ad-O2C4_3-1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 611.93
+
+molmap res 2.8:  area = 429.15
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_Ad-O2C4_3-1_sp res 2.8 = 61.62
+
+molmap res 2.8 masked:  volume = 240.68
+
+molmap res 2.8 masked:  area = 212.89
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_Ad-O2C4_3-1_sp res 2.8 = 61.55
+
+RhRh_Ad-O2C4_C2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 731.12
+
+molmap res 2.8:  area = 433.9
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_Ad-O2C4_C2_sp res 2.8 = 61.71
+
+molmap res 2.8 masked:  volume = 251.47
+
+molmap res 2.8 masked:  area = 212.42
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_Ad-O2C4_C2_sp res 2.8 = 61.67
+
+RhRh_Ad-O2C4_C2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 735.54
+
+molmap res 2.8:  area = 457.24
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_Ad-O2C4_C2_sp res 2.8 = 83.65
+
+molmap res 2.8 masked:  volume = 292.97
+
+molmap res 2.8 masked:  area = 245.37
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_Ad-O2C4_C2_sp res 2.8 = 80.43
+
+RhRh_Ad-O2C4_C4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 754.96
+
+molmap res 2.8:  area = 460.32
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_Ad-O2C4_C4_sp res 2.8 = 75.88
+
+molmap res 2.8 masked:  volume = 279.93
+
+molmap res 2.8 masked:  area = 232.49
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_Ad-O2C4_C4_sp res 2.8 = 74.84
+
+RhRh_Ad-O2C4_C4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 735.98
+
+molmap res 2.8:  area = 464.07
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_Ad-O2C4_C4_sp res 2.8 = 66.15
+
+molmap res 2.8 masked:  volume = 265.59
+
+molmap res 2.8 masked:  area = 220.22
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_Ad-O2C4_C4_sp res 2.8 = 65.98
+
+RhRh_Ad-O2_D2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 622.88
+
+molmap res 2.8:  area = 492.13
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_Ad-O2_D2_sp res 2.8 = 57.71
+
+molmap res 2.8 masked:  volume = 229.44
+
+molmap res 2.8 masked:  area = 205.03
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_Ad-O2_D2_sp res 2.8 = 57.69
+
+RhRh_Ad-O2_D2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 731.5
+
+molmap res 2.8:  area = 490.08
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_Ad-O2_D2_sp res 2.8 = 72.97
+
+molmap res 2.8 masked:  volume = 271.55
+
+molmap res 2.8 masked:  area = 228.57
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_Ad-O2_D2_sp res 2.8 = 72.48
+
+RhRh_EtEtiPr-O2C4_14_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 1.9683
+
+molmap res 2.8:  area = 16.485
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_14_sp res 2.8 = 2.18
+
+molmap res 2.8 masked:  volume = 1.4144
+
+molmap res 2.8 masked:  area = 9.4042
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_14_sp res 2.8 = 2.18
+
+RhRh_EtEtiPr-O2C4_14_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 595.83
+
+molmap res 2.8:  area = 382.23
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_14_sp res 2.8 = 72.26
+
+molmap res 2.8 masked:  volume = 236.76
+
+molmap res 2.8 masked:  area = 204.82
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_14_sp res 2.8 = 71.86
+
+RhRh_EtEtiPr-O2C4_15_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 405.84
+
+molmap res 2.8:  area = 410.65
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_15_sp res 2.8 = 46.14
+
+molmap res 2.8 masked:  volume = 157.29
+
+molmap res 2.8 masked:  area = 169.52
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_15_sp res 2.8 = 45.97
+
+RhRh_EtEtiPr-O2C4_15_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 572.15
+
+molmap res 2.8:  area = 411.32
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_15_sp res 2.8 = 68.12
+
+molmap res 2.8 masked:  volume = 211.64
+
+molmap res 2.8 masked:  area = 190.25
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_15_sp res 2.8 = 67.03
+
+RhRh_EtEtiPr-O2C4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 434.79
+
+molmap res 2.8:  area = 416.07
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_1_sp res 2.8 = 47.19
+
+molmap res 2.8 masked:  volume = 156.42
+
+molmap res 2.8 masked:  area = 159.41
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_1_sp res 2.8 = 47.19
+
+RhRh_EtEtiPr-O2C4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 431.6
+
+molmap res 2.8:  area = 331.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_1_sp res 2.8 = 55.03
+
+molmap res 2.8 masked:  volume = 176.08
+
+molmap res 2.8 masked:  area = 171.11
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_1_sp res 2.8 = 54.93
+
+RhRh_EtEtiPr-O2C4_20_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 282.64
+
+molmap res 2.8:  area = 373.35
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_20_sp res 2.8 = 37
+
+molmap res 2.8 masked:  volume = 114.62
+
+molmap res 2.8 masked:  area = 170.28
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_20_sp res 2.8 = 36.67
+
+RhRh_EtEtiPr-O2C4_20_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 155.71
+
+molmap res 2.8:  area = 276.12
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_20_sp res 2.8 = 30.53
+
+molmap res 2.8 masked:  volume = 69.568
+
+molmap res 2.8 masked:  area = 132.83
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_20_sp res 2.8 = 29.61
+
+RhRh_EtEtiPr-O2C4_23_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 33.768
+
+molmap res 2.8:  area = 113.88
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_23_sp res 2.8 = 21.94
+
+molmap res 2.8 masked:  volume = 24.473
+
+molmap res 2.8 masked:  area = 80.179
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_23_sp res 2.8 = 21.94
+
+RhRh_EtEtiPr-O2C4_23_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 385.73
+
+molmap res 2.8:  area = 387.63
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_23_sp res 2.8 = 49.45
+
+molmap res 2.8 masked:  volume = 157.25
+
+molmap res 2.8 masked:  area = 187.39
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_23_sp res 2.8 = 49.45
+
+RhRh_EtEtiPr-O2C4_25_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 467.5
+
+molmap res 2.8:  area = 374.54
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_25_sp res 2.8 = 60.5
+
+molmap res 2.8 masked:  volume = 191
+
+molmap res 2.8 masked:  area = 182.75
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_25_sp res 2.8 = 59.71
+
+RhRh_EtEtiPr-O2C4_25_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 477.12
+
+molmap res 2.8:  area = 379.35
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_25_sp res 2.8 = 60.18
+
+molmap res 2.8 masked:  volume = 190.1
+
+molmap res 2.8 masked:  area = 184.52
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_25_sp res 2.8 = 60.09
+
+RhRh_EtEtiPr-O2C4_26_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 438.71
+
+molmap res 2.8:  area = 410.42
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_26_sp res 2.8 = 54.42
+
+molmap res 2.8 masked:  volume = 169.99
+
+molmap res 2.8 masked:  area = 178.86
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_26_sp res 2.8 = 54.33
+
+RhRh_EtEtiPr-O2C4_26_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 404.22
+
+molmap res 2.8:  area = 364.3
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_26_sp res 2.8 = 49.44
+
+molmap res 2.8 masked:  volume = 157.81
+
+molmap res 2.8 masked:  area = 163.86
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_26_sp res 2.8 = 49.32
+
+RhRh_EtEtiPr-O2C4_27_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 509.84
+
+molmap res 2.8:  area = 386.18
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_27_sp res 2.8 = 49.95
+
+molmap res 2.8 masked:  volume = 181.83
+
+molmap res 2.8 masked:  area = 176.77
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_27_sp res 2.8 = 49.95
+
+RhRh_EtEtiPr-O2C4_27_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 316.06
+
+molmap res 2.8:  area = 422.31
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_27_sp res 2.8 = 53.9
+
+molmap res 2.8 masked:  volume = 150.92
+
+molmap res 2.8 masked:  area = 195.42
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_27_sp res 2.8 = 53.9
+
+RhRh_EtEtiPr-O2C4_29_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 442.19
+
+molmap res 2.8:  area = 401.71
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_29_sp res 2.8 = 69.28
+
+molmap res 2.8 masked:  volume = 197.79
+
+molmap res 2.8 masked:  area = 195.94
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_29_sp res 2.8 = 65.52
+
+RhRh_EtEtiPr-O2C4_29_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 608.09
+
+molmap res 2.8:  area = 405.57
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_29_sp res 2.8 = 62.08
+
+molmap res 2.8 masked:  volume = 206.29
+
+molmap res 2.8 masked:  area = 187.69
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_29_sp res 2.8 = 61.5
+
+RhRh_EtEtiPr-O2C4_33_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 627.94
+
+molmap res 2.8:  area = 418.86
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_33_sp res 2.8 = 77.81
+
+molmap res 2.8 masked:  volume = 232.79
+
+molmap res 2.8 masked:  area = 205.79
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_33_sp res 2.8 = 76.27
+
+RhRh_EtEtiPr-O2C4_33_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 46.275
+
+molmap res 2.8:  area = 144.46
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_33_sp res 2.8 = 18.07
+
+molmap res 2.8 masked:  volume = 30.64
+
+molmap res 2.8 masked:  area = 84.969
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_33_sp res 2.8 = 18.07
+
+RhRh_EtEtiPr-O2C4_34_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 428.55
+
+molmap res 2.8:  area = 374.55
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_34_sp res 2.8 = 49.05
+
+molmap res 2.8 masked:  volume = 168.73
+
+molmap res 2.8 masked:  area = 167.07
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_34_sp res 2.8 = 49.05
+
+RhRh_EtEtiPr-O2C4_34_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 83.729
+
+molmap res 2.8:  area = 230.33
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_34_sp res 2.8 = 20.08
+
+molmap res 2.8 masked:  volume = 39.379
+
+molmap res 2.8 masked:  area = 99.624
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_34_sp res 2.8 = 20.08
+
+RhRh_EtEtiPr-O2C4_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 605.11
+
+molmap res 2.8:  area = 406.54
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_3_sp res 2.8 = 71.12
+
+molmap res 2.8 masked:  volume = 237.14
+
+molmap res 2.8 masked:  area = 206.26
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_3_sp res 2.8 = 68.94
+
+RhRh_EtEtiPr-O2C4_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 10.984
+
+molmap res 2.8:  area = 50.085
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_3_sp res 2.8 = 5.125
+
+molmap res 2.8 masked:  volume = 8.2882
+
+molmap res 2.8 masked:  area = 30.573
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_3_sp res 2.8 = 5.121
+
+RhRh_EtEtiPr-O2C4_5_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 391.42
+
+molmap res 2.8:  area = 375.06
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_5_sp res 2.8 = 50.75
+
+molmap res 2.8 masked:  volume = 146.79
+
+molmap res 2.8 masked:  area = 169.51
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_5_sp res 2.8 = 50.68
+
+RhRh_EtEtiPr-O2C4_5_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 139.99
+
+molmap res 2.8:  area = 262.08
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_5_sp res 2.8 = 29.31
+
+molmap res 2.8 masked:  volume = 75.724
+
+molmap res 2.8 masked:  area = 139.98
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_5_sp res 2.8 = 29.31
+
+RhRh_EtEtiPr-O2C4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 48.244
+
+molmap res 2.8:  area = 164.49
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_6_sp res 2.8 = 10.74
+
+molmap res 2.8 masked:  volume = 15.714
+
+molmap res 2.8 masked:  area = 60.694
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_6_sp res 2.8 = 10.74
+
+RhRh_EtEtiPr-O2C4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 142
+
+molmap res 2.8:  area = 267.37
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_6_sp res 2.8 = 36.2
+
+molmap res 2.8 masked:  volume = 82.453
+
+molmap res 2.8 masked:  area = 142.45
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_6_sp res 2.8 = 36.2
+
+RhRh_EtEtiPr-O2C4_7_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 14.212
+
+molmap res 2.8:  area = 67.81
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_7_sp res 2.8 = 6.602
+
+molmap res 2.8 masked:  volume = 9.1426
+
+molmap res 2.8 masked:  area = 37.433
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_7_sp res 2.8 = 6.602
+
+RhRh_EtEtiPr-O2C4_7_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 143.47
+
+molmap res 2.8:  area = 281.79
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_7_sp res 2.8 = 33.05
+
+molmap res 2.8 masked:  volume = 71.67
+
+molmap res 2.8 masked:  area = 138.74
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_7_sp res 2.8 = 32.95
+
+RhRh_EtEtiPr-O2C4_8_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 135.11
+
+molmap res 2.8:  area = 290.37
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_8_sp res 2.8 = 29.74
+
+molmap res 2.8 masked:  volume = 67.883
+
+molmap res 2.8 masked:  area = 120.53
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_8_sp res 2.8 = 29.72
+
+RhRh_EtEtiPr-O2C4_8_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 580.79
+
+molmap res 2.8:  area = 465.59
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_8_sp res 2.8 = 75.78
+
+molmap res 2.8 masked:  volume = 213.31
+
+molmap res 2.8 masked:  area = 201.42
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_8_sp res 2.8 = 70.62
+
+RhRh_EtEtiPr-O2C4_9_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 196.52
+
+molmap res 2.8:  area = 328.74
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_9_sp res 2.8 = 27.03
+
+molmap res 2.8 masked:  volume = 78.599
+
+molmap res 2.8 masked:  area = 128.15
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_9_sp res 2.8 = 27.03
+
+RhRh_EtEtiPr-O2C4_9_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 42.628
+
+molmap res 2.8:  area = 140.83
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_9_sp res 2.8 = 11.82
+
+molmap res 2.8 masked:  volume = 20.368
+
+molmap res 2.8 masked:  area = 60.177
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_EtEtiPr-O2C4_9_sp res 2.8 = 11.82
+
+RhRh_MES-O2C4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 369.23
+
+molmap res 2.8:  area = 366.97
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MES-O2C4_1_sp res 2.8 = 60.5
+
+molmap res 2.8 masked:  volume = 164.23
+
+molmap res 2.8 masked:  area = 190.51
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MES-O2C4_1_sp res 2.8 = 60.28
+
+RhRh_MES-O2C4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 228.3
+
+molmap res 2.8:  area = 357.49
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MES-O2C4_1_sp res 2.8 = 46.39
+
+molmap res 2.8 masked:  volume = 114.01
+
+molmap res 2.8 masked:  area = 155.46
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MES-O2C4_1_sp res 2.8 = 44.75
+
+RhRh_MES-O2C4_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 174.45
+
+molmap res 2.8:  area = 302.19
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MES-O2C4_2_sp res 2.8 = 40.27
+
+molmap res 2.8 masked:  volume = 102.19
+
+molmap res 2.8 masked:  area = 166.43
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MES-O2C4_2_sp res 2.8 = 40.21
+
+RhRh_MES-O2C4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 455.25
+
+molmap res 2.8:  area = 438.84
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MES-O2C4_2_sp res 2.8 = 61.72
+
+molmap res 2.8 masked:  volume = 194.41
+
+molmap res 2.8 masked:  area = 194.64
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MES-O2C4_2_sp res 2.8 = 61.67
+
+RhRh_MeMePh-O2C3_20kcal_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 887.63
+
+molmap res 2.8:  area = 517.29
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C3_20kcal_1_sp res 2.8 = 100.9
+
+molmap res 2.8 masked:  volume = 296.8
+
+molmap res 2.8 masked:  area = 241.89
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C3_20kcal_1_sp res 2.8 = 86
+
+RhRh_MeMePh-O2C3_20kcal_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 632.92
+
+molmap res 2.8:  area = 415.9
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C3_20kcal_1_sp res 2.8 = 81.25
+
+molmap res 2.8 masked:  volume = 247.37
+
+molmap res 2.8 masked:  area = 214.26
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C3_20kcal_1_sp res 2.8 = 78.05
+
+RhRh_MeMePh-O2C3_20kcal_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 707.77
+
+molmap res 2.8:  area = 422.95
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C3_20kcal_2_sp res 2.8 = 70.6
+
+molmap res 2.8 masked:  volume = 255.39
+
+molmap res 2.8 masked:  area = 213.57
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C3_20kcal_2_sp res 2.8 = 69.89
+
+RhRh_MeMePh-O2C3_20kcal_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 407.55
+
+molmap res 2.8:  area = 347.71
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C3_20kcal_2_sp res 2.8 = 52.43
+
+molmap res 2.8 masked:  volume = 175.85
+
+molmap res 2.8 masked:  area = 179.8
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C3_20kcal_2_sp res 2.8 = 52.18
+
+RhRh_MeMePh-O2C4_3-1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 573.81
+
+molmap res 2.8:  area = 406.53
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3-1_sp res 2.8 = 71.48
+
+molmap res 2.8 masked:  volume = 234.5
+
+molmap res 2.8 masked:  area = 204.92
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3-1_sp res 2.8 = 69.6
+
+RhRh_MeMePh-O2C4_3-1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 653.1
+
+molmap res 2.8:  area = 423.7
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3-1_sp res 2.8 = 68.8
+
+molmap res 2.8 masked:  volume = 244.05
+
+molmap res 2.8 masked:  area = 213.11
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3-1_sp res 2.8 = 67.86
+
+RhRh_MeMePh-O2C4_3ax-1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 716.06
+
+molmap res 2.8:  area = 444.01
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3ax-1_sp res 2.8 = 94.34
+
+molmap res 2.8 masked:  volume = 274.31
+
+molmap res 2.8 masked:  area = 228.49
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3ax-1_sp res 2.8 = 81.9
+
+RhRh_MeMePh-O2C4_3ax-1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 734.54
+
+molmap res 2.8:  area = 444.77
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3ax-1_sp res 2.8 = 76.45
+
+molmap res 2.8 masked:  volume = 265.61
+
+molmap res 2.8 masked:  area = 223.65
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3ax-1_sp res 2.8 = 74.65
+
+RhRh_MeMePh-O2C4_3ax-1eq_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 641.5
+
+molmap res 2.8:  area = 493.22
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3ax-1eq_sp res 2.8 = 71.97
+
+molmap res 2.8 masked:  volume = 217.54
+
+molmap res 2.8 masked:  area = 200.56
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3ax-1eq_sp res 2.8 = 68.6
+
+RhRh_MeMePh-O2C4_3ax-1eq_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 550.09
+
+molmap res 2.8:  area = 388.1
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3ax-1eq_sp res 2.8 = 72.73
+
+molmap res 2.8 masked:  volume = 243.53
+
+molmap res 2.8 masked:  area = 214.26
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_3ax-1eq_sp res 2.8 = 72.03
+
+RhRh_MeMePh-O2C4_C2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 684.14
+
+molmap res 2.8:  area = 443.42
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C2_sp res 2.8 = 81.26
+
+molmap res 2.8 masked:  volume = 269.05
+
+molmap res 2.8 masked:  area = 228.76
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C2_sp res 2.8 = 73.63
+
+RhRh_MeMePh-O2C4_C2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 661.74
+
+molmap res 2.8:  area = 431.51
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C2_sp res 2.8 = 66.27
+
+molmap res 2.8 masked:  volume = 243.53
+
+molmap res 2.8 masked:  area = 210.45
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C2_sp res 2.8 = 66.1
+
+RhRh_MeMePh-O2C4_C2eq_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 604.74
+
+molmap res 2.8:  area = 378.81
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C2eq_sp res 2.8 = 77.31
+
+molmap res 2.8 masked:  volume = 221.68
+
+molmap res 2.8 masked:  area = 197.24
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C2eq_sp res 2.8 = 72.31
+
+RhRh_MeMePh-O2C4_C2eq_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 680.72
+
+molmap res 2.8:  area = 436.94
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C2eq_sp res 2.8 = 81.29
+
+molmap res 2.8 masked:  volume = 273.77
+
+molmap res 2.8 masked:  area = 232.97
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C2eq_sp res 2.8 = 76.98
+
+RhRh_MeMePh-O2C4_C4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 738.09
+
+molmap res 2.8:  area = 440.2
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C4_sp res 2.8 = 79.73
+
+molmap res 2.8 masked:  volume = 274.45
+
+molmap res 2.8 masked:  area = 226.15
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C4_sp res 2.8 = 78.03
+
+RhRh_MeMePh-O2C4_C4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 750.81
+
+molmap res 2.8:  area = 448.41
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C4_sp res 2.8 = 76.46
+
+molmap res 2.8 masked:  volume = 274.99
+
+molmap res 2.8 masked:  area = 227.66
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C4_sp res 2.8 = 74.99
+
+RhRh_MeMePh-O2C4_C4ax_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 348.42
+
+molmap res 2.8:  area = 348.1
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C4ax_sp res 2.8 = 56.07
+
+molmap res 2.8 masked:  volume = 184.61
+
+molmap res 2.8 masked:  area = 218.93
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C4ax_sp res 2.8 = 55.81
+
+RhRh_MeMePh-O2C4_C4ax_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 415.26
+
+molmap res 2.8:  area = 337.34
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C4ax_sp res 2.8 = 35.58
+
+molmap res 2.8 masked:  volume = 157.68
+
+molmap res 2.8 masked:  area = 164.24
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_C4ax_sp res 2.8 = 35.58
+
+RhRh_MeMePh-O2C4_D2ax_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 782.97
+
+molmap res 2.8:  area = 467.12
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_D2ax_sp res 2.8 = 72.82
+
+molmap res 2.8 masked:  volume = 280.95
+
+molmap res 2.8 masked:  area = 230.01
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_D2ax_sp res 2.8 = 72.21
+
+RhRh_MeMePh-O2C4_D2ax_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 328.61
+
+molmap res 2.8:  area = 424.62
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_D2ax_sp res 2.8 = 59.19
+
+molmap res 2.8 masked:  volume = 164.18
+
+molmap res 2.8 masked:  area = 187.09
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_D2ax_sp res 2.8 = 59.02
+
+RhRh_MeMePh-O2C4_S2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 613.29
+
+molmap res 2.8:  area = 455.88
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_S2_sp res 2.8 = 66.53
+
+molmap res 2.8 masked:  volume = 216.47
+
+molmap res 2.8 masked:  area = 198.1
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_S2_sp res 2.8 = 64.58
+
+RhRh_MeMePh-O2C4_S2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 636.63
+
+molmap res 2.8:  area = 423.62
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_MeMePh-O2C4_S2_sp res 2.8 = 82.69
+
+molmap res 2.8 masked:  volume = 242.01
+
+molmap res 2.8 masked:  area = 212.05
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_MeMePh-O2C4_S2_sp res 2.8 = 74.89
+
+RhRh_OAc4_3-1_cont_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 1113.7
+
+molmap res 2.8:  area = 569.45
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_OAc4_3-1_cont_sp res 2.8 = 78.41
+
+molmap res 2.8 masked:  volume = 380.26
+
+molmap res 2.8 masked:  area = 287.07
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_OAc4_3-1_cont_sp res 2.8 = 75.25
+
+RhRh_OAc4_3-1_cont_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 1047.6
+
+molmap res 2.8:  area = 567.93
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_OAc4_3-1_cont_sp res 2.8 = 77.6
+
+molmap res 2.8 masked:  volume = 363.63
+
+molmap res 2.8 masked:  area = 280.21
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_OAc4_3-1_cont_sp res 2.8 = 72.76
+
+RhRh_PhCy2-O2C4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 0.25999
+
+molmap res 2.8:  area = 2.9089
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhCy2-O2C4_1_sp res 2.8 = 0.8265
+
+molmap res 2.8 masked:  volume = 0.25999
+
+molmap res 2.8 masked:  area = 2.9089
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhCy2-O2C4_1_sp res 2.8 = 0.8265
+
+RhRh_PhCy2-O2C4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 42.796
+
+molmap res 2.8:  area = 167.36
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhCy2-O2C4_2_sp res 2.8 = 15.1
+
+molmap res 2.8 masked:  volume = 21.939
+
+molmap res 2.8 masked:  area = 68.234
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhCy2-O2C4_2_sp res 2.8 = 15.1
+
+RhRh_PhO2C4_C4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 850.72
+
+molmap res 2.8:  area = 482.81
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhO2C4_C4_sp res 2.8 = 74.45
+
+molmap res 2.8 masked:  volume = 302.46
+
+molmap res 2.8 masked:  area = 245.73
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhO2C4_C4_sp res 2.8 = 69.56
+
+RhRh_PhO2C4_C4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 917.68
+
+molmap res 2.8:  area = 514.21
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhO2C4_C4_sp res 2.8 = 73.84
+
+molmap res 2.8 masked:  volume = 309.74
+
+molmap res 2.8 masked:  area = 243.98
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhO2C4_C4_sp res 2.8 = 73.22
+
+RhRh_PhPhtol-O2C4_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 366.72
+
+molmap res 2.8:  area = 396.51
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_10_sp res 2.8 = 82.35
+
+molmap res 2.8 masked:  volume = 154.7
+
+molmap res 2.8 masked:  area = 171.96
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_10_sp res 2.8 = 71.43
+
+RhRh_PhPhtol-O2C4_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 22.102
+
+molmap res 2.8:  area = 97.134
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_10_sp res 2.8 = 7.573
+
+molmap res 2.8 masked:  volume = 8.3211
+
+molmap res 2.8 masked:  area = 39.926
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_10_sp res 2.8 = 7.573
+
+RhRh_PhPhtol-O2C4_15_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 8.4072
+
+molmap res 2.8:  area = 50.103
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_15_sp res 2.8 = 7.801
+
+molmap res 2.8 masked:  volume = 7.3401
+
+molmap res 2.8 masked:  area = 39.741
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_15_sp res 2.8 = 7.801
+
+RhRh_PhPhtol-O2C4_15_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 201.66
+
+molmap res 2.8:  area = 334.87
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_15_sp res 2.8 = 45.53
+
+molmap res 2.8 masked:  volume = 104.72
+
+molmap res 2.8 masked:  area = 152.71
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_15_sp res 2.8 = 45.41
+
+RhRh_PhPhtol-O2C4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 3.0785
+
+molmap res 2.8:  area = 23.453
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_1_sp res 2.8 = 2.718
+
+molmap res 2.8 masked:  volume = 1.1861
+
+molmap res 2.8 masked:  area = 10.359
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_1_sp res 2.8 = 2.718
+
+RhRh_PhPhtol-O2C4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 168.36
+
+molmap res 2.8:  area = 323.11
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_1_sp res 2.8 = 37.34
+
+molmap res 2.8 masked:  volume = 76.933
+
+molmap res 2.8 masked:  area = 134.9
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_1_sp res 2.8 = 36.38
+
+RhRh_PhPhtol-O2C4_28_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 168.18
+
+molmap res 2.8:  area = 299.92
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_28_sp res 2.8 = 39.32
+
+molmap res 2.8 masked:  volume = 63.018
+
+molmap res 2.8 masked:  area = 116
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_28_sp res 2.8 = 37.53
+
+RhRh_PhPhtol-O2C4_28_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 132.49
+
+molmap res 2.8:  area = 305.6
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_28_sp res 2.8 = 34.17
+
+molmap res 2.8 masked:  volume = 60.56
+
+molmap res 2.8 masked:  area = 127.77
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_28_sp res 2.8 = 33.7
+
+RhRh_PhPhtol-O2C4_30_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 340.58
+
+molmap res 2.8:  area = 338.46
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_30_sp res 2.8 = 69.94
+
+molmap res 2.8 masked:  volume = 155.68
+
+molmap res 2.8 masked:  area = 184.22
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_30_sp res 2.8 = 68.32
+
+RhRh_PhPhtol-O2C4_30_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 157.19
+
+molmap res 2.8:  area = 311.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_30_sp res 2.8 = 39.93
+
+molmap res 2.8 masked:  volume = 63.816
+
+molmap res 2.8 masked:  area = 126.44
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_30_sp res 2.8 = 39.93
+
+RhRh_PhPhtol-O2C4_33_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 14.133
+
+molmap res 2.8:  area = 65.792
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_33_sp res 2.8 = 4.22
+
+molmap res 2.8 masked:  volume = 8.2697
+
+molmap res 2.8 masked:  area = 33.461
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_33_sp res 2.8 = 4.22
+
+RhRh_PhPhtol-O2C4_33_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 230.84
+
+molmap res 2.8:  area = 319.96
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_33_sp res 2.8 = 38.89
+
+molmap res 2.8 masked:  volume = 99.725
+
+molmap res 2.8 masked:  area = 143.64
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_33_sp res 2.8 = 38.88
+
+RhRh_PhPhtol-O2C4_34_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 255.86
+
+molmap res 2.8:  area = 382.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_34_sp res 2.8 = 48.59
+
+molmap res 2.8 masked:  volume = 102.62
+
+molmap res 2.8 masked:  area = 155.14
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_34_sp res 2.8 = 46.3
+
+RhRh_PhPhtol-O2C4_34_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 297.56
+
+molmap res 2.8:  area = 357.38
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_34_sp res 2.8 = 48.59
+
+molmap res 2.8 masked:  volume = 119.86
+
+molmap res 2.8 masked:  area = 147.36
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_34_sp res 2.8 = 48.59
+
+RhRh_PhPhtol-O2C4_37_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 0.0090636
+
+molmap res 2.8:  area = 0.37404
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_37_sp res 2.8 = 0
+
+molmap res 2.8 masked:  volume = 0.0012483
+
+molmap res 2.8 masked:  area = 0.10338
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_37_sp res 2.8 = 0
+
+RhRh_PhPhtol-O2C4_37_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 335.34
+
+molmap res 2.8:  area = 328.81
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_37_sp res 2.8 = 61.01
+
+molmap res 2.8 masked:  volume = 141.49
+
+molmap res 2.8 masked:  area = 177.56
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_37_sp res 2.8 = 59.03
+
+RhRh_PhPhtol-O2C4_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 384.47
+
+molmap res 2.8:  area = 394.29
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_3_sp res 2.8 = 67.2
+
+molmap res 2.8 masked:  volume = 144.82
+
+molmap res 2.8 masked:  area = 174.51
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_3_sp res 2.8 = 62.44
+
+RhRh_PhPhtol-O2C4_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 37.605
+
+molmap res 2.8:  area = 127.28
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_3_sp res 2.8 = 19.52
+
+molmap res 2.8 masked:  volume = 26.767
+
+molmap res 2.8 masked:  area = 82.029
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_3_sp res 2.8 = 19.5
+
+RhRh_PhPhtol-O2C4_43_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 30.2
+
+molmap res 2.8:  area = 110.05
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_43_sp res 2.8 = 6.772
+
+molmap res 2.8 masked:  volume = 11.362
+
+molmap res 2.8 masked:  area = 40.154
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_43_sp res 2.8 = 6.772
+
+RhRh_PhPhtol-O2C4_43_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 249.64
+
+molmap res 2.8:  area = 341.72
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_43_sp res 2.8 = 61.09
+
+molmap res 2.8 masked:  volume = 116.26
+
+molmap res 2.8 masked:  area = 156.63
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_43_sp res 2.8 = 55.96
+
+RhRh_PhPhtol-O2C4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 0.035819
+
+molmap res 2.8:  area = 0.80058
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_6_sp res 2.8 = 0
+
+molmap res 2.8 masked:  volume = 0.0027707
+
+molmap res 2.8 masked:  area = 0.13323
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_6_sp res 2.8 = 0
+
+RhRh_PhPhtol-O2C4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 160.76
+
+molmap res 2.8:  area = 251.19
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_6_sp res 2.8 = 29.45
+
+molmap res 2.8 masked:  volume = 59.58
+
+molmap res 2.8 masked:  area = 114.67
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_PhPhtol-O2C4_6_sp res 2.8 = 29
+
+RhRh_S-BPTTL4_5_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 290.79
+
+molmap res 2.8:  area = 332.12
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-BPTTL4_5_sp res 2.8 = 58.04
+
+molmap res 2.8 masked:  volume = 127.09
+
+molmap res 2.8 masked:  area = 177.09
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-BPTTL4_5_sp res 2.8 = 56.59
+
+RhRh_S-BPTTL4_5_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 241.76
+
+molmap res 2.8:  area = 405.65
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-BPTTL4_5_sp res 2.8 = 42.74
+
+molmap res 2.8 masked:  volume = 114.84
+
+molmap res 2.8 masked:  area = 177.39
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-BPTTL4_5_sp res 2.8 = 42.6
+
+RhRh_S-BPTTL4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 61.43
+
+molmap res 2.8:  area = 167.1
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-BPTTL4_6_sp res 2.8 = 17.5
+
+molmap res 2.8 masked:  volume = 23.49
+
+molmap res 2.8 masked:  area = 65.912
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-BPTTL4_6_sp res 2.8 = 16.78
+
+RhRh_S-BPTTL4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 265.05
+
+molmap res 2.8:  area = 383.29
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-BPTTL4_6_sp res 2.8 = 47.19
+
+molmap res 2.8 masked:  volume = 121.16
+
+molmap res 2.8 masked:  area = 151.4
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-BPTTL4_6_sp res 2.8 = 47.17
+
+RhRh_S-BPTTL4_8_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 92.023
+
+molmap res 2.8:  area = 248.73
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-BPTTL4_8_sp res 2.8 = 20.61
+
+molmap res 2.8 masked:  volume = 52.282
+
+molmap res 2.8 masked:  area = 122.49
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-BPTTL4_8_sp res 2.8 = 20.61
+
+RhRh_S-BPTTL4_9_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 176.96
+
+molmap res 2.8:  area = 321.24
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-BPTTL4_9_sp res 2.8 = 32.75
+
+molmap res 2.8 masked:  volume = 70.077
+
+molmap res 2.8 masked:  area = 138.87
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-BPTTL4_9_sp res 2.8 = 31.74
+
+RhRh_S-BPTTL4_9_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 259.24
+
+molmap res 2.8:  area = 333.73
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-BPTTL4_9_sp res 2.8 = 39.91
+
+molmap res 2.8 masked:  volume = 104.7
+
+molmap res 2.8 masked:  area = 145.24
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-BPTTL4_9_sp res 2.8 = 39.91
+
+RhRh_S-NTTL4_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 0.17229
+
+molmap res 2.8:  area = 2.2303
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-NTTL4_10_sp res 2.8 = 0
+
+molmap res 2.8 masked:  volume = 0.1518
+
+molmap res 2.8 masked:  area = 1.9982
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-NTTL4_10_sp res 2.8 = 0
+
+RhRh_S-NTTL4_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 43.295
+
+molmap res 2.8:  area = 156.24
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-NTTL4_10_sp res 2.8 = 20.51
+
+molmap res 2.8 masked:  volume = 31.554
+
+molmap res 2.8 masked:  area = 94.252
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-NTTL4_10_sp res 2.8 = 20.51
+
+RhRh_S-NTTL4_13_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 403.15
+
+molmap res 2.8:  area = 381.45
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-NTTL4_13_sp res 2.8 = 117.8
+
+molmap res 2.8 masked:  volume = 152.28
+
+molmap res 2.8 masked:  area = 162.8
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-NTTL4_13_sp res 2.8 = 78.92
+
+RhRh_S-NTTL4_13_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 3.085
+
+molmap res 2.8:  area = 20.807
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-NTTL4_13_sp res 2.8 = 4.603
+
+molmap res 2.8 masked:  volume = 3.0237
+
+molmap res 2.8 masked:  area = 19.847
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-NTTL4_13_sp res 2.8 = 4.603
+
+RhRh_S-NTTL4_9_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+failed for RhRh_S-NTTL4_9_sp.mol2
+RhRh_S-NTTL4_9_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 12.086
+
+molmap res 2.8:  area = 65.736
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-NTTL4_9_sp res 2.8 = 4.211
+
+molmap res 2.8 masked:  volume = 6.783
+
+molmap res 2.8 masked:  area = 37.017
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-NTTL4_9_sp res 2.8 = 4.211
+
+RhRh_S-PTTL4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 0.77026
+
+molmap res 2.8:  area = 7.6889
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTTL4_1_sp res 2.8 = 0.9861
+
+molmap res 2.8 masked:  volume = 0.33274
+
+molmap res 2.8 masked:  area = 3.5688
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTTL4_1_sp res 2.8 = 0.9861
+
+RhRh_S-PTTL4_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 267.58
+
+molmap res 2.8:  area = 379.74
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTTL4_2_sp res 2.8 = 87.99
+
+molmap res 2.8 masked:  volume = 122.95
+
+molmap res 2.8 masked:  area = 162.51
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTTL4_2_sp res 2.8 = 79.08
+
+RhRh_S-PTTL4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 5.7274
+
+molmap res 2.8:  area = 31.754
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTTL4_2_sp res 2.8 = 0
+
+molmap res 2.8 masked:  volume = 1.3572
+
+molmap res 2.8 masked:  area = 9.5384
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTTL4_2_sp res 2.8 = 0
+
+RhRh_S-PTV4_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 461.82
+
+molmap res 2.8:  area = 343.37
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTV4_10_sp res 2.8 = 76.32
+
+molmap res 2.8 masked:  volume = 191.76
+
+molmap res 2.8 masked:  area = 188.8
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTV4_10_sp res 2.8 = 72.41
+
+RhRh_S-PTV4_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 346.25
+
+molmap res 2.8:  area = 324.05
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTV4_10_sp res 2.8 = 60.7
+
+molmap res 2.8 masked:  volume = 149.91
+
+molmap res 2.8 masked:  area = 166.15
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTV4_10_sp res 2.8 = 58.6
+
+RhRh_S-PTV4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 424.16
+
+molmap res 2.8:  area = 360.91
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTV4_2_sp res 2.8 = 54.42
+
+molmap res 2.8 masked:  volume = 164.68
+
+molmap res 2.8 masked:  area = 170.95
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTV4_2_sp res 2.8 = 53.2
+
+RhRh_S-PTV4_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 14.762
+
+molmap res 2.8:  area = 73.759
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTV4_3_sp res 2.8 = 6.169
+
+molmap res 2.8 masked:  volume = 8.988
+
+molmap res 2.8 masked:  area = 46.006
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTV4_3_sp res 2.8 = 6.169
+
+RhRh_S-PTV4_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 348.94
+
+molmap res 2.8:  area = 416.25
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTV4_3_sp res 2.8 = 50.8
+
+molmap res 2.8 masked:  volume = 135.6
+
+molmap res 2.8 masked:  area = 162.59
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTV4_3_sp res 2.8 = 50.34
+
+RhRh_S-PTV4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+failed for RhRh_S-PTV4_6_sp.mol2
+RhRh_S-PTV4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 376.52
+
+molmap res 2.8:  area = 336.39
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTV4_6_sp res 2.8 = 57.85
+
+molmap res 2.8 masked:  volume = 150.63
+
+molmap res 2.8 masked:  area = 168.07
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTV4_6_sp res 2.8 = 55.86
+
+RhRh_S-PTV4_8_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 466.82
+
+molmap res 2.8:  area = 333.86
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTV4_8_sp res 2.8 = 70.65
+
+molmap res 2.8 masked:  volume = 185.9
+
+molmap res 2.8 masked:  area = 179.41
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTV4_8_sp res 2.8 = 67.56
+
+RhRh_S-PTV4_8_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 275.78
+
+molmap res 2.8:  area = 373.79
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PTV4_8_sp res 2.8 = 57.45
+
+molmap res 2.8 masked:  volume = 130.35
+
+molmap res 2.8 masked:  area = 168.42
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PTV4_8_sp res 2.8 = 57.06
+
+RhRh_S-PhenTTL4_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 246.96
+
+molmap res 2.8:  area = 384.21
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_10_sp res 2.8 = 42.98
+
+molmap res 2.8 masked:  volume = 113.17
+
+molmap res 2.8 masked:  area = 161.33
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_10_sp res 2.8 = 42.39
+
+RhRh_S-PhenTTL4_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 372.96
+
+molmap res 2.8:  area = 415.45
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_10_sp res 2.8 = 81.63
+
+molmap res 2.8 masked:  volume = 161.36
+
+molmap res 2.8 masked:  area = 183.01
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_10_sp res 2.8 = 69.27
+
+RhRh_S-PhenTTL4_11_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 208.19
+
+molmap res 2.8:  area = 341.71
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_11_sp res 2.8 = 30.62
+
+molmap res 2.8 masked:  volume = 99.848
+
+molmap res 2.8 masked:  area = 157.02
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_11_sp res 2.8 = 30.62
+
+RhRh_S-PhenTTL4_12_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 249.11
+
+molmap res 2.8:  area = 356.57
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_12_sp res 2.8 = 44.43
+
+molmap res 2.8 masked:  volume = 126.81
+
+molmap res 2.8 masked:  area = 181.72
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_12_sp res 2.8 = 44.38
+
+RhRh_S-PhenTTL4_12_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 0.49191
+
+molmap res 2.8:  area = 5.0972
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_12_sp res 2.8 = 1.884
+
+molmap res 2.8 masked:  volume = 0.48122
+
+molmap res 2.8 masked:  area = 4.7087
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_12_sp res 2.8 = 1.884
+
+RhRh_S-PhenTTL4_14_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 351.89
+
+molmap res 2.8:  area = 352.42
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_14_sp res 2.8 = 42.04
+
+molmap res 2.8 masked:  volume = 129.41
+
+molmap res 2.8 masked:  area = 151.76
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_14_sp res 2.8 = 42.04
+
+RhRh_S-PhenTTL4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 126.27
+
+molmap res 2.8:  area = 263.37
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_1_sp res 2.8 = 30.49
+
+molmap res 2.8 masked:  volume = 66.707
+
+molmap res 2.8 masked:  area = 141.21
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_1_sp res 2.8 = 30.49
+
+RhRh_S-PhenTTL4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 5.4818
+
+molmap res 2.8:  area = 28.448
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_1_sp res 2.8 = 5.881
+
+molmap res 2.8 masked:  volume = 5.3927
+
+molmap res 2.8 masked:  area = 26.571
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_1_sp res 2.8 = 5.881
+
+RhRh_S-PhenTTL4_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 15.885
+
+molmap res 2.8:  area = 75.78
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_2_sp res 2.8 = 9.142
+
+molmap res 2.8 masked:  volume = 8.1546
+
+molmap res 2.8 masked:  area = 34.327
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_2_sp res 2.8 = 8.272
+
+RhRh_S-PhenTTL4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 27.864
+
+molmap res 2.8:  area = 112.34
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_2_sp res 2.8 = 14.19
+
+molmap res 2.8 masked:  volume = 11.908
+
+molmap res 2.8 masked:  area = 50.535
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_2_sp res 2.8 = 14.19
+
+RhRh_S-PhenTTL4_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 165.82
+
+molmap res 2.8:  area = 298.44
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_3_sp res 2.8 = 25.69
+
+molmap res 2.8 masked:  volume = 65.031
+
+molmap res 2.8 masked:  area = 116.52
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_3_sp res 2.8 = 25.69
+
+RhRh_S-PhenTTL4_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 14.431
+
+molmap res 2.8:  area = 74.762
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_3_sp res 2.8 = 4.633
+
+molmap res 2.8 masked:  volume = 6.3468
+
+molmap res 2.8 masked:  area = 33.561
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_3_sp res 2.8 = 4.633
+
+RhRh_S-PhenTTL4_4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 109.2
+
+molmap res 2.8:  area = 270.76
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_4_sp res 2.8 = 22.68
+
+molmap res 2.8 masked:  volume = 56.027
+
+molmap res 2.8 masked:  area = 130.96
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_4_sp res 2.8 = 22.68
+
+RhRh_S-PhenTTL4_4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+failed for RhRh_S-PhenTTL4_4_sp.mol2
+RhRh_S-PhenTTL4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 9.8934
+
+molmap res 2.8:  area = 48.399
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_6_sp res 2.8 = 0.4101
+
+molmap res 2.8 masked:  volume = 4.9283
+
+molmap res 2.8 masked:  area = 22.777
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_6_sp res 2.8 = 0.3644
+
+RhRh_S-PhenTTL4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 210.71
+
+molmap res 2.8:  area = 352.63
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_6_sp res 2.8 = 40.44
+
+molmap res 2.8 masked:  volume = 107.8
+
+molmap res 2.8 masked:  area = 177.53
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_6_sp res 2.8 = 40.41
+
+RhRh_S-PhenTTL4_7_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 159.51
+
+molmap res 2.8:  area = 305.57
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_7_sp res 2.8 = 39.72
+
+molmap res 2.8 masked:  volume = 72.71
+
+molmap res 2.8 masked:  area = 137.86
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_7_sp res 2.8 = 39.29
+
+RhRh_S-PhenTTL4_7_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 235.06
+
+molmap res 2.8:  area = 416.22
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_7_sp res 2.8 = 44.54
+
+molmap res 2.8 masked:  volume = 95.845
+
+molmap res 2.8 masked:  area = 181.07
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_7_sp res 2.8 = 44.52
+
+RhRh_S-PhenTTL4_9_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 471.47
+
+molmap res 2.8:  area = 352.62
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_9_sp res 2.8 = 81.3
+
+molmap res 2.8 masked:  volume = 171.59
+
+molmap res 2.8 masked:  area = 170.71
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_9_sp res 2.8 = 70.88
+
+RhRh_S-PhenTTL4_9_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 41.557
+
+molmap res 2.8:  area = 142.62
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-PhenTTL4_9_sp res 2.8 = 15.93
+
+molmap res 2.8 masked:  volume = 34.904
+
+molmap res 2.8 masked:  area = 99.199
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-PhenTTL4_9_sp res 2.8 = 15.93
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 29.412
+
+molmap res 2.8:  area = 109.29
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_10_sp res 2.8 = 19.34
+
+molmap res 2.8 masked:  volume = 16.802
+
+molmap res 2.8 masked:  area = 54.965
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_10_sp res 2.8 = 16.9
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 191.95
+
+molmap res 2.8:  area = 366.39
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_10_sp res 2.8 = 44.71
+
+molmap res 2.8 masked:  volume = 80.172
+
+molmap res 2.8 masked:  area = 142.72
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_10_sp res 2.8 = 38.57
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_12_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 50.286
+
+molmap res 2.8:  area = 179.09
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_12_sp res 2.8 = 20.78
+
+molmap res 2.8 masked:  volume = 32.531
+
+molmap res 2.8 masked:  area = 97.456
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_12_sp res 2.8 = 20.09
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_12_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 252.95
+
+molmap res 2.8:  area = 330.42
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_12_sp res 2.8 = 43.07
+
+molmap res 2.8 masked:  volume = 92.153
+
+molmap res 2.8 masked:  area = 139.54
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_12_sp res 2.8 = 34.36
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_13_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 131.54
+
+molmap res 2.8:  area = 261.61
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_13_sp res 2.8 = 39.57
+
+molmap res 2.8 masked:  volume = 54.715
+
+molmap res 2.8 masked:  area = 107.61
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_13_sp res 2.8 = 23.26
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_13_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 365.84
+
+molmap res 2.8:  area = 334.76
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_13_sp res 2.8 = 82.02
+
+molmap res 2.8 masked:  volume = 144.88
+
+molmap res 2.8 masked:  area = 157.61
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_13_sp res 2.8 = 63.47
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_15_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 33.454
+
+molmap res 2.8:  area = 122.42
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_15_sp res 2.8 = 8.847
+
+molmap res 2.8 masked:  volume = 15.796
+
+molmap res 2.8 masked:  area = 58.568
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_15_sp res 2.8 = 8.847
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_15_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 715.16
+
+molmap res 2.8:  area = 406.92
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_15_sp res 2.8 = 181
+
+molmap res 2.8 masked:  volume = 254.61
+
+molmap res 2.8 masked:  area = 216.08
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_15_sp res 2.8 = 116
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 29.16
+
+molmap res 2.8:  area = 117.03
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_3_sp res 2.8 = 14.37
+
+molmap res 2.8 masked:  volume = 10.27
+
+molmap res 2.8 masked:  area = 40.652
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_3_sp res 2.8 = 14.36
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 418.91
+
+molmap res 2.8:  area = 419.13
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_3_sp res 2.8 = 53.62
+
+molmap res 2.8 masked:  volume = 173.2
+
+molmap res 2.8 masked:  area = 176.87
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_3_sp res 2.8 = 53.57
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 154.14
+
+molmap res 2.8:  area = 278.78
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_4_sp res 2.8 = 25.35
+
+molmap res 2.8 masked:  volume = 66.79
+
+molmap res 2.8 masked:  area = 142.19
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_4_sp res 2.8 = 25.35
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 122.56
+
+molmap res 2.8:  area = 229.77
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_4_sp res 2.8 = 50.76
+
+molmap res 2.8 masked:  volume = 49.662
+
+molmap res 2.8 masked:  area = 106.6
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_4_sp res 2.8 = 33.99
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 455.69
+
+molmap res 2.8:  area = 448.09
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_6_sp res 2.8 = 54.55
+
+molmap res 2.8 masked:  volume = 158.2
+
+molmap res 2.8 masked:  area = 179.06
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_6_sp res 2.8 = 54.55
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+failed for RhRh_S-TCPTTL4_fromcarbene_20kcal_6_sp.mol2
+RhRh_S-TCPTTL4_fromcarbene_20kcal_7_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 136.56
+
+molmap res 2.8:  area = 301.65
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_7_sp res 2.8 = 63.99
+
+molmap res 2.8 masked:  volume = 61.548
+
+molmap res 2.8 masked:  area = 117.9
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_7_sp res 2.8 = 39.89
+
+RhRh_S-TCPTTL4_fromcarbene_20kcal_7_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 225.4
+
+molmap res 2.8:  area = 385.87
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_7_sp res 2.8 = 40.65
+
+molmap res 2.8 masked:  volume = 103.6
+
+molmap res 2.8 masked:  area = 150.39
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TCPTTL4_fromcarbene_20kcal_7_sp res 2.8 = 40.15
+
+RhRh_S-TPPTTL4_5_ONIOM_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 51.953
+
+molmap res 2.8:  area = 178.92
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TPPTTL4_5_ONIOM_sp res 2.8 = 24.24
+
+molmap res 2.8 masked:  volume = 26.31
+
+molmap res 2.8 masked:  area = 85.993
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TPPTTL4_5_ONIOM_sp res 2.8 = 23.69
+
+RhRh_S-TPPTTL4_6_ONIOM_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 39.154
+
+molmap res 2.8:  area = 114.94
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-TPPTTL4_6_ONIOM_sp res 2.8 = 12.61
+
+molmap res 2.8 masked:  volume = 17.785
+
+molmap res 2.8 masked:  area = 56.245
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-TPPTTL4_6_ONIOM_sp res 2.8 = 12.61
+
+RhRh_S-pBrTPCP_C4-2_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 4.0555
+
+molmap res 2.8:  area = 31.588
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-pBrTPCP_C4-2_10_sp res 2.8 = 3.679
+
+molmap res 2.8 masked:  volume = 2.4278
+
+molmap res 2.8 masked:  area = 15.513
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-pBrTPCP_C4-2_10_sp res 2.8 = 2.415
+
+RhRh_S-pBrTPCP_C4-2_19_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 281.45
+
+molmap res 2.8:  area = 341.15
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-pBrTPCP_C4-2_19_sp res 2.8 = 47
+
+molmap res 2.8 masked:  volume = 129.53
+
+molmap res 2.8 masked:  area = 170.31
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-pBrTPCP_C4-2_19_sp res 2.8 = 46.73
+
+RhRh_S-pBrTPCP_C4-2_20_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 371.33
+
+molmap res 2.8:  area = 423.53
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-pBrTPCP_C4-2_20_sp res 2.8 = 84.7
+
+molmap res 2.8 masked:  volume = 153.53
+
+molmap res 2.8 masked:  area = 179.17
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-pBrTPCP_C4-2_20_sp res 2.8 = 66.1
+
+RhRh_S-pBrTPCP_C4-2_4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 31.998
+
+molmap res 2.8:  area = 110.66
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-pBrTPCP_C4-2_4_sp res 2.8 = 14.18
+
+molmap res 2.8 masked:  volume = 20.786
+
+molmap res 2.8 masked:  area = 58.893
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-pBrTPCP_C4-2_4_sp res 2.8 = 14.18
+
+RhRh_S-pPhTPCP_31-10_12_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 487.76
+
+molmap res 2.8:  area = 390.72
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-pPhTPCP_31-10_12_sp res 2.8 = 90.94
+
+molmap res 2.8 masked:  volume = 180.86
+
+molmap res 2.8 masked:  area = 182.45
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-pPhTPCP_31-10_12_sp res 2.8 = 73.74
+
+RhRh_S-pPhTPCP_31-10_13_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 27.668
+
+molmap res 2.8:  area = 89.519
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_S-pPhTPCP_31-10_13_sp res 2.8 = 10.2
+
+molmap res 2.8 masked:  volume = 23.09
+
+molmap res 2.8 masked:  area = 61.612
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_S-pPhTPCP_31-10_13_sp res 2.8 = 10.2
+
+RhRh_TFA4_3-1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 1106.7
+
+molmap res 2.8:  area = 561.66
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_TFA4_3-1_sp res 2.8 = 93.05
+
+molmap res 2.8 masked:  volume = 364.83
+
+molmap res 2.8 masked:  area = 276.64
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_TFA4_3-1_sp res 2.8 = 89.35
+
+RhRh_TFA4_3-1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 1028.5
+
+molmap res 2.8:  area = 538.3
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_TFA4_3-1_sp res 2.8 = 94.51
+
+molmap res 2.8 masked:  volume = 360.44
+
+molmap res 2.8 masked:  area = 273.2
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_TFA4_3-1_sp res 2.8 = 88.31
+
+RhRh_anthracenyl-O2C4_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 710.68
+
+molmap res 2.8:  area = 489.69
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_2_sp res 2.8 = 64.84
+
+molmap res 2.8 masked:  volume = 251.29
+
+molmap res 2.8 masked:  area = 221.05
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_2_sp res 2.8 = 62.88
+
+RhRh_anthracenyl-O2C4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 835.78
+
+molmap res 2.8:  area = 481.74
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_2_sp res 2.8 = 95.57
+
+molmap res 2.8 masked:  volume = 299.24
+
+molmap res 2.8 masked:  area = 242.77
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_2_sp res 2.8 = 82.26
+
+RhRh_anthracenyl-O2C4_4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 835.57
+
+molmap res 2.8:  area = 512.46
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_4_sp res 2.8 = 95.08
+
+molmap res 2.8 masked:  volume = 305.6
+
+molmap res 2.8 masked:  area = 247.81
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_4_sp res 2.8 = 85.96
+
+RhRh_anthracenyl-O2C4_4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 546.42
+
+molmap res 2.8:  area = 461.89
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_4_sp res 2.8 = 54.16
+
+molmap res 2.8 masked:  volume = 210.66
+
+molmap res 2.8 masked:  area = 197.14
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_4_sp res 2.8 = 53.99
+
+RhRh_anthracenyl-O2C4_5_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 878.76
+
+molmap res 2.8:  area = 481.11
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_5_sp res 2.8 = 94.85
+
+molmap res 2.8 masked:  volume = 328.07
+
+molmap res 2.8 masked:  area = 258.44
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_5_sp res 2.8 = 90.85
+
+RhRh_anthracenyl-O2C4_5_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 679.64
+
+molmap res 2.8:  area = 462.03
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_5_sp res 2.8 = 69.95
+
+molmap res 2.8 masked:  volume = 266.63
+
+molmap res 2.8 masked:  area = 224.57
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_5_sp res 2.8 = 68.71
+
+RhRh_anthracenyl-O2C4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 732.68
+
+molmap res 2.8:  area = 460.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_6_sp res 2.8 = 75.77
+
+molmap res 2.8 masked:  volume = 286.41
+
+molmap res 2.8 masked:  area = 237.3
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_6_sp res 2.8 = 72.97
+
+RhRh_anthracenyl-O2C4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 821.82
+
+molmap res 2.8:  area = 476.77
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_6_sp res 2.8 = 84.32
+
+molmap res 2.8 masked:  volume = 304.8
+
+molmap res 2.8 masked:  area = 244.53
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_6_sp res 2.8 = 82.43
+
+RhRh_anthracenyl-O2C4_D2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 847.94
+
+molmap res 2.8:  area = 465.55
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_D2_sp res 2.8 = 91.54
+
+molmap res 2.8 masked:  volume = 338.56
+
+molmap res 2.8 masked:  area = 260.59
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_D2_sp res 2.8 = 87.71
+
+RhRh_anthracenyl-O2C4_D2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 813.21
+
+molmap res 2.8:  area = 480.98
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_D2_sp res 2.8 = 83.78
+
+molmap res 2.8 masked:  volume = 308.18
+
+molmap res 2.8 masked:  area = 249.76
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_anthracenyl-O2C4_D2_sp res 2.8 = 79.82
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 212.05
+
+molmap res 2.8:  area = 312.35
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_10_sp res 2.8 = 43.37
+
+molmap res 2.8 masked:  volume = 112.43
+
+molmap res 2.8 masked:  area = 154.74
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_10_sp res 2.8 = 42.7
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_12_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 276.77
+
+molmap res 2.8:  area = 377.54
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_12_sp res 2.8 = 46.88
+
+molmap res 2.8 masked:  volume = 118.49
+
+molmap res 2.8 masked:  area = 150.57
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_12_sp res 2.8 = 46.86
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_13_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 22.088
+
+molmap res 2.8:  area = 91.421
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_13_sp res 2.8 = 5.133
+
+molmap res 2.8 masked:  volume = 7.6027
+
+molmap res 2.8 masked:  area = 35.298
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_13_sp res 2.8 = 5.133
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_17_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 460.96
+
+molmap res 2.8:  area = 401.76
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_17_sp res 2.8 = 60.04
+
+molmap res 2.8 masked:  volume = 184.97
+
+molmap res 2.8 masked:  area = 190.81
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_17_sp res 2.8 = 59.5
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_18_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 255.3
+
+molmap res 2.8:  area = 333.42
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_18_sp res 2.8 = 41.13
+
+molmap res 2.8 masked:  volume = 125.14
+
+molmap res 2.8 masked:  area = 160.66
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_18_sp res 2.8 = 41.12
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_19_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 12.327
+
+molmap res 2.8:  area = 66.662
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_19_sp res 2.8 = 6.197
+
+molmap res 2.8 masked:  volume = 8.2638
+
+molmap res 2.8 masked:  area = 42.827
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_19_sp res 2.8 = 6.197
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 169.68
+
+molmap res 2.8:  area = 342.13
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_1_sp res 2.8 = 36.08
+
+molmap res 2.8 masked:  volume = 90.077
+
+molmap res 2.8 masked:  area = 164.5
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_1_sp res 2.8 = 36.06
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_20_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 274.2
+
+molmap res 2.8:  area = 338.34
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_20_sp res 2.8 = 48.88
+
+molmap res 2.8 masked:  volume = 126.1
+
+molmap res 2.8 masked:  area = 162.1
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_20_sp res 2.8 = 48.25
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_26_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 128.98
+
+molmap res 2.8:  area = 279.97
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_26_sp res 2.8 = 23.21
+
+molmap res 2.8 masked:  volume = 51.46
+
+molmap res 2.8 masked:  area = 125.38
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_26_sp res 2.8 = 23.21
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_31_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 312.09
+
+molmap res 2.8:  area = 362.11
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_31_sp res 2.8 = 47.08
+
+molmap res 2.8 masked:  volume = 130.08
+
+molmap res 2.8 masked:  area = 175.89
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_31_sp res 2.8 = 47.08
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_32_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 205.05
+
+molmap res 2.8:  area = 297.54
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_32_sp res 2.8 = 38.37
+
+molmap res 2.8 masked:  volume = 90.165
+
+molmap res 2.8 masked:  area = 158.93
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_32_sp res 2.8 = 38.34
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_33_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 325.89
+
+molmap res 2.8:  area = 388.06
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_33_sp res 2.8 = 44.95
+
+molmap res 2.8 masked:  volume = 128.05
+
+molmap res 2.8 masked:  area = 172.97
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_33_sp res 2.8 = 44.56
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_5_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 504.95
+
+molmap res 2.8:  area = 380.49
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_5_sp res 2.8 = 62.39
+
+molmap res 2.8 masked:  volume = 190.44
+
+molmap res 2.8 masked:  area = 180.52
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_5_sp res 2.8 = 62.36
+
+RhRh_cis-Cy-fused-Hback-S-PTV4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 514.15
+
+molmap res 2.8:  area = 405.72
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_6_sp res 2.8 = 71.05
+
+molmap res 2.8 masked:  volume = 208.84
+
+molmap res 2.8 masked:  area = 193.86
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_cis-Cy-fused-Hback-S-PTV4_6_sp res 2.8 = 70.41
+
+RhRh_pFPh-O2C4_C4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 911.57
+
+molmap res 2.8:  area = 521.99
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPh-O2C4_C4_sp res 2.8 = 80.86
+
+molmap res 2.8 masked:  volume = 313.54
+
+molmap res 2.8 masked:  area = 249.12
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPh-O2C4_C4_sp res 2.8 = 76.28
+
+RhRh_pFPh-O2C4_C4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 828.04
+
+molmap res 2.8:  area = 486.52
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPh-O2C4_C4_sp res 2.8 = 81.49
+
+molmap res 2.8 masked:  volume = 297.03
+
+molmap res 2.8 masked:  area = 245.03
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPh-O2C4_C4_sp res 2.8 = 76.04
+
+RhRh_pFPhMe2-O2C4_20kcal_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 834.48
+
+molmap res 2.8:  area = 523.53
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_10_sp res 2.8 = 90.74
+
+molmap res 2.8 masked:  volume = 305.32
+
+molmap res 2.8 masked:  area = 246.8
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_10_sp res 2.8 = 87.02
+
+RhRh_pFPhMe2-O2C4_20kcal_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 345.4
+
+molmap res 2.8:  area = 384.25
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_10_sp res 2.8 = 53.77
+
+molmap res 2.8 masked:  volume = 152.8
+
+molmap res 2.8 masked:  area = 164.02
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_10_sp res 2.8 = 50.02
+
+RhRh_pFPhMe2-O2C4_20kcal_11_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 752.39
+
+molmap res 2.8:  area = 460.91
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_11_sp res 2.8 = 77.53
+
+molmap res 2.8 masked:  volume = 267.97
+
+molmap res 2.8 masked:  area = 225.79
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_11_sp res 2.8 = 76.58
+
+RhRh_pFPhMe2-O2C4_20kcal_11_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 331.9
+
+molmap res 2.8:  area = 382.04
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_11_sp res 2.8 = 45.36
+
+molmap res 2.8 masked:  volume = 153.37
+
+molmap res 2.8 masked:  area = 163.15
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_11_sp res 2.8 = 45.36
+
+RhRh_pFPhMe2-O2C4_20kcal_12_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 751.42
+
+molmap res 2.8:  area = 517.16
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_12_sp res 2.8 = 94.51
+
+molmap res 2.8 masked:  volume = 272.76
+
+molmap res 2.8 masked:  area = 227.71
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_12_sp res 2.8 = 85.34
+
+RhRh_pFPhMe2-O2C4_20kcal_12_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 855.74
+
+molmap res 2.8:  area = 515.08
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_12_sp res 2.8 = 82.83
+
+molmap res 2.8 masked:  volume = 282.69
+
+molmap res 2.8 masked:  area = 232.92
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_12_sp res 2.8 = 78.59
+
+RhRh_pFPhMe2-O2C4_20kcal_14_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 780.95
+
+molmap res 2.8:  area = 452.08
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_14_sp res 2.8 = 91.57
+
+molmap res 2.8 masked:  volume = 305.51
+
+molmap res 2.8 masked:  area = 246.05
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_14_sp res 2.8 = 85.93
+
+RhRh_pFPhMe2-O2C4_20kcal_14_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 510.54
+
+molmap res 2.8:  area = 408.75
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_14_sp res 2.8 = 72.35
+
+molmap res 2.8 masked:  volume = 203.85
+
+molmap res 2.8 masked:  area = 203.25
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_14_sp res 2.8 = 66.93
+
+RhRh_pFPhMe2-O2C4_20kcal_15_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 529.23
+
+molmap res 2.8:  area = 420.07
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_15_sp res 2.8 = 57.13
+
+molmap res 2.8 masked:  volume = 200.44
+
+molmap res 2.8 masked:  area = 188.24
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_15_sp res 2.8 = 56.78
+
+RhRh_pFPhMe2-O2C4_20kcal_15_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 664.55
+
+molmap res 2.8:  area = 489.78
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_15_sp res 2.8 = 77.57
+
+molmap res 2.8 masked:  volume = 256.05
+
+molmap res 2.8 masked:  area = 218.35
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_15_sp res 2.8 = 76.22
+
+RhRh_pFPhMe2-O2C4_20kcal_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 712.06
+
+molmap res 2.8:  area = 449.16
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_2_sp res 2.8 = 82.69
+
+molmap res 2.8 masked:  volume = 272.02
+
+molmap res 2.8 masked:  area = 224.01
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_2_sp res 2.8 = 79.07
+
+RhRh_pFPhMe2-O2C4_20kcal_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 512.83
+
+molmap res 2.8:  area = 371.67
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_2_sp res 2.8 = 53.12
+
+molmap res 2.8 masked:  volume = 209.46
+
+molmap res 2.8 masked:  area = 198.35
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_2_sp res 2.8 = 53.12
+
+RhRh_pFPhMe2-O2C4_20kcal_4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 528.63
+
+molmap res 2.8:  area = 451.17
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_4_sp res 2.8 = 54.02
+
+molmap res 2.8 masked:  volume = 209.46
+
+molmap res 2.8 masked:  area = 198.97
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_4_sp res 2.8 = 53.98
+
+RhRh_pFPhMe2-O2C4_20kcal_4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 701.4
+
+molmap res 2.8:  area = 420.99
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_4_sp res 2.8 = 101.7
+
+molmap res 2.8 masked:  volume = 271.56
+
+molmap res 2.8 masked:  area = 228.92
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_4_sp res 2.8 = 87.61
+
+RhRh_pFPhMe2-O2C4_20kcal_7_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 815.16
+
+molmap res 2.8:  area = 483.1
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_7_sp res 2.8 = 100.8
+
+molmap res 2.8 masked:  volume = 300.18
+
+molmap res 2.8 masked:  area = 243.97
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_7_sp res 2.8 = 90.59
+
+RhRh_pFPhMe2-O2C4_20kcal_7_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 651.47
+
+molmap res 2.8:  area = 410.81
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_7_sp res 2.8 = 65.29
+
+molmap res 2.8 masked:  volume = 240.62
+
+molmap res 2.8 masked:  area = 208.01
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_7_sp res 2.8 = 65.11
+
+RhRh_pFPhMe2-O2C4_20kcal_8_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 589.21
+
+molmap res 2.8:  area = 433.45
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_8_sp res 2.8 = 76.28
+
+molmap res 2.8 masked:  volume = 220.41
+
+molmap res 2.8 masked:  area = 203.44
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_8_sp res 2.8 = 72.78
+
+RhRh_pFPhMe2-O2C4_20kcal_8_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 512.74
+
+molmap res 2.8:  area = 417.68
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_8_sp res 2.8 = 53.23
+
+molmap res 2.8 masked:  volume = 208.2
+
+molmap res 2.8 masked:  area = 198.34
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_8_sp res 2.8 = 53.17
+
+RhRh_pFPhMe2-O2C4_20kcal_9_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 455.98
+
+molmap res 2.8:  area = 374.19
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_9_sp res 2.8 = 47.9
+
+molmap res 2.8 masked:  volume = 184.17
+
+molmap res 2.8 masked:  area = 193.88
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_9_sp res 2.8 = 47.9
+
+RhRh_pFPhMe2-O2C4_20kcal_9_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 309.44
+
+molmap res 2.8:  area = 404.49
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_9_sp res 2.8 = 49.29
+
+molmap res 2.8 masked:  volume = 149.96
+
+molmap res 2.8 masked:  area = 179.23
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pFPhMe2-O2C4_20kcal_9_sp res 2.8 = 45.91
+
+RhRh_pOMe-PhO2C4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 860.73
+
+molmap res 2.8:  area = 490.51
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_1_sp res 2.8 = 79.9
+
+molmap res 2.8 masked:  volume = 313.51
+
+molmap res 2.8 masked:  area = 250.19
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_1_sp res 2.8 = 76.83
+
+RhRh_pOMe-PhO2C4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 844.12
+
+molmap res 2.8:  area = 465.32
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_1_sp res 2.8 = 77.64
+
+molmap res 2.8 masked:  volume = 304.07
+
+molmap res 2.8 masked:  area = 244.56
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_1_sp res 2.8 = 74.38
+
+RhRh_pOMe-PhO2C4_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 877.51
+
+molmap res 2.8:  area = 523.27
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_2_sp res 2.8 = 77.53
+
+molmap res 2.8 masked:  volume = 306.28
+
+molmap res 2.8 masked:  area = 250.4
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_2_sp res 2.8 = 75.94
+
+RhRh_pOMe-PhO2C4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 884.65
+
+molmap res 2.8:  area = 505.64
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_2_sp res 2.8 = 79.05
+
+molmap res 2.8 masked:  volume = 317.31
+
+molmap res 2.8 masked:  area = 250.17
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_2_sp res 2.8 = 76.71
+
+RhRh_pOMe-PhO2C4_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 790.18
+
+molmap res 2.8:  area = 472.72
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_3_sp res 2.8 = 71.86
+
+molmap res 2.8 masked:  volume = 289.75
+
+molmap res 2.8 masked:  area = 237.17
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_3_sp res 2.8 = 69.52
+
+RhRh_pOMe-PhO2C4_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 793.96
+
+molmap res 2.8:  area = 504.07
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_3_sp res 2.8 = 73.78
+
+molmap res 2.8 masked:  volume = 290.48
+
+molmap res 2.8 masked:  area = 241.53
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_pOMe-PhO2C4_3_sp res 2.8 = 70.01
+
+RhRh_tBu-O2C4_C2_redo_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 856.32
+
+molmap res 2.8:  area = 468.42
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tBu-O2C4_C2_redo_sp res 2.8 = 75.72
+
+molmap res 2.8 masked:  volume = 295.91
+
+molmap res 2.8 masked:  area = 236.34
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tBu-O2C4_C2_redo_sp res 2.8 = 74.25
+
+RhRh_tBu-O2C4_C2_redo_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 860.76
+
+molmap res 2.8:  area = 511.62
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tBu-O2C4_C2_redo_sp res 2.8 = 79.83
+
+molmap res 2.8 masked:  volume = 298.15
+
+molmap res 2.8 masked:  area = 239.86
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tBu-O2C4_C2_redo_sp res 2.8 = 78.05
+
+RhRh_tBu-O2C4_C4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 833.15
+
+molmap res 2.8:  area = 514.7
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tBu-O2C4_C4_sp res 2.8 = 73.19
+
+molmap res 2.8 masked:  volume = 268.28
+
+molmap res 2.8 masked:  area = 228.08
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tBu-O2C4_C4_sp res 2.8 = 71.45
+
+RhRh_tBu-O2C4_C4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 725.99
+
+molmap res 2.8:  area = 430.73
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tBu-O2C4_C4_sp res 2.8 = 74.36
+
+molmap res 2.8 masked:  volume = 283.56
+
+molmap res 2.8 masked:  area = 233.62
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tBu-O2C4_C4_sp res 2.8 = 71.63
+
+RhRh_tBu-O2C4_D2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 467.14
+
+molmap res 2.8:  area = 341.5
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tBu-O2C4_D2_sp res 2.8 = 61.08
+
+molmap res 2.8 masked:  volume = 226.34
+
+molmap res 2.8 masked:  area = 207.65
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tBu-O2C4_D2_sp res 2.8 = 60.39
+
+RhRh_tBu-O2C4_D2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 671.53
+
+molmap res 2.8:  area = 446.7
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tBu-O2C4_D2_sp res 2.8 = 70.95
+
+molmap res 2.8 masked:  volume = 263.01
+
+molmap res 2.8 masked:  area = 224.98
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tBu-O2C4_D2_sp res 2.8 = 69.74
+
+RhRh_tri-pFPh-O2C4_13_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 540.48
+
+molmap res 2.8:  area = 375.58
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_13_sp res 2.8 = 99.3
+
+molmap res 2.8 masked:  volume = 202.5
+
+molmap res 2.8 masked:  area = 191.37
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_13_sp res 2.8 = 87.79
+
+RhRh_tri-pFPh-O2C4_13_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 7.7271
+
+molmap res 2.8:  area = 37.974
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_13_sp res 2.8 = 10.56
+
+molmap res 2.8 masked:  volume = 6.6937
+
+molmap res 2.8 masked:  area = 29.36
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_13_sp res 2.8 = 10.56
+
+RhRh_tri-pFPh-O2C4_14_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 181.15
+
+molmap res 2.8:  area = 306.3
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_14_sp res 2.8 = 55.06
+
+molmap res 2.8 masked:  volume = 85.1
+
+molmap res 2.8 masked:  area = 148.46
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_14_sp res 2.8 = 45.71
+
+RhRh_tri-pFPh-O2C4_14_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 175.9
+
+molmap res 2.8:  area = 332.81
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_14_sp res 2.8 = 29.19
+
+molmap res 2.8 masked:  volume = 77.866
+
+molmap res 2.8 masked:  area = 135.21
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_14_sp res 2.8 = 27.85
+
+RhRh_tri-pFPh-O2C4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 372.22
+
+molmap res 2.8:  area = 330.08
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_1_sp res 2.8 = 67.05
+
+molmap res 2.8 masked:  volume = 158.85
+
+molmap res 2.8 masked:  area = 168.85
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_1_sp res 2.8 = 65.3
+
+RhRh_tri-pFPh-O2C4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 9.2475
+
+molmap res 2.8:  area = 55.096
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_1_sp res 2.8 = 3.608
+
+molmap res 2.8 masked:  volume = 5.8955
+
+molmap res 2.8 masked:  area = 31.209
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_1_sp res 2.8 = 3.608
+
+RhRh_tri-pFPh-O2C4_3_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 142.3
+
+molmap res 2.8:  area = 296.1
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_3_sp res 2.8 = 39.19
+
+molmap res 2.8 masked:  volume = 64.864
+
+molmap res 2.8 masked:  area = 145.91
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_3_sp res 2.8 = 38.93
+
+RhRh_tri-pFPh-O2C4_3_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 40.947
+
+molmap res 2.8:  area = 146.66
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_3_sp res 2.8 = 10.78
+
+molmap res 2.8 masked:  volume = 20.106
+
+molmap res 2.8 masked:  area = 69.466
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_3_sp res 2.8 = 10.78
+
+RhRh_tri-pFPh-O2C4_4_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 175.52
+
+molmap res 2.8:  area = 262.25
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_4_sp res 2.8 = 33.45
+
+molmap res 2.8 masked:  volume = 77.445
+
+molmap res 2.8 masked:  area = 138.91
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_4_sp res 2.8 = 33.45
+
+RhRh_tri-pFPh-O2C4_4_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 241.1
+
+molmap res 2.8:  area = 298.02
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_4_sp res 2.8 = 43.96
+
+molmap res 2.8 masked:  volume = 93.806
+
+molmap res 2.8 masked:  area = 152.67
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_4_sp res 2.8 = 43.96
+
+RhRh_tri-pFPh-O2C4_5_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 519.21
+
+molmap res 2.8:  area = 371.44
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_5_sp res 2.8 = 82.4
+
+molmap res 2.8 masked:  volume = 192.01
+
+molmap res 2.8 masked:  area = 184.28
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_5_sp res 2.8 = 72.51
+
+RhRh_tri-pFPh-O2C4_5_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 0.0071199
+
+molmap res 2.8:  area = 0.2381
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_5_sp res 2.8 = 0.001123
+
+molmap res 2.8 masked:  volume = 0.0071199
+
+molmap res 2.8 masked:  area = 0.2381
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_5_sp res 2.8 = 0.001123
+
+RhRh_tri-pFPh-O2C4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 226.32
+
+molmap res 2.8:  area = 368.92
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_6_sp res 2.8 = 55.29
+
+molmap res 2.8 masked:  volume = 108.21
+
+molmap res 2.8 masked:  area = 154.49
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_6_sp res 2.8 = 46.99
+
+RhRh_tri-pFPh-O2C4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 324.01
+
+molmap res 2.8:  area = 320.56
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_6_sp res 2.8 = 60.5
+
+molmap res 2.8 masked:  volume = 137.84
+
+molmap res 2.8 masked:  area = 164.72
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_6_sp res 2.8 = 59.17
+
+RhRh_tri-pFPh-O2C4_9_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 8.9875
+
+molmap res 2.8:  area = 55.504
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_9_sp res 2.8 = 7.122
+
+molmap res 2.8 masked:  volume = 3.5299
+
+molmap res 2.8 masked:  area = 23.07
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_9_sp res 2.8 = 7.122
+
+RhRh_tri-pFPh-O2C4_9_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 294.18
+
+molmap res 2.8:  area = 344.44
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_9_sp res 2.8 = 62.77
+
+molmap res 2.8 masked:  volume = 122.4
+
+molmap res 2.8 masked:  area = 162.3
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_tri-pFPh-O2C4_9_sp res 2.8 = 58.78
+
+RhRh_triPh-O2C4_10_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 362.38
+
+molmap res 2.8:  area = 364.63
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_10_sp res 2.8 = 67.12
+
+molmap res 2.8 masked:  volume = 146.09
+
+molmap res 2.8 masked:  area = 167.97
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_10_sp res 2.8 = 66.36
+
+RhRh_triPh-O2C4_10_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 446.23
+
+molmap res 2.8:  area = 328.4
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_10_sp res 2.8 = 79.06
+
+molmap res 2.8 masked:  volume = 182.19
+
+molmap res 2.8 masked:  area = 179.88
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_10_sp res 2.8 = 76.29
+
+RhRh_triPh-O2C4_12_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 310.55
+
+molmap res 2.8:  area = 376.17
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_12_sp res 2.8 = 50.01
+
+molmap res 2.8 masked:  volume = 118.92
+
+molmap res 2.8 masked:  area = 152.87
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_12_sp res 2.8 = 48.82
+
+RhRh_triPh-O2C4_12_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 472.9
+
+molmap res 2.8:  area = 334.94
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_12_sp res 2.8 = 69.83
+
+molmap res 2.8 masked:  volume = 181.35
+
+molmap res 2.8 masked:  area = 175.67
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_12_sp res 2.8 = 66.62
+
+RhRh_triPh-O2C4_1_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 0.54149
+
+molmap res 2.8:  area = 5.2077
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_1_sp res 2.8 = 0.02365
+
+molmap res 2.8 masked:  volume = 0.00051498
+
+molmap res 2.8 masked:  area = 0.040232
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_1_sp res 2.8 = 0.02365
+
+RhRh_triPh-O2C4_1_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 243.75
+
+molmap res 2.8:  area = 356.76
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_1_sp res 2.8 = 41.96
+
+molmap res 2.8 masked:  volume = 98.09
+
+molmap res 2.8 masked:  area = 152.73
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_1_sp res 2.8 = 41.96
+
+RhRh_triPh-O2C4_2_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 228.31
+
+molmap res 2.8:  area = 338.79
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_2_sp res 2.8 = 56.95
+
+molmap res 2.8 masked:  volume = 102.73
+
+molmap res 2.8 masked:  area = 174.67
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_2_sp res 2.8 = 56.33
+
+RhRh_triPh-O2C4_2_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 1.7815
+
+molmap res 2.8:  area = 10.79
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_2_sp res 2.8 = 2.633
+
+molmap res 2.8 masked:  volume = 1.7766
+
+molmap res 2.8 masked:  area = 10.593
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_2_sp res 2.8 = 2.633
+
+RhRh_triPh-O2C4_5_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 60.625
+
+molmap res 2.8:  area = 196.7
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_5_sp res 2.8 = 22.89
+
+molmap res 2.8 masked:  volume = 34.798
+
+molmap res 2.8 masked:  area = 96.039
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_5_sp res 2.8 = 22.89
+
+RhRh_triPh-O2C4_5_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 81.94
+
+molmap res 2.8:  area = 235.41
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_5_sp res 2.8 = 18.98
+
+molmap res 2.8 masked:  volume = 39.979
+
+molmap res 2.8 masked:  area = 105.11
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_5_sp res 2.8 = 18.91
+
+RhRh_triPh-O2C4_6_sp_S_SiH2_12_cyclic_Rh0_cavity.sdf
+molmap res 2.8:  volume = 1.384
+
+molmap res 2.8:  area = 12.31
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_6_sp res 2.8 = 1.547
+
+molmap res 2.8 masked:  volume = 0.34026
+
+molmap res 2.8 masked:  area = 3.3922
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_6_sp res 2.8 = 1.547
+
+RhRh_triPh-O2C4_6_sp_S_SiH2_12_cyclic_Rh1_cavity.sdf
+molmap res 2.8:  volume = 481.72
+
+molmap res 2.8:  area = 348.91
+
+Contact area on molmap res 2.8 within distance 1.1
+of molmap RhRh_triPh-O2C4_6_sp res 2.8 = 77.87
+
+molmap res 2.8 masked:  volume = 186.15
+
+molmap res 2.8 masked:  area = 178.56
+
+Contact area on molmap res 2.8 masked within distance 1.1
+of molmap RhRh_triPh-O2C4_6_sp res 2.8 = 74.65
+

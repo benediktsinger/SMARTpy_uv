@@ -88,5 +88,5 @@ for file in os.listdir(os.getcwd()):
         #    print(e)
         #    continue
 
-#props.to_excel('SPINOL.xlsx')
+#props.to_excel('BINOL.xlsx')
 print('DONE')

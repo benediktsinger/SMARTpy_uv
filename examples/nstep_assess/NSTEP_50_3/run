@@ -1,0 +1,22 @@
+#!/bin/bash
+#!/uufs/chpc.utah.edu/common/home/u1319506/software/pkg/anaconda3/bin/python3
+#SBATCH --partition=sigman-shared-np
+#SBATCH --account=sigman-np
+#SBATCH --time=72:00:00
+#SBATCH -o slurm-%j.out-%N
+#SBATCH -e slurm-%j.err-%N
+
+module use $HOME/Py3Modules
+ml miniconda3/latest
+
+python3 run_SMART.py > run.log
+
+#python3 just_properties.py > props.log
+
+#ml chimera/1.17.3
+
+#chimera --nogui --script "~/structs_acyclic_SiI2_12/SMART_chimera_descriptors.py" > chimera_log.txt
+
+#ml miniconda3/latest
+
+#python3 parse_chimera_log.py

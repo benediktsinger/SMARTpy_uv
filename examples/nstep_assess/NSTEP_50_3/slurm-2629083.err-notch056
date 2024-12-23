@@ -1,0 +1,2 @@
+/uufs/chpc.utah.edu/common/home/u1319506/SMART_manuscript/SMART/conf_search.py:153: UserWarning: Optimal rotation is not uniquely or poorly defined for the given sets of vectors.
+  r = R.align_vectors([ref_rotvec], [rot_v])
